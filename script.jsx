@@ -19,12 +19,23 @@ function Com2 ({title}) { // object destructuring
 }
 
 function Homepage () {
+    const [likes, setLikes] = React.useState(0); 
+    // React.useState() returns an array, use array destructuring (left side) so that we can access the elements with a name
+    // syntax:
+    // const [state name, update state function] = React.useState(optional initial value);
+
+    // on click function
+    function handleClick() {
+        setLikes(likes + 1);
+    }
+
     return (
         <div>
             Hello world
             {/* nesting the header component inside the Homepage */}
             <Com1 aaa="jello"/> 
             <Com2 aaa="jello this is com2"/>
+            <button onClick={handleClick}>Likes ({likes})</button>
         </div>
     );
 }
