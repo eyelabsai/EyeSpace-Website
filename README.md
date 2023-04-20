@@ -1,3 +1,11 @@
+# Cloning the Repository
+- `git clone git@github.com:EH67/Eyespace.git`
+- make sure there's an ssh key in your computer. If not:
+    - `ssh-keygen`
+        - keep pressing enter for the default values (unless you already have a key. If so, exit out of ssh-keygen with Ctrl+C and skip to the next step)
+    - `cat ~/.ssh/id_rsa.pub`
+        - copy the output and add the key to your github
+
 # Setting Up
 - Make sure Node.js is install on your computer
 - Travel to the project directory in the terminal. Run `npm install` to install all the necessary packages
@@ -22,4 +30,4 @@
     - `index.js`: main entry point for the app
     - `App.js`: root component (where the rest of the components go)
 - `old/`: Irrelavent to the project, contains files for me to refer back to for syntax
-- `config-overrides.js`: contains the path alias
+- `config-overrides.js`: contains the path alias (this doesn't work properly for some reason)
