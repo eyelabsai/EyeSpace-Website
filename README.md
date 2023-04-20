@@ -2,6 +2,13 @@
 - Make sure Node.js is install on your computer
 - Travel to the project directory in the terminal. Run `npm install` to install all the necessary packages
 
+# BEFORE YOU EDIT ANYTHING, MAKE A BRANCH
+- type `git checkout -b <branch name>` to create a new branch and travel to it
+- type `git branch` and make sure you're in the branch you just created
+- to travel to another branch, type `git checkout <branch name>`
+    - the `-b` argument creates a new branch. If you're not trying to create the branch, do not include `-b`
+- DO NOT EDIT DIRECTLY ON THE MAIN BRANCH!
+
 # Running the Website
 - In the terminal, type `npm start`
 - Once the app is fired up, go to any browser (Google Chrome, Firefox, etc) and type "localhost:3000" to access the website
