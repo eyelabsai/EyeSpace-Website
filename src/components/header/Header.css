@@ -1,0 +1,11 @@
+.navbar {
+  position: absolute;
+  width: 1920px;
+  height: 130px;
+  left: 0px;
+  top: 0px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 4px 12px 6px rgba(129, 129, 129, 0.13);
+  border-radius: 0px 0px 40px 40px;
+}
