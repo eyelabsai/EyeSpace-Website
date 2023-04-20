@@ -20,11 +20,7 @@ export default class Button extends React.Component {
       <div className="navbar">
         <img src="../../assets/eyespaceLogo.svg" alt="EyeSpace Logo"/>
         <div className="buttons">
-          {/* {
-            for (let i = 0 ; i < 4 ; i++) {
-              <div
-            }
-          } */}
+          {  }
         </div>
       </div>
     );
