@@ -10,10 +10,6 @@ export default class Button extends React.Component {
   };
 
   buttonsList = ["Home","About Us", "Contact", "Blogs"];
-  
-
-
-
 
   render() {
     return (
