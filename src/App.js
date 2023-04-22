@@ -7,10 +7,10 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-        {/** Everything outside the BrowserRouter tag will be rendered on every single page */}
+        {/** Everything outside the BrowserRouter tag will be rendered on every single page (ex: nav bar and footer)*/}
         <BrowserRouter>
           <Routes>
-            {/** For each path we have, add a Route tag and put the tag. */}
+            {/** For each path we have, add a Route tag to define which element to render depending on the path. */}
             <Route path="/" element={<Homepage/>}>
             </Route>
           </Routes>

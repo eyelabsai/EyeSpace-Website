@@ -1,4 +1,5 @@
-# Cloning the Repository
+# First Time
+## Cloning the Repository
 - `git clone git@github.com:EH67/Eyespace.git`
 - make sure there's an ssh key in your computer. If not:
     - `ssh-keygen`
@@ -6,20 +7,31 @@
     - `cat ~/.ssh/id_rsa.pub`
         - copy the output and add the key to your github
 
-# Setting Up
+## Setting Up
 - Make sure Node.js is install on your computer
 - Travel to the project directory in the terminal. Run `npm install` to install all the necessary packages
 
-# BEFORE YOU EDIT ANYTHING, MAKE A BRANCH
-- type `git checkout -b <branch name>` to create a new branch and travel to it
+# Instructions for Working on a New Component
+## Creating a Branch
+- type `git checkout -b <branch name> main` to create a new branch from main and travel to it
 - type `git branch` and make sure you're in the branch you just created
 - to travel to another branch, type `git checkout <branch name>`
     - the `-b` argument creates a new branch. If you're not trying to create the branch, do not include `-b`
 - DO NOT EDIT DIRECTLY ON THE MAIN BRANCH!
 
-# Running the Website
+## Running the Website
 - In the terminal, type `npm start`
 - Once the app is fired up, go to any browser (Google Chrome, Firefox, etc) and type `localhost:3000` to access the website
+
+## Setting Up the Component
+- If the component is one that is used throughout many pages (ex: nav bar, footer), create a new folder under `src/components` with your component name
+- Otherwise, travel to the page your component is supposed to be on (Homepage, About Us, etc) under `src/views` and create a new folder there with your component name
+- inside that folder, create a `.js` and `.css` file. This is where you'll write your HTML and CSS
+- for guidance on how to set up the `.js` file, look under `Examples/TestComponent/TestComponent.js` and `Examples/TestComponent/TestComponent_commented.js`
+    - the commented version provides a bit more information on how the code works, whereas the other version is simply a template
+
+## To Render the Component
+- Open the .js file for the page you're working on. For instance, if you're building a component for the Homepage, open up 
 
 # Directory Structure
 - `src`: 
