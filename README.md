@@ -31,7 +31,12 @@
     - the commented version provides a bit more information on how the code works, whereas the other version is simply a template
 
 ## To Render the Component
-- Open the .js file for the page you're working on. For instance, if you're building a component for the Homepage, open up 
+- Open the .js file for the page you're working on. For instance, if you're building a component for the Homepage, open up `src/views/Homepage/Homepage.js`.
+    - import your component at the top (remember to use the right path!)
+    - add your component into its `render()` function by the syntax `<ComponentName/>`. 
+    - You can also pass in any variables/props within the tag
+        - ex: `<ComponentName name="HELLO" color="red" prop1="1"/>`
+- in your browser, go to `localhost:3000` (or whatever the path is, depending on which page your component is on) to see if your component pops up. I recommend hard coding a random message within the HTML and use that as a test.  
 
 # Directory Structure
 - `src`: 
