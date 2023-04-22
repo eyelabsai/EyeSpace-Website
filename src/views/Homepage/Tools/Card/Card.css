@@ -1,0 +1,21 @@
+.cards {
+  width: 340px;
+  height: 500px;
+  
+    
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  box-sizing: border-box;
+
+  /* position: absolute; */
+  width: 340px;
+  height: 500px;
+  left: 0px;
+  top: 0px;
+
+  background: #FDFDFD;
+  border: 1px solid #EBEBEB;
+  box-shadow: 4px 4px 30px 10px rgba(181, 181, 181, 0.3);
+  border-radius: 40px;
+}
