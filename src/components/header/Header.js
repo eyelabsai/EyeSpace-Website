@@ -6,8 +6,12 @@ import logo from '../../assets/eyespaceLogo.svg';
 
 export default class Button extends React.Component {
   static propTypes = {
-    name: PropTypes.string,
+    page: PropTypes.string,
   };
+  
+  f1 () {
+    console.log("page is " + this.page);
+  }
 
   buttonsList = ["Home","About Us", "Contact", "Blogs"];
 
@@ -18,9 +22,10 @@ export default class Button extends React.Component {
         <img src={logo} alt="EyeSpace Logo"/>
         <div className="buttons">
           {this.buttonsList.map((name)=> {
-            return <div class="button">{name}</div>
+            return <div className="button" style={{color: this.page === name ? 'orange' : 'black'}}>{name}</div>
           })}
         </div>
+        <button className="login-button" onClick={this.f1}>Login/Register</button>
       </div>
     );
   }
