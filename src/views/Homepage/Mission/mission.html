@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="mission.css">
+  </head>
+  <body>
+
+    <div id = "title"></div>
+    <div id = "content"></div>
+    <div id = "btn"></div>
+
+    <script type="text/jsx">
+      const title = document.getElementById('title');
+      ReactDOM.render(<h1>Our Mission</h1>, title);
+
+      const content = document.getElementById('content');
+      ReactDOM.render(<p>Our mission is to empower ophthalmologists and surgeons with the tools they need to optimize their outcomes while providing an inclusive space to discuss topics with colleagues, mentors, and mentees</p>, content);
+    
+      const btn = document.getElementById('btn');
+      ReactDOM.render(<button>Learn More About Us ></button>, btn);
+    </script>
+  </body>
+</html>
