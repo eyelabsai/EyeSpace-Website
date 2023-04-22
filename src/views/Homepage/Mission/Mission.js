@@ -19,7 +19,7 @@ export default class Mission extends React.Component { // replace "TestCOmponent
         <p>Our mission is to empower ophthalmologists and surgeons with the tools they need to optimize their outcomes while providing an inclusive space to discuss topics with colleagues, mentors, and mentees</p>
       </div>
       <div id = "btn">
-        <button>Learn More About Us</button>
+        <button>Learn More About Us &gt; </button>
       </div>
     </div>
     );
