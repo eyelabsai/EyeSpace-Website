@@ -42,7 +42,7 @@ export default class Button extends React.Component {
             )
           })}
         </div>
-        <div><button className="login-button" onClick={this.f1}>Login/Register</button></div>
+        <div><Link to="/Login" style={{textDecoration: 'none'}}><button className="login-button" onClick={this.f1}>Login/Register</button></Link></div>
       </div>
     );
   }
