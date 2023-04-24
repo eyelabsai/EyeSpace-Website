@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types"; 
 import Header from '../../components/header/Header';
-import './Contact.css'; 
+import './Blogs.css'; 
 
-export default class Contact extends React.Component { 
+export default class Blogs extends React.Component { 
   static propTypes = { // define any props here
     name: PropTypes.string,
   };
@@ -11,8 +11,8 @@ export default class Contact extends React.Component {
   render() {
     return (
     <div className="cards">
-      <Header page="Contact"/>
-      <h1>Contact Us</h1>
+      <Header page="Blogs"/>
+      <h1>Blogs</h1>
     </div>
     );
   }
