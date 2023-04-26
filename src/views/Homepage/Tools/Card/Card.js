@@ -33,30 +33,31 @@ export default class Card extends React.Component {
     render() {
       return (
         <div className = "tool">
-          <div classs="title">Current Tools</div>
-
-          <div class="cards">
-            <img class="card-img" src={Card1} alt="Card1 Logo"/>
-            <div class="detail">
-              <div class="card-title">IOL Reference</div>
-              <div class="card-content">Browse the entire spectrum of current FDA approved IOLs and find the lens right for any case using a novel search function</div>
+          <div class="title">Current Tools</div>
+          
+            <div class="cards">
+              <img class="card-img" src={Card1} alt="Card1 Logo"/>
+              <div class="detail">
+                <div class="card-title">IOL Reference</div>
+                <div class="card-content">Browse the entire spectrum of current FDA approved IOLs and find the lens right for any case using a novel search function</div>
+              </div>
             </div>
-          </div>
 
-          <div class="cards">
-            <img class="card-img" src={Card2} alt="Card2 Logo"/>
-            <div class="detail">
-              <div class="card-title">Refractive Outcome Tracking</div>
-              <div class="card-content">This is a state of the art outcome tracking utility that analyzes your cataract cases to learn more about refractive outcomes, surgically induced astigmatism, and personalized A-constants</div>
+            <div class="cards">
+              <img class="card-img" src={Card2} alt="Card2 Logo"/>
+              <div class="detail">
+                <div class="card-title">Refractive Outcome Tracking</div>
+                <div class="card-content">This is a state of the art outcome tracking utility that analyzes your cataract cases to learn more about refractive outcomes, surgically induced astigmatism, and personalized A-constants</div>
+              </div>
             </div>
-          </div>
 
-          <div class="cards">
-            <img class="card-img" src={Card3} alt="Card3 Logo"/>
-            <div class="detail">
-              <div class="card-title">eyeSpace Forum</div>
-              <div class="card-content">Connect with colleagues, mentors, and mentees to discuss cases, gather wisdom, and gain support"</div>
-            </div>
+            <div class="cards">
+              <img class="card-img" src={Card3} alt="Card3 Logo"/>
+              <div class="detail">
+                <div class="card-title">eyeSpace Forum</div>
+                <div class="card-content">Connect with colleagues, mentors, and mentees to discuss cases, gather wisdom, and gain support"</div>
+              </div>
+          
           </div>
         </div>
       );
