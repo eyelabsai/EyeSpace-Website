@@ -25,22 +25,35 @@
 import React from "react";
 import PropTypes from "prop-types";
 import './Footer.css';
+import eyelab_logo from '../../assets/eyelabsLogo.svg';
+import eyeflymd_logo from '../../assets/EyeFlyMDLogo.svg';
+import instagram_logo from '../../assets/instagramLogo.svg';
+import fb_logo from '../../assets/facebookLogo.svg';
+import gmail_logo from '../../assets/gmailLogo.svg';
+import copyright_text from '../../assets/copyright.svg';
 
 export default class Footer extends React.Component {
     // you can ignore this for now, but essentially this is for passing in information from the parent component
-    
+                                
     static propTypes = {
       name: PropTypes.string,
     };
-
+ß
   
   // This is where you'll be coding the HTML. Look into "src/components/header/Header.js" for an ex as to how html should be coded here
   // For now, don't use any {} inside the return(). Anything inside {} will be treated as javascript, not html
     render() {
       return (
         <div className="footer">
-          Footer Component renders correctly! (Delete this once you start working)
           {/** start your html here! (delete this whole line, including the {}) */}
+          <div className="eyelabLogo"><img src={eyelab_logo} alt="Eyelab logo"/></div>
+          <div className="eyeflymdLogo"><img src={eyeflymd_logo} alt="EyeFlyMD logo"/></div>
+          <div className="socials">
+            <img src={instagram_logo} alt="Instagram logo"/>
+            <img src={fb_logo} alt="Facebook logo"/>
+            <img src={gmail_logo} alt="Gmail logo"/>
+          </div>
+          <div className="copyrightText"><img src={copyright_text} alt="Copyright text"/></div>
         </div>
       );
     }
