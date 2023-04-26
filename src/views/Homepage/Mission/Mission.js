@@ -14,7 +14,7 @@ export default class Mission extends React.Component { // replace "TestCOmponent
     <div id="mission-div">
       {/** This is where your HTML goes. The only thing is that instead of class="" you do className="" for some reason */}
       <div id = "title">
-        <h1>Our Mission</h1>
+        Our Mission
       </div>
       <div id = "content">
         <p>Our mission is to empower ophthalmologists and surgeons with the tools they need to optimize their outcomes while providing an inclusive space to discuss topics with colleagues, mentors, and mentees</p>

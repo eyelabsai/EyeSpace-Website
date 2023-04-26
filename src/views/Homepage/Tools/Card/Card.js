@@ -11,6 +11,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import './Card.css';
+import Card1 from '../../../../assets/card1.svg'
+import Card2 from '../../../../assets/card2.svg'
+import Card3 from '../../../../assets/card3.svg'
 
 export default class Card extends React.Component {
     // you can ignore this for now, but essentially this is for passing in information from the parent component (in this case, "Tools" or "App")
@@ -19,14 +22,49 @@ export default class Card extends React.Component {
       name: PropTypes.string,
     };
 
+    img = [Card1, Card2, Card3];
+    titleList = ["IOL Reference", "Refractive Outcome Tracking", "eyeSpace Forum"];
+    content = ["Browse the entire spectrum of current FDA approved IOLs and find the lens right for any case using a novel search function", 
+              "This is a state of the art outcome tracking utility that analyzes your cataract cases to learn more about refractive outcomes, surgically induced astigmatism, and personalized A-constants",
+              "Connect with colleagues, mentors, and mentees to discuss cases, gather wisdom, and gain support"]
   
   // This is where you'll be coding the HTML. Look into "src/components/header/Header.js" for an ex as to how html should be coded here
   // For now, don't use any {} inside the return(). Anything inside {} will be treated as javascript, not html
     render() {
       return (
-        <div className="cards">
-          Card Component renders correctly! (Delete this once you start working)
-          {/** start your html here! (delete this whole line, including the {}) */}
+        <div className = "current_tools">
+
+          <div className="title">Current Tools</div>
+
+            <div className = "tool">
+
+              <div className="card">
+                <img className="card-img" src={Card1} alt="Card1 Logo"/>
+                <div className="detail">
+                  <div className="card-title">IOL Reference</div>
+                  <div className="card-content">Browse the entire spectrum of current FDA approved IOLs and find the lens right for any case using a novel search function</div>
+                </div>
+              </div>
+
+              <div className="card">
+                <img className="card-img" src={Card2} alt="Card2 Logo"/>
+                <div className="detail">
+                  <div className="card-title">Refractive Outcome Tracking</div>
+                  <div className="card-content" id = "card2">This is a state of the art outcome tracking utility that analyzes your cataract cases to learn more about refractive outcomes, surgically induced astigmatism, and personalized A-constants</div>
+                </div>
+              </div>
+
+              <div className="card">
+                <img className="card-img" src={Card3} alt="Card3 Logo"/>
+                <div className="detail">
+                  <div className="card-title">eyeSpace Forum</div>
+                  <div className="card-content">Connect with colleagues, mentors, and mentees to discuss cases, gather wisdom, and gain support</div>
+              </div>
+
+            </div>
+
+          </div>
+          
         </div>
       );
     }

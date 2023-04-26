@@ -3,6 +3,8 @@ import Mission from "./Mission/Mission";
 import Header from "../../components/header/Header";
 // import "./Homepage.css";
 
+// import your component here so you can use it
+import Card from "./Tools/Card/Card";
 
 export default class Homepage extends React.Component {
     render() {
@@ -10,8 +12,10 @@ export default class Homepage extends React.Component {
         <div className="homepage">
          
           <Header page="Home"/>
+          <Card/>
           <Mission/>
-          <h1>Home</h1>
+          {/** This is where you use the component that you used. Simply type the component name inside of <ComponentName/> */}
+          
         </div>
       );
     }
