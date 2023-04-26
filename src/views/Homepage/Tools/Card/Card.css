@@ -1,3 +1,7 @@
+.body{
+  margin: 20%;
+}
+
 .title{
   font-family: 'Inter';
   font-style: normal;
@@ -9,14 +13,16 @@
   text-align: center;
 
   color: #446087;
+  margin-top: 3%;
 }
 
 .tool{
   display: flex;
-  padding: 5%;
-}
+  padding: 3%;
+  justify-content: center;
+;}
 
-.cards {
+.card {
   width: 340px;
   height: 500px;
     
@@ -36,12 +42,11 @@
   box-shadow: 4px 4px 30px 10px rgba(181, 181, 181, 0.3);
   border-radius: 40px;
 
-  margin: 2%;
-
+  margin: 20px;
 }
 
 .card-img{
-  padding: 10%;
+  padding: 8%;
 }
 
 .card-title{
@@ -65,4 +70,8 @@
   /* or 122% */
   color: #515151;
   margin: 12%;
+}
+
+#card2{
+  margin-top: -2%;
 }
