@@ -1,18 +1,17 @@
 // FOR CHERRY :))
 import React from "react";
 import PropTypes from "prop-types"; 
-import './Mission.css'; // replace "TestComponent" with your own component
+import './Mission.css';
 import { Link } from 'react-router-dom';
 
-export default class Mission extends React.Component { // replace "TestCOmponent" with your own component
-  static propTypes = { // define any props here
+export default class Mission extends React.Component { 
+  static propTypes = {
     name: PropTypes.string,
   };
 
-  render() { // whatever is returned here will be the html that is rendered when this component is being used
+  render() {
     return (
     <div id="mission-div">
-      {/** This is where your HTML goes. The only thing is that instead of class="" you do className="" for some reason */}
       <div id = "title">
         Our Mission
       </div>
