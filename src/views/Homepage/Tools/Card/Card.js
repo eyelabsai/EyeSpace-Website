@@ -33,8 +33,11 @@ export default class Card extends React.Component {
     render() {
       return (
         <div className = "current_tools">
+
           <div class="title">Current Tools</div>
+
             <div class = "tool">
+
               <div class="card">
                 <img class="card-img" src={Card1} alt="Card1 Logo"/>
                 <div class="detail">
@@ -57,8 +60,11 @@ export default class Card extends React.Component {
                   <div class="card-title">eyeSpace Forum</div>
                   <div class="card-content">Connect with colleagues, mentors, and mentees to discuss cases, gather wisdom, and gain support</div>
               </div>
+
             </div>
+
           </div>
+          
         </div>
       );
     }
