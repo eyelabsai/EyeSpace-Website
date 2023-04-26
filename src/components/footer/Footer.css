@@ -5,7 +5,7 @@
 width: 440px;
 height: 100px;
 margin-left: 495px;
-margin-top: 4506px;
+margin-bottom: 108px;
 
 /* background: url(eyelabswhitelogo-png.png); */
 }
@@ -15,8 +15,8 @@ margin-top: 4506px;
 /* position: absolute; */
 width: 440px;
 height: 90px;
-margin-left: 985px;
-margin-top: 4511px;
+margin-left: 50px;
+margin-bottom: 113px;
 
 /* background: url(LOOK-1536x317.png); */
 }
@@ -31,10 +31,10 @@ align-items: center;
 padding: 0px;
 gap: 20px;
 
-position: absolute;
+/* position: absolute; */
 width: 190px;
 height: 50px;
 margin-left: 866px;
-margin-top: 4714px;
+margin-bottom: 152px;
 
 }
