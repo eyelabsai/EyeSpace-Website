@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import './Card.css';
-import Card1 from '../../../../assets/card1.svg'
-import Card2 from '../../../../assets/card2.svg'
-import Card3 from '../../../../assets/card3.svg'
+import Card1 from '../../../../assets/card1.svg';
+import Card2 from '../../../../assets/card2.svg';
+import Card3 from '../../../../assets/card3.svg';
 
 export default class Card extends React.Component {
     
