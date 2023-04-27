@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types"; 
 import './AdvisoryBoard.css';
-import Card from './Card/Card';
+import AdvisoryCard from './AdvisoryCard/AdvisoryCard';
 
 export default class AdvisoryBoard extends React.Component {
   static propTypes = {
@@ -12,7 +12,7 @@ export default class AdvisoryBoard extends React.Component {
     return ( 
     // maybe add a prop for id (if we need to distinguish btwn different cards)
     <div className="cards">
-      <Card/>
+      <AdvisoryCard/>
     </div>
     );
   }

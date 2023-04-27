@@ -3,19 +3,12 @@ import PropTypes from "prop-types";
 import './Header.css';
 import logo from '../../assets/eyespaceLogo.svg';
 import { Link } from 'react-router-dom';
-// REMEMBER TO IMPORT CSS FILES
-
-/**
- * Buttons information:
- * https://react-bootstrap.github.io/components/buttons/
- */
-
 
 export default class Button extends React.Component {
   static propTypes = {
     page: PropTypes.string,
   };
-  
+    
 
 
   buttonsList = ["Home","About Us", "Contact", "Blogs"];

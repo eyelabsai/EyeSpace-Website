@@ -1,12 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types"; 
-import './Card.css';
+import './AdvisoryCard.css';
 
 // look into how to pass in images (whether as paths, or the actual image)
 // info: https://stackoverflow.com/questions/52999377/react-passing-import-name-as-prop-and-adding-to-image-src
 // might have problems with the import statements
 
-export default class Card extends React.Component {
+export default class AdvisoryCard extends React.Component {
   static propTypes = { // define any props here
     name: PropTypes.string, // name of the person on the card
     title: PropTypes.string, // title of the person (MD, PHD, etc)
