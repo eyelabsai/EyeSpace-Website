@@ -46,14 +46,22 @@ export default class Footer extends React.Component {
       return (
         <div className="footer">
           {/** start your html here! (delete this whole line, including the {}) */}
-          <div className="eyelabLogo"><img src={eyelab_logo} alt="Eyelab logo"/></div>
-          <div className="eyeflymdLogo"><img src={eyeflymd_logo} alt="EyeFlyMD logo"/></div>
+          <div className="logos">
+            <img src={eyelab_logo} alt="Eyelab logo"/>
+
+          <div>
+            <img src={eyeflymd_logo} alt="EyeFlyMD logo"/>
+          </div>
+        </div>
+
           <div className="socials">
             <img src={instagram_logo} alt="Instagram logo"/>
             <img src={fb_logo} alt="Facebook logo"/>
             <img src={gmail_logo} alt="Gmail logo"/>
           </div>
-          <div className="copyrightText"><img src={copyright_text} alt="Copyright text"/></div>
+          <div className="copyrightText">
+            <img src={copyright_text} alt="Copyright text"/>
+          </div>
         </div>
       );
     }
