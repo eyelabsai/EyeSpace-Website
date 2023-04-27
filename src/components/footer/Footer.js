@@ -30,7 +30,6 @@ import eyeflymd_logo from '../../assets/EyeFlyMDLogo.svg';
 import instagram_logo from '../../assets/instagramLogo.svg';
 import fb_logo from '../../assets/facebookLogo.svg';
 import gmail_logo from '../../assets/gmailLogo.svg';
-import copyright_text from '../../assets/copyright.svg';
 
 export default class Footer extends React.Component {
     // you can ignore this for now, but essentially this is for passing in information from the parent component
@@ -60,7 +59,7 @@ export default class Footer extends React.Component {
             <img src={gmail_logo} alt="Gmail logo"/>
           </div>
           <div className="copyrightText">
-            <img src={copyright_text} alt="Copyright text"/>
+            Copyright 2022 Matt Hirabayashi MD | Gurpal Virdi MD
           </div>
         </div>
       );
