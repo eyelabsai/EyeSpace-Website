@@ -4,12 +4,31 @@
     font-size: 100px;
     color: #354B86;
 }
+
+.desc {
+    position: absolute;
+    width: 749px;
+    height: 70px;
+    left: 2px;
+    top: 300px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    /* or 125% */
+
+
+color: #585858;
+}
 .downloadpad {
     box-sizing: border-box;
     padding-top: 15px;
     height: 50px;
     left: 260px;
     top: 652px;
+    
     
     background: #FDFDFD;
     border-width: 1px 0px 0px 1px;
@@ -33,7 +52,7 @@
 }
 
 .banner {
-    font-family: sans-serif; /*switch to inter*/
+    font-family: Inter;
     position: static;
     top: 50px;
     width: 1000px;
@@ -43,6 +62,7 @@
 .stats {
     width: 100%;
     margin-top: 20px;
+    color: #48627E;
     
 }
 
@@ -61,4 +81,24 @@
 
 .topstats {
     height: 35px;
+}
+
+
+#downloadpic {
+    position: absolute;
+    left: 25%;
+    top: 7%;
+}
+
+#downloadtext {
+    position: absolute;
+    left: 36%;
+    top: 13%;
+    color: #446087;
+}
+
+.right {
+    position: absolute;
+    top: 60px;
+    left: 70%;
 }
