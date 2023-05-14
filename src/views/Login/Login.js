@@ -13,7 +13,34 @@ export default class Login extends React.Component {
     return (
     <div className="cards">
       <Header page="Login"/>
-      <h1>Login</h1>
+      <div className="loginpage">
+        <div className="left">
+          <h1 id="titlelogin">Login</h1>
+          <form action="/">
+            <label>Email</label>
+            <br/>
+            <div>
+              <input className="inputborder" type="text"></input>
+            </div>
+            <br/>
+            <label>Password</label>
+            <br/>
+            <div>
+              <input className="inputborder" type="password"></input>
+            </div>
+            <p>
+            <a href="/Login" id="forgotpw">Forgot password?</a>
+            </p>
+            <button type="submit" className="inloginsubmit">Submit</button>
+          </form>
+        </div>
+        <div className="right">
+          <h1 id="accprompt"> Don't Have An Account?</h1>
+          <div className="inloginsubmit">
+            <a href="/Register">Create account</a>
+          </div>
+        </div>
+      </div>
       <Footer/>
     </div>
     );
