@@ -14,6 +14,7 @@ export default class Login extends React.Component {
     <div className="cards">
       <Header page="Login"/>
       <div className="loginpage">
+        <div id="email-notif"></div>
         <div className="left-login">
           <h1 id="titlelogin">Login</h1>
           <form action="/">
