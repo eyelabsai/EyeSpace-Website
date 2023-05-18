@@ -15,8 +15,8 @@ export default class AboutUs extends React.Component { // replace "TestCOmponent
     <div className="AboutUs">
       <Header page="About Us"/>
       <h1>About Us</h1>
-      <div><AdvisoryBoard/></div>
-      <div><Footer/></div>
+      <AdvisoryBoard/>
+      <Footer/>
     </div>
     );
   }
