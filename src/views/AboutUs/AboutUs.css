@@ -1,0 +1,4 @@
+.AboutUs{
+    display: flex;
+    flex-direction: column;
+}

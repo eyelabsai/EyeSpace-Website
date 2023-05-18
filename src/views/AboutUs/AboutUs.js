@@ -12,11 +12,11 @@ export default class AboutUs extends React.Component { // replace "TestCOmponent
 
   render() {
     return (
-    <div className="cards">
+    <div className="AboutUs">
       <Header page="About Us"/>
       <h1>About Us</h1>
-      <AdvisoryBoard/>
-      <Footer/>
+      <div><AdvisoryBoard/></div>
+      <div><Footer/></div>
     </div>
     );
   }

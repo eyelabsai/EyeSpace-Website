@@ -1,7 +1,9 @@
-.card {
+.AdvisoryBoard {
+  /* display: flex; */
+  /* flex-direction: row; */
   width: 348px;
   height: 669px;
-  flex: none;
+  /* flex: none;
   order: 0;
-  flex-grow: 0;
+  flex-grow: 0; */
 }

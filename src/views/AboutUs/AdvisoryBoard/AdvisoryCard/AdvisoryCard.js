@@ -20,7 +20,7 @@ export default class AdvisoryCard extends React.Component {
   render() {
     return (
     <div className="advisory-card">
-      {/** start your html here! (delete this whole line, including the {}) */}
+      <img src={this.props.picture} alt={this.props.name}/>
       
     </div>
     );
