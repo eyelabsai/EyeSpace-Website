@@ -13,6 +13,7 @@
 
 # Instructions for Working on a New Component
 ## Creating a Branch
+- type `git pull` to get any updates to the repository
 - type `git checkout -b <branch name> main` to create a new branch from main and travel to it
 - type `git branch` and make sure you're in the branch you just created
 - to travel to another branch, type `git checkout <branch name>`
