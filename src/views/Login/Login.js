@@ -14,7 +14,7 @@ export default class Login extends React.Component {
     <div className="cards">
       <Header page="Login"/>
       <div className="loginpage">
-        <div className="left">
+        <div className="left-login">
           <h1 id="titlelogin">Login</h1>
           <form action="/">
             <label>Email</label>
@@ -36,9 +36,9 @@ export default class Login extends React.Component {
         </div>
         <div className="right">
           <h1 id="accprompt"> Don't Have An Account?</h1>
-          <div className="inloginsubmit">
-            <a href="/Register">Create account</a>
-          </div>
+          <form action="Register">
+          <button type="submit" className="inloginsubmit">Create account</button>
+          </form>
         </div>
       </div>
       <Footer/>
