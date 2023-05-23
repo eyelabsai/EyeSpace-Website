@@ -4,11 +4,12 @@
   flex-direction: column;
   align-items: center;
 
-  /* position: absolute; */
+
   width: 348px;
   height: 640px;
   left: 0px;
   top: 0.12px;
+  min-width: 100px;
 
   background: #FDFDFD;
   border: 1px solid #EBEBEB;
@@ -49,4 +50,9 @@
 
 
   color: #515151;
+}
+
+.mediaIcons {
+  display: flex;
+  flex-direction: row;
 }

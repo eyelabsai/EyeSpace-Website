@@ -1,6 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types"; 
 import './AdvisoryCard.css';
+import Youtube from '../../../../assets/youtube.svg';
+import Linkedin from '../../../../assets/linkedin.svg';
+import Twitter from '../../../../assets/twitter.svg';
 
 // look into how to pass in images (whether as paths, or the actual image)
 // info: https://stackoverflow.com/questions/52999377/react-passing-import-name-as-prop-and-adding-to-image-src
@@ -25,10 +28,9 @@ export default class AdvisoryCard extends React.Component {
       <div className="desc">{this.props.text}</div>
       <div className="mediaIcons">
         {/* only display the icon if the person has social media links associated with it */}
-        {/* this  */}
-        {(this.props.twitter !== "") && <div className="twitter">Twitter {this.props.twitter}</div>}
-        {(this.props.linkedin !== "") && <div className="linkedin">Linkedin {this.props.linkedin}</div>}
-        {(this.props.youtube !== "") && <div className="youtube">Youtube {this.props.youtube} </div>}
+        {(this.props.twitter !== "") && <div className="twitter"><a href={this.props.twitter} target="_blank" rel="noreferrer"><img src={Twitter} alt="Twitter"/></a></div>}
+        {(this.props.linkedin !== "") && <div className="linkedin"><a href={this.props.linkedin} target="_blank" rel="noreferrer"><img src={Linkedin} alt="Linkedin"/></a></div>}
+        {(this.props.youtube !== "") && <div className="youtube"><a href={this.props.youtube} target="_blank" rel="noreferrer"><img src={Youtube} alt="Youtube"/></a></div>}
 
       </div>
     </div>
