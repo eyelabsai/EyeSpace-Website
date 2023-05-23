@@ -22,7 +22,15 @@ export default class AdvisoryCard extends React.Component {
     <div className="advisory-card">
       <div className="pic"><img src={this.props.picture} alt={this.props.name}/></div>
       <div className="name">{this.props.name}<br/>{this.props.title}</div>
-      
+      <div className="desc">{this.props.text}</div>
+      <div className="mediaIcons">
+        {/* only display the icon if the person has social media links associated with it */}
+        {/* this  */}
+        {(this.props.twitter !== "") && <div className="twitter">Twitter {this.props.twitter}</div>}
+        {(this.props.linkedin !== "") && <div className="linkedin">Linkedin {this.props.linkedin}</div>}
+        {(this.props.youtube !== "") && <div className="youtube">Youtube {this.props.youtube} </div>}
+
+      </div>
     </div>
     );
   }

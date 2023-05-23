@@ -66,13 +66,16 @@ export default class AdvisoryBoard extends React.Component {
     return ( 
     // maybe add a prop for id (if we need to distinguish btwn different cards)
     <div className="AdvisoryBoard">
-      {
-        this.information.map((obj) => {
-          return (
-            <AdvisoryCard name={obj.name} title={obj.title} text={obj.text} twitter={obj.twitter} linkedin={obj.linkedin} youtube={obj.youtube} picture={obj.picture}/>
-          )
-        })
-      }
+      <div className="AdvisoryBoardTitle">Advisory Board</div>
+      <div className="AdvisoryBoardCards">
+        {
+          this.information.map((obj) => {
+            return (
+              <AdvisoryCard name={obj.name} title={obj.title} text={obj.text} twitter={obj.twitter} linkedin={obj.linkedin} youtube={obj.youtube} picture={obj.picture}/>
+            )
+          })
+        }
+      </div>
     </div>
     );
   }

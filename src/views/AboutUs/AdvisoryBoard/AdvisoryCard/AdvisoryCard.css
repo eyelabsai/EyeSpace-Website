@@ -35,3 +35,18 @@
 
   margin-top: 20px;
 }
+
+.desc {
+  margin-left: 40px;
+  margin-right: 28px;
+  margin-top: 37px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  /* or 122% */
+
+
+  color: #515151;
+}
