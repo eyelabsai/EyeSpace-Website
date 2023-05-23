@@ -9,18 +9,16 @@
   height: 640px;
   left: 0px;
   top: 0.12px;
-  min-width: 100px;
+  min-width: 348px;
 
   background: #FDFDFD;
   border: 1px solid #EBEBEB;
   box-shadow: 4px 4px 30px 10px rgba(181, 181, 181, 0.3);
   border-radius: 24px;
-  
-
 }
 
 .pic {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .name {
@@ -34,13 +32,14 @@
   text-align: center;
   color: #515151;
 
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .desc {
+  height: 300px;
   margin-left: 40px;
   margin-right: 28px;
-  margin-top: 37px;
+  margin-top: 15px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
