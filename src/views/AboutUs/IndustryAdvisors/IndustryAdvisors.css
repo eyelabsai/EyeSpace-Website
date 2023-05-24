@@ -1,0 +1,19 @@
+.TitleText {
+    /* Industry Advisors */
+    position: absolute;
+    width: 686px;
+    height: 64px;
+    left: 597px;
+    top: 3514px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 64px;
+    /* identical to box height, or 80% */
+
+    text-align: right;
+
+    color: #48627E;
+}
