@@ -2,12 +2,11 @@ import React from "react";
 import PropTypes from "prop-types"; 
 import './IndustryAdvisors.css'; // replace "TestComponent" with your own component
 
-import JohnsonJohnson_logo from '../../assets/JohnsonJohnsonLogo.svg';
-import Alcon_logo from '../../assets/alconLogo.svg';
-import RxSight_logo from '../../assets/RxSight.svg';
-import gray_rectangle from '../../assets/grayRectange.svg';
-
-
+import JohnsonJohnson_logo from '../../../assets/JohnsonJohnsonLogo.svg';
+import Alcon_logo from '../../../assets/alconLogo.svg';
+import RxSight_logo from '../../../assets/RxSight.svg';
+import gray_rectangle from '../../../assets/grayRectangle.svg';
+import linkedinLogo from '../../../assets/linkedinLogo.svg';
 
 export default class IndustryAdvisors extends React.Component { // replace "TestCOmponent" with your own component
   static propTypes = { // define any props here
@@ -16,53 +15,101 @@ export default class IndustryAdvisors extends React.Component { // replace "Test
 
   render() {
     return (
-    <div className="industryAdvisors">
+    <div className="container"> 
       <div className="TitleText">
         Industry Advisors
       </div>
 
-      <div className="Sponsor Logos">
-        <img src={JohnsonJohnson_logo} alt="Johnson & Johnson logo"/>
-        <img src={Alcon_logo} alt="Alcon logo"/>
-        <img src={RxSight_logo} alt="RxSight logo"/>
-      </div>
+      <div className="LogosAndLinkedin"> 
+        <div className='left'>
 
-      <div className="background"> 
-        <img src={gray_rectangle} alt="gray background rectangle"/>
+          <div className='johnsonLogo'>
+            <img src={JohnsonJohnson_logo} alt="Johnson & Johnson logo"/>
+          </div>
 
-      </div>
-
-      <div className="Advisor Names">
-        <div className="Zachary Johnson">
-          <div className="ZJ name">
+          <div className='rectangle'>
+            <img src={gray_rectangle} alt="gray background rectangle"/>
+          </div>
+          
+          <div className="ZacharyJohnson">
             Zachary Johnson
           </div>
-          <div className="ZJ position">
+
+          <div className="position">
             Account Executive – Los Angeles
           </div>
+
+          <div className="linkedinLogo">
+            <img src={linkedinLogo} alt="LinkedIn Logo"/>
+          </div>
+
         </div>
 
-        <div className="Charlie Green">
-          <div className="CG name">
+        <div className="middle">
+
+          <div className="alconLogo">
+            <img src={Alcon_logo} alt="Alcon logo"/>
+          </div>
+
+          <div className="rectangle">
+            <img src={gray_rectangle} alt="gray background rectangle"/>
+          </div>
+
+          <div className="CharlieGreen">
             Charlie Green
           </div>
-          <div className="CG position">
+
+          <div className="position">
             Surgical Academic Manager
           </div>
+
+          <div className="linkedinLogo">
+            <img src={linkedinLogo} alt="LinkedIn Logo"/>
+          </div>
+
         </div>
 
-        <div className="Paul Ericson">
-          <div className="PE name">
+
+        <div className="right">
+
+          <div className="rxSightLogo">
+            <img src={RxSight_logo} alt="RxSight logo"/>
+          </div>
+
+          <div className="rectangle">
+            <img src={gray_rectangle} alt="gray background rectangle"/>
+          </div>
+
+          <div className="PaulEricson">
             Paul Ericson
           </div>
-          <div className="PE position">
-            Director of Sales – Mid-Central Region
-          </div>
-        </div>
 
+          <div className="position">
+            Director of Sales - Mid-Central Region
+          </div>
+
+          <div className="linkedinLogo">
+            <img src={linkedinLogo} alt="LinkedIn Logo"/>
+          </div>
+
+        </div>
       </div>
 
+      <div className="Disclaimer">
+        <p>eyeSpace is a private entity and neither the platform nor its owners have financial relationships with any member of industry. We do feel strongly about the importance of good industry<br></br>
+        connections tough and are grateful to the following advisors that help keep our application current, accurate, and up to date.<br></br>
+        If you represent industry, please contact us via the form below or by email to discuss ideas, partnerships, corrections, and more.</p>
+      </div>
+
+      <div className="Button">
+        
+      </div>
+
+
     </div>
+    
+
+
     );
   }
 }
