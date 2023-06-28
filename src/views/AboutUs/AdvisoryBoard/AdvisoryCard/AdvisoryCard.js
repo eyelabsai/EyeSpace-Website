@@ -23,10 +23,10 @@ export default class AdvisoryCard extends React.Component {
   render() {
     return (
     <div className="advisory-card">
-      <div className="pic"><img src={this.props.picture} alt={this.props.name}/></div>
-      <div className="name">{this.props.name}<br/>{this.props.title}</div>
-      <div className="desc">{this.props.text}</div>
-      <div className="mediaIcons">
+      <div className="advisory-pic"><img src={this.props.picture} alt={this.props.name}/></div>
+      <div className="advisory-name">{this.props.name}<br/>{this.props.title}</div>
+      <div className="advisory-desc">{this.props.text}</div>
+      <div className="advisory-mediaIcons">
         {/* only display the icon if the person has social media links associated with it */}
         {(this.props.twitter !== "") && <div className="twitter"><a href={this.props.twitter} target="_blank" rel="noreferrer"><img src={Twitter} alt="Twitter"/></a></div>}
         {(this.props.linkedin !== "") && <div className="linkedin"><a href={this.props.linkedin} target="_blank" rel="noreferrer"><img src={Linkedin} alt="Linkedin"/></a></div>}
