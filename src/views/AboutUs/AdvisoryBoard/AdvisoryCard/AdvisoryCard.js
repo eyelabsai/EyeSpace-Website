@@ -10,7 +10,7 @@ import Twitter from '../../../../assets/twitter.svg';
 // might have problems with the import statements
 
 export default class AdvisoryCard extends React.Component {
-  static propTypes = { // define any props here
+  static propTypes = { // define any props here 
     name: PropTypes.string, // name of the person on the card
     title: PropTypes.string, // title of the person (MD, PHD, etc)
     text: PropTypes.string, // person's description
