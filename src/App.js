@@ -5,6 +5,7 @@ import Blogs from "./views/Blogs/Blogs";
 import AboutUs from "./views/AboutUs/AboutUs";
 import Contact from "./views/Contact/Contact";
 import Login from "./views/Login/Login";
+import CreateAccount from "./views/CreateAccount/CreateAccount"
 //import './App.css';
 
 export default class App extends React.Component {
@@ -20,6 +21,7 @@ export default class App extends React.Component {
             <Route path="/Blogs" element={ <Blogs/> }></Route>
             <Route path="/Contact" element={ <Contact/> }></Route>
             <Route path="/Login" element={ <Login/> }></Route>
+            <Route path="/CreateAccount" element={ <CreateAccount/> }></Route>
           </Routes>
         </BrowserRouter>
       </div>

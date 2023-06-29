@@ -37,7 +37,7 @@ export default class Login extends React.Component {
         </div>
         <div className="right">
           <h1 id="accprompt"> Don't Have An Account?</h1>
-          <form action="Register">
+          <form action="CreateAccount/">
           <button type="submit" className="inloginsubmit">Create account</button>
           </form>
         </div>

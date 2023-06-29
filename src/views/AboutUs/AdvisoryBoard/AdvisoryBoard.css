@@ -1,0 +1,23 @@
+.AdvisoryBoardCards {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 24px;
+  justify-content: center;
+  /* flex: none;
+  order: 0;
+  flex-grow: 0; */
+}
+.AdvisoryBoardTitle {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 64px;
+  /* identical to box height, or 80% */
+
+  text-align: center;
+
+  color: #48627E;
+  margin-bottom: 140px;
+}
