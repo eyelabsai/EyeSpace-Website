@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types"; 
-import './IndustryAdvisors.css'; // replace "TestComponent" with your own component
+import './IndustryAdvisors.css';
 
 import JohnsonJohnson_logo from '../../../assets/JohnsonJohnsonLogo.svg';
 import Alcon_logo from '../../../assets/alconLogo.svg';
@@ -8,7 +8,7 @@ import RxSight_logo from '../../../assets/RxSight.svg';
 import gray_rectangle from '../../../assets/grayRectangle.svg';
 import linkedinLogo from '../../../assets/linkedinLogo.svg';
 
-export default class IndustryAdvisors extends React.Component { // replace "TestCOmponent" with your own component
+export default class IndustryAdvisors extends React.Component {
   static propTypes = { // define any props here
     name: PropTypes.string,
   };
@@ -40,7 +40,7 @@ export default class IndustryAdvisors extends React.Component { // replace "Test
           </div>
 
           <div className="linkedinLogo">
-            <img src={linkedinLogo} alt="LinkedIn Logo"/>
+            <a href="https://www.linkedin.com/in/charles-green-2639411a/" target="_blank" rel="noreferrer"><img src={linkedinLogo} alt="LinkedIn Logo"/></a>
           </div>
 
         </div>
@@ -64,7 +64,7 @@ export default class IndustryAdvisors extends React.Component { // replace "Test
           </div>
 
           <div className="linkedinLogo">
-            <img src={linkedinLogo} alt="LinkedIn Logo"/>
+            <a href="https://www.linkedin.com/in/paul-ericson-30482811/" target="_blank" rel="noreferrer"><img src={linkedinLogo} alt="LinkedIn Logo"/></a>
           </div>
 
         </div>
@@ -89,7 +89,7 @@ export default class IndustryAdvisors extends React.Component { // replace "Test
           </div>
 
           <div className="linkedinLogo">
-            <img src={linkedinLogo} alt="LinkedIn Logo"/>
+            <a href="https://www.linkedin.com/in/zachary-johnson-b890b5168/" target="_blank" rel="noreferrer"><img src={linkedinLogo} alt="LinkedIn Logo"/></a>
           </div>
 
         </div>
