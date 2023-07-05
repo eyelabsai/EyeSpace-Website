@@ -1,17 +1,38 @@
 import React from "react";
 import PropTypes from "prop-types"; 
 import './IndustryAdvisors.css';
+import { Link } from 'react-router-dom';
 
 import JohnsonJohnson_logo from '../../../assets/JohnsonJohnsonLogo.svg';
 import Alcon_logo from '../../../assets/alconLogo.svg';
 import RxSight_logo from '../../../assets/RxSight.svg';
-import gray_rectangle from '../../../assets/grayRectangle.svg';
-import linkedinLogo from '../../../assets/linkedinLogo.svg';
+import IndustryAdvisorCard from "./IndustryAdvisorCard/IndustryAdvisorCard";
 
 export default class IndustryAdvisors extends React.Component {
   static propTypes = { // define any props here
     name: PropTypes.string,
   };
+
+  info = [
+    {
+      name: "Zachary Johnson",
+      position: "Account Executive - Los Angeles",
+      linkedin: "https://www.linkedin.com/in/zachary-johnson-b890b5168/",
+      logo: JohnsonJohnson_logo,
+    },
+    {
+      name: "Charlie Green",
+      position: "Surgical Academic Manager",
+      linkedin: "https://www.linkedin.com/in/charles-green-2639411a/",
+      logo: Alcon_logo,
+    },
+    {
+      name: "Paul Ericson",
+      position: "Director of Sales - Mid-Central Region", 
+      linkedin: "https://www.linkedin.com/in/paul-ericson-30482811/",
+      logo: RxSight_logo,
+    },
+  ];
 
   render() {
     return (
@@ -21,78 +42,13 @@ export default class IndustryAdvisors extends React.Component {
       </div>
 
       <div className="LogosAndLinkedin"> 
-        <div className='left'>
-
-          <div className='johnsonLogo'>
-            <img src={JohnsonJohnson_logo} alt="Johnson & Johnson logo"/>
-          </div>
-
-          <div className='rectangle'>
-            <img src={gray_rectangle} alt="gray background rectangle"/>
-          </div>
-          
-          <div className="ZacharyJohnson">
-            Zachary Johnson
-          </div>
-
-          <div className="position">
-            Account Executive – Los Angeles
-          </div>
-
-          <div className="linkedinLogo">
-            <a href="https://www.linkedin.com/in/charles-green-2639411a/" target="_blank" rel="noreferrer"><img src={linkedinLogo} alt="LinkedIn Logo"/></a>
-          </div>
-
-        </div>
-
-        <div className="middle">
-
-          <div className="alconLogo">
-            <img src={Alcon_logo} alt="Alcon logo"/>
-          </div>
-
-          <div className="rectangle">
-            <img src={gray_rectangle} alt="gray background rectangle"/>
-          </div>
-
-          <div className="CharlieGreen">
-            Charlie Green
-          </div>
-
-          <div className="position">
-            Surgical Academic Manager
-          </div>
-
-          <div className="linkedinLogo">
-            <a href="https://www.linkedin.com/in/paul-ericson-30482811/" target="_blank" rel="noreferrer"><img src={linkedinLogo} alt="LinkedIn Logo"/></a>
-          </div>
-
-        </div>
-
-
-        <div className="right">
-
-          <div className="rxSightLogo">
-            <img src={RxSight_logo} alt="RxSight logo"/>
-          </div>
-
-          <div className="rectangle">
-            <img src={gray_rectangle} alt="gray background rectangle"/>
-          </div>
-
-          <div className="PaulEricson">
-            Paul Ericson
-          </div>
-
-          <div className="position">
-            Director of Sales - Mid-Central Region
-          </div>
-
-          <div className="linkedinLogo">
-            <a href="https://www.linkedin.com/in/zachary-johnson-b890b5168/" target="_blank" rel="noreferrer"><img src={linkedinLogo} alt="LinkedIn Logo"/></a>
-          </div>
-
-        </div>
+        {
+          this.info.map((obj) => {
+            return (
+              <IndustryAdvisorCard name={obj.name} position={obj.position} linkedin={obj.linkedin} logo={obj.logo}/>
+            )
+          })
+        }
       </div>
 
       <div className="Disclaimer">
@@ -102,7 +58,7 @@ export default class IndustryAdvisors extends React.Component {
       </div>
 
       <div className="Button">
-        
+      <Link to="/Contact" style={{textDecoration: 'none'}}><button className="contact-button">Get in Touch &gt;</button></Link>
       </div>
 
 
