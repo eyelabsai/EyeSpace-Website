@@ -23,7 +23,7 @@ export default class FounderCard extends React.Component {
   render() {
     return (
     <div className="founders-card">
-      <div className="founder-pic"><img clasName="img-tag" src={this.props.picture} alt={this.props.name}/></div>
+      <div className="founder-pic"><img className="img-tag" src={this.props.picture} alt={this.props.name}/></div>
       <div className="founder-name">{this.props.name}<br/>{this.props.title}</div>
       <div className="founder-desc">{this.props.text}</div>
       <div className="mediaIcons">

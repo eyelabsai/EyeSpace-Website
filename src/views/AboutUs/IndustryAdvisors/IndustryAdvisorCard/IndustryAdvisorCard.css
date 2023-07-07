@@ -1,0 +1,42 @@
+.gray-rectangle {
+    display: flex;
+    flex-direction: row;
+    width: 428px;
+    height: 80px;
+    flex-shrink: 0;
+
+    border-radius: 20px;
+    background: rgba(72, 98, 126, 0.20);
+}
+
+.advisorLogo {
+    height: 160px;
+}
+
+.advisorInformation {
+    display: flex;
+    flex-direction: column;
+    margin-left: 14px;
+    width: 358px;
+}
+
+.advisorName {
+    color: #48627E;
+    font-size: 24px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+
+    margin-top: 14px;
+    margin-bottom: 5px;
+}
+
+.advisorPosition {
+    color: #515151;
+    font-size: 16px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}

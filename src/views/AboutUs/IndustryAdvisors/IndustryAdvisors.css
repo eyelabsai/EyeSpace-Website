@@ -1,0 +1,66 @@
+.IndustryAdvisors {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.TitleText {
+    /* Industry Advisors */
+    display: flex;
+    flex-direction: row;
+    width: 686px;
+    height: 64px;
+    align-self: center;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 64px;
+    /* identical to box height, or 80% */
+
+    /* text-align: right; */
+
+    color: #48627E;
+}
+
+.LogosAndLinkedin {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+ 
+    padding: 0px;
+    gap: 200px;
+
+    width: 100%;
+    height: 248px;
+    margin-top: 88px;
+} 
+
+.Disclaimer {
+    display: flex;
+    /* width: 1684px; */
+    /* height: 132px; */
+    margin-top: 90px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 44px;
+
+    text-align: center;
+    align-self: center;
+
+    color: #484848;
+
+    opacity: 0.9;   
+}
+
+.Button {
+    align-self: center;
+    margin-top: 60px;
+}
