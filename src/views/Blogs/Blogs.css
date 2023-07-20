@@ -22,5 +22,24 @@
 
 .blog-aboutus{
     margin-top: 10%;
-    margin-left: 25%;
+    width: 100%;
+    margin-left: 20%;
+}
+
+@media only screen and (max-width: 920px) {
+    #top{
+        display: block;
+        margin-bottom: 80px; 
+    }
+
+    #title{
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .blog-aboutus{
+        margin-top: 5%;
+        margin-left: auto;
+    }
 }
