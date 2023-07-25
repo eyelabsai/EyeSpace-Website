@@ -1,20 +1,23 @@
 .loginpage {
     font-family: 'Inter';
-    display: flex;
+    @media screen and (min-width:1030px) {
+        display: flex;
+        gap: 10%;
+    }
     margin-top: 20px;
+    padding-left: 20px;
     justify-content: center;
-    margin-bottom: 100px;
 }
 
 .left-login {
-    margin-right: 10%;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 28px;
-
+    margin-bottom: 100px;
     color: #515151;
+    flex: 1;
 }
 
 #titlelogin {
@@ -28,6 +31,11 @@
 
     color: #48627E;
 
+}
+
+.right {
+    width: 500px;
+    flex: 1;
 }
 
 #accprompt {
@@ -44,8 +52,8 @@
 
 .inputborder {
     box-sizing: border-box;
-    width: 464px;
-    height: 62px;
+    width: 400px;
+    height: 47px;
 
     background: #F3F3F3;
     border: 0.5px solid #C4C4C4;
@@ -69,8 +77,8 @@
     display: block;
     box-sizing: border-box;
 
-    width: 464px;
-    height: 80px;
+    width: 400px;
+    height: 60px;
 
     background: #354B86;
     border-width: 1px 0px 0px 1px;
@@ -82,6 +90,7 @@
 
 a {
     color: #FDFDFD;
+    font-size: 20px;
     text-decoration: none;
 }
 
