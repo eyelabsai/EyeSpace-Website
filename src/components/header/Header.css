@@ -73,3 +73,55 @@
   margin-left: 80px;
   margin-top: 43px;
 }
+/* 
+.menu-icon {
+  display: none;
+} */
+
+@media only screen and (max-width: 920px) {
+  /* .menu-icon {
+    display: flex;
+    width: 80px;
+    height: 27px;
+  } */
+
+  .navbar {
+    /* position: absolute; */
+    /* width: 1920px; */
+    height: 66px;
+  }
+
+  .logo-div {
+    width: 80px;
+    height: 27px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-right: 0px;
+  }
+
+  .logo-img-tag {
+    width: 80px;
+    height: 27px;
+  }
+
+  .buttons {
+    gap: 20px;
+    margin-left: 20px;
+  }
+
+  .button {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .login-button {
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 20px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 20px;
+  }
+}

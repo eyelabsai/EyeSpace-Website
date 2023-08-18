@@ -46,17 +46,17 @@ export default class Footer extends React.Component {
         <div className="footer">
           {/** start your html here! (delete this whole line, including the {}) */}
           <div className="logos">
-            <img src={eyelab_logo} alt="Eyelab logo"/>
+            <img className="footer-logo-img-tag" src={eyelab_logo} alt="Eyelab logo"/>
 
           <div>
-            <img src={eyeflymd_logo} alt="EyeFlyMD logo"/>
+            <img className="footer-logo-img-tag" src={eyeflymd_logo} alt="EyeFlyMD logo"/>
           </div>
         </div>
 
           <div className="socials">
-            <img src={instagram_logo} alt="Instagram logo"/>
-            <img src={fb_logo} alt="Facebook logo"/>
-            <img src={gmail_logo} alt="Gmail logo"/>
+            <img className="socials-img-tag" src={instagram_logo} alt="Instagram logo"/>
+            <img className="socials-img-tag" src={fb_logo} alt="Facebook logo"/>
+            <img className="socials-img-tag" src={gmail_logo} alt="Gmail logo"/>
           </div>
           <div className="copyrightText">
             Copyright 2022 Matt Hirabayashi MD | Gurpal Virdi MD
