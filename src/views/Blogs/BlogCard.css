@@ -49,3 +49,20 @@
     line-height: 20px;
     color: #787878;
 }
+
+@media only screen and (max-width: 920px) {
+    #article{
+        display: block;
+    }
+
+    #blog-detail{
+        margin-right: 5%;
+    }
+
+    #blog-img{
+        margin-top: -5%;
+        margin-left: 20%;
+        margin-right: auto;
+        width: 50%;
+    }
+}
