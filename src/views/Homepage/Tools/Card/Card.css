@@ -87,7 +87,7 @@
     font-style: normal;
     font-weight: 600;
     font-size: 80px;
-    line-height: 0px;
+    line-height: 70px; /* less overlap when window size decreases */
     /* identical to box height, or 0% */
   
     text-align: center;
@@ -95,12 +95,17 @@
     color: #446087;
     margin-top: 3%;
     margin-bottom: 3%;
+
+    position: relative;
+    white-space: normal;
   }
   
   .tool{
     display: flex;
+    flex-wrap: wrap;
     padding: 3%;
     justify-content: center;
+    flex-direction: row;
   }
   
   .card {
@@ -122,9 +127,9 @@
     border: 1px solid #EBEBEB;
     box-shadow: 4px 4px 30px 10px rgba(181, 181, 181, 0.3);
     border-radius: 40px;
-  
+    
     margin: 20px;
-  }
+    }
   
   .card-img{
     padding: 8%;
