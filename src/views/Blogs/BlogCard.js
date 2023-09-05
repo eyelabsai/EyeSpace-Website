@@ -19,7 +19,7 @@ export default class BlogCard extends React.Component {
                     <div id="blog-content">{this.props.content}</div>
                     <div id="blog-date">{this.props.date}</div>
                 </div>
-                  <img className="card-img" src={this.props.image} alt={this.props.title}/>
+                  <img id="blog-img" className="card-img" src={this.props.image} alt={this.props.title}/>
             </div>
         </div>
     );

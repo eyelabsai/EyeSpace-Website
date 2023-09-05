@@ -7,6 +7,7 @@ import './Blogs.css';
 import { Link } from 'react-router-dom';
 import Blog1 from '../../assets/blog1.svg'
 import Blog2 from '../../assets/blog2.svg'
+import Bg from '../../assets/blogbg.svg'
 
 export default class Blogs extends React.Component {
   static propTypes = { // define any props here
@@ -30,7 +31,7 @@ export default class Blogs extends React.Component {
 
   render() {
     return (
-      <div className="blog-div">
+      <div className="blog-div" style={{backgroundImage: `url(${Bg})`}}>
           <Header page="Blogs"/>
           <div id = "blog">
             <div id = "top">
