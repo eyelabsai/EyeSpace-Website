@@ -112,9 +112,9 @@
     }
     
     .desc {
-        display: flex;
-        width: 749px;
-        margin-left: 2px;
+        /* display: flex; */
+        /* width: 749px; */
+        margin-left: 2px; 
     
         font-style: normal;
         font-weight: 600;
@@ -122,8 +122,8 @@
         line-height: 40px;
         /* or 125% */
         color: #585858;
-        text-align: center;
-        margin-left: 10%;
+        text-align: left;
+        /* margin-left: 10%; */
     }
     
     .button-info {
@@ -165,7 +165,8 @@
         flex-direction: column;
         margin-top: 20px;
         justify-content: center;
-        margin-bottom: 100px;
+        padding-bottom: 75%;
+        /* margin-bottom: 100px; */
     }
     
     .stats {
@@ -178,8 +179,9 @@
     .bottomblock {
         /* position: absolute; */
         width: 60%;
-        margin-left: 10%;
+        margin-left: 50%;
         text-align: center;
+        padding-bottom: 12%;
     }
     
     .download {
@@ -204,8 +206,9 @@
     }
     
     .right {
-        display: flex;
-        margin-left: 100px;
-        float: right;
+        display: block;
+        margin-left: 28%;
+        float: none;
+
     }
 }
