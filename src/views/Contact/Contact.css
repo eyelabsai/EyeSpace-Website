@@ -66,9 +66,16 @@ input {
     }
 
     .contact-left {
-        margin-right: 5%;
         margin-left: 5%;
         width: 90%;
         font-weight: 200;
+    }
+
+    input {
+        width: 125%;
+    }
+
+    form{
+        margin-left: 5%;
     }
 }
