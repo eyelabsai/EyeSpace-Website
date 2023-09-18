@@ -52,8 +52,8 @@ export default class IndustryAdvisors extends React.Component {
       </div>
 
       <div className="Disclaimer">
-        <p>eyeSpace is a private entity and neither the platform nor its owners have financial relationships with any member of industry. We do feel strongly about the importance of good industry<br></br>
-        connections tough and are grateful to the following advisors that help keep our application current, accurate, and up to date.<br></br>
+        <p>eyeSpace is a private entity and neither the platform nor its owners have financial relationships with any member of industry. We do feel strongly about the importance of good industry
+        connections tough and are grateful to the following advisors that help keep our application current, accurate, and up to date.
         If you represent industry, please contact us via the form below or by email to discuss ideas, partnerships, corrections, and more.</p>
       </div>
 
