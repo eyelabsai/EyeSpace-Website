@@ -14,7 +14,7 @@ export default class IndustryAdvisorCard extends React.Component {
   render() {
     return (
     <div className="IndustryAdvisorCard">
-        <div className="advisorLogo"><img src={this.props.logo} alt={this.props.name}/></div>
+        <div className="advisorLogo"><img className="advisorLogo-img-div" src={this.props.logo} alt={this.props.name}/></div>
         <div className="gray-rectangle">
             <div className="advisorInformation">
                 <div className="advisorName">{this.props.name}</div>

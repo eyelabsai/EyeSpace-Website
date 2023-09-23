@@ -37,7 +37,7 @@ export default class IndustryAdvisors extends React.Component {
   render() {
     return (
     <div className="IndustryAdvisors"> 
-      <div className="TitleText">
+      <div className="TitleText AboutUsTitle">
         Industry Advisors
       </div>
 

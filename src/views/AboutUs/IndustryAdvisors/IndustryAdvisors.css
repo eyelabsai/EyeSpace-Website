@@ -1,40 +1,23 @@
 .IndustryAdvisors {
-    @media screen and (min-width:1030px) {
+    @media screen and (min-width:920px) {
         display: flex;
         flex-direction: column;
     }
 }
 
 
-.TitleText {
-    /* Industry Advisors */
-    width: 686px;
-    height: 64px;
-    align-self: center;
-
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 80px;
-    line-height: 64px;
-    /* identical to box height, or 80% */
-
-    /* text-align: right; */
-
-    color: #48627E;
-}
-
 .LogosAndLinkedin {
-    @media screen and (min-width:1030px) {
+    @media screen and (min-width:920px) {
         display: flex;
         flex-direction: row;
     }
     justify-content: center; 
  
     padding: 0px;
-    gap: 200px;
+    width: 100%;
+    gap: 5%;
 
-    margin-top: 88px;
+    /* margin-top: 88px; */
 } 
 
 .Disclaimer {

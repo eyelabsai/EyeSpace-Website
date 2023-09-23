@@ -66,7 +66,7 @@ export default class AdvisoryBoard extends React.Component {
     return ( 
     // maybe add a prop for id (if we need to distinguish btwn different cards)
     <div className="AdvisoryBoard">
-      <div className="AdvisoryBoardTitle">Advisory Board</div>
+      <div className="AdvisoryBoardTitle AboutUsTitle">Advisory Board</div>
       <div className="AdvisoryBoardCards">
         {
           this.information.map((obj) => {
