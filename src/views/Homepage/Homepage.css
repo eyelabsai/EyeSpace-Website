@@ -8,8 +8,8 @@
     min-width: 0;
 }
 
-@media only screen and (max-width: 920px) { 
+@media only screen and (max-width: 920px) {
     .footer-div {
-        margin-top: 30px;
+        margin-top: 230px;
     }
 }
