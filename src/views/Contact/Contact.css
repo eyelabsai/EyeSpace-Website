@@ -8,7 +8,6 @@
 }
 
 .contact-left {
-
     margin-right: 10%;
     margin-left: 200px;
     width: 500px;
@@ -21,6 +20,7 @@
 
 .contact-right {
     margin-top: 80px;
+    margin-right: 200px;
     color: #515151;
     font-size: 24px;
     font-weight: 600;
@@ -58,4 +58,24 @@ input {
     color: #FDFDFD;
     font-size: 24px;
     line-height: 28px;
+}
+
+@media only screen and (max-width: 920px) {
+    .contact-container {
+        display: block;
+    }
+
+    .contact-left {
+        margin-left: 5%;
+        width: 90%;
+        font-weight: 200;
+    }
+
+    input {
+        width: 125%;
+    }
+
+    form{
+        margin-left: 5%;
+    }
 }

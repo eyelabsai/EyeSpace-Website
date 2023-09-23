@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types"; 
 import Header from '../../components/header/Header';
 import Footer from "../../components/footer/Footer";
+import Bg from "../../assets/contactbg.svg";
 import './Contact.css'; 
 
 export default class Contact extends React.Component { 
@@ -12,6 +13,7 @@ export default class Contact extends React.Component {
   render() {
     return (
     <div className="cards">
+      <div  className="contact-div" style={{backgroundImage: `url(${Bg})`}}>
       <Header page="Contact"/>
       <div className="contact-container">
         <div className="contact-left">
@@ -35,6 +37,7 @@ export default class Contact extends React.Component {
         </div>
       </div>
       <Footer/>
+      </div>
     </div>
     );
   }
