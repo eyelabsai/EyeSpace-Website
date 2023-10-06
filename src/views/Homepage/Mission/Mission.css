@@ -1,0 +1,109 @@
+#mission-div{
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    position: relative;
+}
+
+#title{
+    font-size: 80px;
+    line-height: 64px;
+    /* identical to box height, or 80% */
+    color: #48627E;
+}
+
+#content{
+    font-size: 28px;
+    line-height: 44px;
+    /* or 157% */
+
+    text-align: center;
+    color: #484848;
+    opacity: 0.9;
+}
+
+button {
+    box-sizing: border-box;
+
+    /*position: absolute;*/
+     width: 464px;
+    height: 80px;
+    left: 728px;
+    top: 2270px; 
+
+    background: #354B86;
+    border-width: 1px 0px 0px 1px;
+    border-style: solid;
+    border-color: #F1F1F1;
+    box-shadow: -4px -4px 4px rgba(255, 255, 255, 0.25), 4px 4px 8px 2px rgba(181, 181, 181, 0.3), inset 4px 2px 4px rgba(0, 0, 0, 0.03);
+    border-radius: 40px;
+
+    font-size: 24px;
+    line-height: 28px;
+    /* identical to box height, or 117% */
+
+    color: #FDFDFD;
+}
+
+#btn {
+    text-align: center;
+}
+
+@media only screen and (max-width: 920px) { 
+    #mission-div{
+        margin-left: 20%;
+        margin-right: 20%;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        /* position: relative; removed before */
+    }
+    
+    #title{
+        font-size: 80px;
+        line-height: 64px;
+        color: #48627E;
+    }
+    
+    #content{
+        font-size: 28px;
+        line-height: 44px;
+
+        text-align: center;
+        color: #484848;
+        opacity: 0.9;
+    }
+    
+    button {
+        box-sizing: border-box;
+    
+        width: 464px;
+        height: 80px;
+        left: 728px;
+        top: 2270px;
+    
+        background: #354B86;
+        border-width: 1px 0px 0px 1px;
+        border-style: solid;
+        border-color: #F1F1F1;
+        box-shadow: -4px -4px 4px rgba(255, 255, 255, 0.25), 4px 4px 8px 2px rgba(181, 181, 181, 0.3), inset 4px 2px 4px rgba(0, 0, 0, 0.03);
+        border-radius: 40px;
+    
+        font-size: 24px;
+        line-height: 28px;
+        /* identical to box height, or 117% */
+
+        color: #FDFDFD;
+    }
+    
+    #btn {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; 
+    }
+   
+} 

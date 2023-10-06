@@ -1,0 +1,44 @@
+#blog{
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: 'Inter';
+    /* font-style: normal; */
+    font-weight: 600;
+}
+
+#title{
+    font-size: 80px;
+    line-height: 70px;
+    /* identical to box height, or 80% */
+    color: #48627E;
+    width: 35%;
+}
+
+#top{
+    display: flex;
+    margin-bottom: 80px;
+}
+
+.blog-aboutus{
+    margin-top: 10%;
+    width: 100%;
+    margin-left: 20%;
+}
+
+@media only screen and (max-width: 920px) {
+    #top{
+        display: block;
+        margin-bottom: 80px; 
+    }
+
+    #title{
+        width: 100%;
+        text-align: center;
+    }
+
+    .blog-aboutus{
+        margin-top: 5%;
+        margin-left: auto;
+    }
+}

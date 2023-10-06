@@ -1,0 +1,214 @@
+.banner-title {
+    font-style: normal;
+    font-size: 100px;
+    font-weight: 900;
+    color: #354B86;
+    fill: solid;
+    margin-top: 50px;
+}
+
+.desc {
+    width: 749px;
+    margin-left: 2px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    /* or 125% */
+    color: #585858;
+}
+
+.button-info {
+    width: 45%;
+    margin-left: 27%;
+}
+
+.downloadpad {
+    box-sizing: border-box;
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+    flex-direction: row;
+
+    justify-content: center;
+    text-align: center;
+    
+    background: #FDFDFD;
+    border-width: 1px 0px 0px 1px;
+    border-style: solid;
+    border-color: #F1F1F1;
+    box-shadow: -4px -4px 4px rgba(255, 255, 255, 0.25), 4px 4px 8px 2px rgba(181, 181, 181, 0.3), inset 4px 2px 4px rgba(0, 0, 0, 0.03);
+    border-radius: 40px;
+}
+.star {
+    color: #FFCB45;
+}
+
+.rating {
+    text-align: center;
+}
+
+.left {
+    margin-right: 10%;
+}
+
+.banner {
+    font-family: 'Inter';
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.stats {
+    width: 100%;
+    margin-top: 20px;
+    color: #48627E;
+    
+}
+
+.bottomblock {
+    /* position: absolute; */
+    width: 60%;
+    margin-left: 0;
+    text-align: center;
+}
+
+.download {
+    height: 200px;
+    color: #000;
+    text-decoration: none;
+}
+
+.topstats {
+    height: 35px;
+}
+
+
+#downloadpic {
+    margin-left: auto;
+}
+
+#downloadtext {
+    justify-content: center;
+    align-items: center;
+    color: #446087;
+}
+
+.right {
+    margin-top: 0px;
+}
+
+@media only screen and (max-width: 920px) {
+    .banner-title {
+        display: flex;
+        font-style: normal;
+        font-size: 100px;
+        font-weight: 900;
+        color: #354B86;
+        fill: solid;
+        margin-top: 50px;
+        margin-left: 10%;
+    }
+    
+    .desc {
+        /* display: flex; */
+        /* width: 749px; */
+        margin-left: 2px; 
+    
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+        /* or 125% */
+        color: #585858;
+        text-align: left;
+        /* margin-left: 10%; */
+    }
+    
+    .button-info {
+        width: 45%;
+        margin-left: 27%;
+    }
+    
+    .downloadpad {
+        box-sizing: border-box;
+        padding-top: 7.5px;
+        padding-bottom: 7.5px;
+        flex-direction: row;
+    
+        justify-content: center;
+        text-align: center;
+        
+        background: #FDFDFD;
+        border-width: 1px 0px 0px 1px;
+        border-style: solid;
+        border-color: #F1F1F1;
+        box-shadow: -4px -4px 4px rgba(255, 255, 255, 0.25), 4px 4px 8px 2px rgba(181, 181, 181, 0.3), inset 4px 2px 4px rgba(0, 0, 0, 0.03);
+        border-radius: 40px;
+    }
+    .star {
+        color: #FFCB45;
+    }
+    
+    .rating {
+        text-align: center;
+    }
+    
+    .left {
+        margin-right: 10%;
+    }
+    
+    .banner {
+        font-family: 'Inter';
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        justify-content: center;
+        padding-bottom: 75%;
+        /* margin-bottom: 100px; */
+    }
+    
+    .stats {
+        width: 100%;
+        margin-top: 20px;
+        color: #48627E;
+        
+    }
+    
+    .bottomblock {
+        /* position: absolute; */
+        width: 60%;
+        margin-left: 50%;
+        text-align: center;
+        padding-bottom: 12%;
+    }
+    
+    .download {
+        height: 200px;
+        color: #000;
+        text-decoration: none;
+    }
+    
+    .topstats {
+        height: 35px;
+    }
+    
+    
+    #downloadpic {
+        margin-left: auto;
+    }
+    
+    #downloadtext {
+        justify-content: center;
+        align-items: center;
+        color: #446087;
+    }
+    
+    .right {
+        display: block;
+        margin-left: 28%;
+        float: none;
+
+    }
+}

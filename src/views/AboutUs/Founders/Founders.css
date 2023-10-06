@@ -1,0 +1,14 @@
+.FoundersCards {
+  @media screen and (max-width:920px) {
+    display: flex;
+    flex-direction: column;
+  }
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 24px;
+  justify-content: center;
+  /* flex: none;
+  order: 0;
+  flex-grow: 0; */
+}

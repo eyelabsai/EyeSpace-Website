@@ -1,0 +1,64 @@
+.gray-rectangle {
+    @media screen and (max-width:1280px) {
+        width: 300px;
+        height: 90px;
+    }
+    display: flex;
+    flex-direction: row;
+    width: 428px;
+    height: 80px;
+    flex-shrink: 0;
+
+    border-radius: 20px;
+    background: rgba(72, 98, 126, 0.20);
+}
+
+.advisorLogo {
+    
+    height: 160px;
+}
+
+.advisorLogo-img-div {
+    @media screen and (max-width:1280px) {
+        width: 280px;
+    }
+
+}
+
+.advisorInformation {
+    @media screen and (max-width:1280px) {
+        width: 300px;
+    }
+    display: flex;
+    flex-direction: column;
+    margin-left: 14px;
+    width: 358px;
+}
+
+.advisorName {
+    @media screen and (max-width:1280px) {
+        font-size: 21px;
+        margin-bottom: 2px;
+    }
+    color: #48627E;
+    font-size: 24px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+
+    margin-top: 14px;
+    margin-bottom: 5px;
+}
+
+.advisorPosition {
+    @media screen and (max-width:1280px) {
+        font-size: 14px;
+    }
+    color: #515151;
+    font-size: 16px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
