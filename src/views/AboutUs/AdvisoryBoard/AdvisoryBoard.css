@@ -2,6 +2,7 @@
   @media screen and (max-width:920px) {
     display: flex;
     flex-direction: column;
+  
   }
   display: flex;
   flex-direction: row;
@@ -11,4 +12,6 @@
   /* flex: none;
   order: 0;
   flex-grow: 0; */
+  background-color: rgb(246, 246, 246)
+
 }

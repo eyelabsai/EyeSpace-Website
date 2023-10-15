@@ -1,57 +1,45 @@
 .advisory-card {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-
-  width: 348px;
-  height: 640px;
-  left: 0px;
-  top: 0.12px;
-  min-width: 348px;
-
-  background: #FDFDFD;
-  border: 1px solid #EBEBEB;
-  box-shadow: 4px 4px 30px 10px rgba(181, 181, 181, 0.3);
-  border-radius: 24px;
+  width: 255px; /* 25% smaller */
+  height: 480px; /* 25% smaller */
+  /* Adjust other properties accordingly */
 }
 
 .advisory-pic {
-  margin-top: 20px;
+  margin-top: 15px; /* Slightly smaller margin */
+  text-align: center; /* Center the content horizontally */
 }
 
+.advisory-pic img {
+  display: block; /* Set the image to block-level element */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+
 .advisory-name {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 28px;
-  /* or 117% */
-
+  font-size: 18px; /* 25% smaller */
+  line-height: 21px; /* 25% smaller */
+  /* Adjust other properties accordingly */
+  margin-top: 10px; /* Slightly smaller margin */
+  font-weight: 700; /* Bold */
   text-align: center;
-  color: #515151;
 
-  margin-top: 15px;
 }
 
 .advisory-desc {
-  height: 300px;
-  margin-left: 40px;
-  margin-right: 28px;
-  margin-top: 15px;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 22px;
-  /* or 122% */
-
-
-  color: #515151;
+  height: 225px; /* 25% smaller */
+  /* Adjust other properties accordingly */
+  margin-left: 30px; /* Slightly smaller margin */
+  margin-right: 21px; /* Slightly smaller margin */
+  margin-top: 10px; /* Slightly smaller margin */
+  font-size: 14px; /* 25% smaller */
+  line-height: 17px; /* 25% smaller */
 }
 
 .advisory-mediaIcons {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  background-color: rgb(246, 246, 246)
+
+
 }

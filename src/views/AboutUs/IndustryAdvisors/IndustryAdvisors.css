@@ -10,6 +10,8 @@
     @media screen and (min-width:920px) {
         display: flex;
         flex-direction: row;
+        background-color: rgb(246, 246, 246)
+
     }
     justify-content: center; 
  

@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import './Banner.css'; // replace "TestComponent" with your own component
 import appstore from "../../../assets/appstore.svg"
 import iphone from "../../../assets/iphone.svg"
+// import Bckg from "../../../assets/eyespaceNewlogo.svg";
+
 
 export default class Banner extends React.Component { // replace "TestCOmponent" with your own component
   static propTypes = { // define any props here
@@ -12,13 +14,13 @@ export default class Banner extends React.Component { // replace "TestCOmponent"
   render() {
     return (
     <div className="banner">
-
+      {/* <div  className="contact-div" style={{backgroundImage: `url(${Bckg})`}}> */}
         <div className="left">
             <div className="banner-title">
                 eyeSpace<br/>opthamology
             </div>
             <div className="desc">
-                <p>Welcome to the future of integrated ophthalmic surgery</p>
+                <p>Welcome to the future of integrated ophthalmic surgery. eyeSpace is a technology company and consulting firm specializing in delivering innovative and AI-based solutions to problems facing surgeons.</p>
             </div>
             <div className="bottomblock">
                 <a href="appstore://" className="download">
@@ -61,6 +63,8 @@ export default class Banner extends React.Component { // replace "TestCOmponent"
             <img src={iphone} width="300px" alt="phone"></img>
         </div>
     </div>
+//   </div>
+    
     );
   }
 }

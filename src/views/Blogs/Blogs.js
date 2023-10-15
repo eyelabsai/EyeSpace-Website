@@ -7,6 +7,9 @@ import './Blogs.css';
 import { Link } from 'react-router-dom';
 import Blog1 from '../../assets/blog1.svg'
 import Blog2 from '../../assets/blog2.svg'
+import Blog3 from '../../assets/blog3.svg'
+import Blog4 from '../../assets/blog4.svg'
+import Blog5 from '../../assets/blog5.svg'
 import Bg from '../../assets/blogbg.svg'
 
 export default class Blogs extends React.Component {
@@ -26,6 +29,24 @@ export default class Blogs extends React.Component {
       content: "Git is a powerful tool that feels great to use when you know how to use it. — I’ve used these features of Git for years across teams and projects. I’m still developing opinions around some workflows (like to squash or ...",
       date: "04/04/2023",
       image: Blog2
+    },
+    {
+      title: "OptiCalc Ai",
+      content: "Git is a powerful tool that feels great to use when you know how to use it. — I’ve used these features of Git for years across teams and projects. I’m still developing opinions around some workflows (like to squash or ...",
+      date: "04/04/2023",
+      image: Blog3
+    },
+    {
+      title: "The Perfect Test",
+      content: "Git is a powerful tool that feels great to use when you know how to use it. — I’ve used these features of Git for years across teams and projects. I’m still developing opinions around some workflows (like to squash or ...",
+      date: "04/04/2023",
+      image: Blog4
+    },
+    {
+      title: "Vault",
+      content: "Git is a powerful tool that feels great to use when you know how to use it. — I’ve used these features of Git for years across teams and projects. I’m still developing opinions around some workflows (like to squash or ...",
+      date: "04/04/2023",
+      image: Blog5
     },
   ]
 

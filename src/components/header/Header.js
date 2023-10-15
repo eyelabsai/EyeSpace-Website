@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import './Header.css';
-import logo from '../../assets/eyespaceLogo.svg';
+import logo from '../../assets/eyespacelogologo.svg';
 // import expansion_icon from '../../assets/menu_expansion_button.svg';
 // import collapse_icon from '../../assets/x_icon.svg';
 import { Link } from 'react-router-dom';

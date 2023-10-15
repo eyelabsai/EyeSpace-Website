@@ -5,12 +5,12 @@
     color: #354B86;
     fill: solid;
     margin-top: 50px;
+    text-align: center;
 }
-
 .desc {
     width: 749px;
     margin-left: 2px;
-
+    text-align: center;
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
@@ -55,9 +55,15 @@
 .banner {
     font-family: 'Inter';
     display: flex;
-    margin-top: 20px;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 100px;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 10%;
 }
 
 .stats {
@@ -70,8 +76,9 @@
 .bottomblock {
     /* position: absolute; */
     width: 60%;
-    margin-left: 0;
+    margin-left: 150px;
     text-align: center;
+    align-items: center;
 }
 
 .download {
