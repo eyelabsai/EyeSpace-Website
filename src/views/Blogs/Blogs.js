@@ -32,19 +32,19 @@ export default class Blogs extends React.Component {
     },
     {
       title: "OptiCalc Ai",
-      content: "Git is a powerful tool that feels great to use when you know how to use it. — I’ve used these features of Git for years across teams and projects. I’m still developing opinions around some workflows (like to squash or ...",
+      content: "OptiCalc is an AI-Driven IOL formula that utilizes pre-operative imaging routinely obtained with biometry. These include the OCT and topography images from the ZEISS IOLMaster® and Scheimpflug images from the OCULUS Pentacam®. This novel, image-driven approach provides additional benefits for machine learning models beyond simply feeding algorithms raw numbers. Important anatomical relationships may greatly impact effective lens position and final refractive outcome.",
       date: "04/04/2023",
       image: Blog3
     },
     {
       title: "The Perfect Test",
-      content: "Git is a powerful tool that feels great to use when you know how to use it. — I’ve used these features of Git for years across teams and projects. I’m still developing opinions around some workflows (like to squash or ...",
+      content: "The PERFECT Test is an image-based machine learning project aiming to create an accurate, repeatable, and continuously improving tool for the prediction of corneal ectasia development. This will assist clinicians in the diagnosis of corneal ectasia as well as screening for refractive surgery candidates.",
       date: "04/04/2023",
       image: Blog4
     },
     {
       title: "Vault",
-      content: "Git is a powerful tool that feels great to use when you know how to use it. — I’ve used these features of Git for years across teams and projects. I’m still developing opinions around some workflows (like to squash or ...",
+      content: "VAULT is an AI-driven tool to accurately predict postoperative vault of the EVO Visian ICL™ (Implanted Collamer® Lens). The goal is to create an accurate, repeatable, and continuously improving machine-learning based tool for the prediction of post-operative ICL™ Vault using various imaging modalities (e.g., Ultrasound Biomicroscopy and Anterior Segment OCT). The models have been developed and are trained with data from refractive surgery cases in the United States at a high volume surgery center.",
       date: "04/04/2023",
       image: Blog5
     },
