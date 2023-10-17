@@ -30,8 +30,8 @@ export default class Button extends React.Component {
   // }, []);
 
 
-  buttonsList = ["Home","About Us", "Contact", "Blogs"];
-  buttonsDict = {"Home": "/", "About Us":"/AboutUs", "Contact":"/Contact", "Blogs":"/Blogs"}; // maps the button names to the link to travel to
+  buttonsList = ["Home","Technology","About Us", "Contact", "Blogs", ];
+  buttonsDict = {"Home": "/", "Technology":"/Technology", "About Us":"/AboutUs", "Contact":"/Contact", "Blogs":"/Blogs"}; // maps the button names to the link to travel to
 
   f1 = () => {
     console.log("page is " + this.props.page);
@@ -55,19 +55,19 @@ export default class Button extends React.Component {
           <div className="expand" style={{display: (this.menuButtonState.expand) ? 'flex' : 'none'}}><button onClick={this.set_button_state}><img src={expansion_icon} alt="menu expand button"/></button></div>
           <div className="exit" style={{display: (this.menuButtonState.exit) ? 'flex' : 'none'}}><button onClick={this.set_button_state}><img src={collapse_icon} alt="menu exit button"/></button></div>
         </div> */}
-        <div className="buttons">
-          {this.buttonsList.map((name)=> {
+                <div className="buttons">
+          {this.buttonsList.map((name) => {
             return (
               <div>
-                <Link to={this.buttonsDict[name]} style={{textDecoration: 'none'}}>
-                  <div className="button" style={{color: this.props.page === name ? '#FF6400' : '#48627E'}}>
+                <Link to={this.buttonsDict[name]} style={{ textDecoration: 'none' }}>
+                  <div className="button" style={{ color: this.props.page === name ? '#FF6400' : '#48627E' }}>
                     {name}
                   </div>
                 </Link>
               </div>
-            )
+            );
           })}
-        </div>
+          </div>
         <div><Link to="/Login" style={{textDecoration: 'none'}}><button className="login-button" onClick={this.f1}>Login/Register</button></Link></div>
       </div>
     );
