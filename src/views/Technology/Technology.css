@@ -1,4 +1,4 @@
-#blog{
+#blog {
     margin-top: 5%;
     margin-left: 10%;
     margin-right: 10%;
@@ -7,38 +7,40 @@
     font-weight: 600;
 }
 
-#title{
-    font-size: 80px;
-    line-height: 76px;
+#title {
+    font-size: 52px; /* Reduced by 35% */
+    line-height: 49.4px; /* Adjusted proportionally */
     /* identical to box height, or 80% */
     color: #48627E;
     width: 35%;
 }
 
-#top{
+#top {
     display: flex;
-    margin-bottom: 80px;
+    margin-bottom: 52px; /* Adjusted proportionally */
 }
 
-.blog-aboutus{
-    margin-top: 10%;
+.blog-aboutus {
+    margin-top: 6.5%; /* Adjusted proportionally */
     width: 100%;
     margin-left: 20%;
 }
 
 @media only screen and (max-width: 920px) {
-    #top{
+    #top {
         display: block;
-        margin-bottom: 80px; 
+        margin-bottom: 52px; 
     }
 
-    #title{
+    #title {
+        font-size: 52px; /* Reduced by 35% */
+        line-height: 49.4px; /* Adjusted proportionally */
         width: 100%;
         text-align: center;
     }
 
-    .blog-aboutus{
-        margin-top: 5%;
+    .blog-aboutus {
+        margin-top: 3.25%; /* Adjusted proportionally */
         margin-left: auto;
     }
 }

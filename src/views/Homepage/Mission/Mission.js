@@ -12,7 +12,7 @@ export default class Mission extends React.Component {
   render() {
     return (
     <div id="mission-div">
-      <div id = "title">
+      <div id = "mission-title">
         Our Mission
       </div>
       <div id = "content">

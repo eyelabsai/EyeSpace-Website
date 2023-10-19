@@ -36,7 +36,7 @@ export default class Founders extends React.Component {
     return ( 
     // maybe add a prop for id (if we need to distinguish btwn different cards)
     <div className="Founders">
-      <div className="FoundersTitle AboutUsTitle">Meet Our<br/>Founders</div>
+      <div className="FoundersTitle AboutUsTitle">Meet Our Founders</div>
       <div className="FoundersCards">
         {
           this.information.map((obj) => {

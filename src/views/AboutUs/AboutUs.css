@@ -1,36 +1,30 @@
-.AboutUs{
+.AboutUs {
     display: flex;
     flex-direction: column;
-}
-
-.AdvisoryBoard {
-    margin-top: 200px;
-}
-
-.IndustryAdvisors {
-    margin-top: 245px;
-}
-
-.AboutUsTitle {
+  }
+  
+  .AdvisoryBoard {
+    margin-top: 130px; /* Adjusted proportionally */
+  }
+  
+  .IndustryAdvisors {
+    margin-top: 160.75px; /* Adjusted proportionally */
+  }
+  
+  .AboutUsTitle {
     @media screen and (max-width:1280px) {
-        /* font-weight: 500; */
-        font-size: 75px;
-        /* line-height: 55px; */
+      font-size: 52px; /* Reduced by 35% */
     }
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 80px;
-    line-height: 64px;
-    /* identical to box height, or 80% */
-  
+    font-size: 52px; /* Reduced by 35% */
+    line-height: 41.6px; /* Reduced by 35% */
     text-align: center;
-  
     color: #48627E;
-    margin-bottom: 60px;
-    margin-top: 20px;
-    /* background-color: rgb(255, 100, 0); */
-    padding-bottom: 15px;
-    padding-top: 5px;
-
-}
+    margin-bottom: 39px; /* Adjusted proportionally */
+    margin-top: 13px; /* Adjusted proportionally */
+    padding-bottom: 9.75px; /* Adjusted proportionally */
+    padding-top: 3.25px; /* Adjusted proportionally */
+  }
+  

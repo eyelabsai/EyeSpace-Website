@@ -2,62 +2,60 @@
     font-family: 'Inter';
     font-style: normal;
     display: flex;
-    margin-top: 20px;
+    margin-top: 15px; /* Adjusted proportionally */
     justify-content: center;
-    margin-bottom: 100px;
+    margin-bottom: 75px; /* Adjusted proportionally */
 }
 
 .contact-left {
-    margin-right: 10%;
-    margin-left: 200px;
-    width: 500px;
+    margin-right: 7.5%; /* Adjusted proportionally */
+    margin-left: 150px; /* Adjusted proportionally */
+    width: 375px; /* Reduced by 25% */
     font-weight: 600;
-
     color: #585858;
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 24px; /* Reduced by 25% */
+    line-height: 30px; /* Reduced by 25% */
 }
 
 .contact-right {
-    margin-top: 80px;
-    margin-right: 200px;
+    margin-top: 60px; /* Adjusted proportionally */
+    margin-right: 150px; /* Adjusted proportionally */
     color: #515151;
-    font-size: 24px;
+    font-size: 18px; /* Reduced by 25% */
     font-weight: 600;
-    line-height: 28px;
+    line-height: 21px; /* Reduced by 25% */
 }
 
 #lefthead {
     color: #48627E;
-    font-size: 80px;
-    line-height: 70px;
+    font-size: 60px; /* Reduced by 25% */
+    line-height: 52.5px; /* Reduced by 25% */
 }
 
 input {
-    border-radius: 20px;
-    border: 0.5px solid #C3C3C3;
+    border-radius: 15px; /* Reduced by 25% */
+    border: 0.375px solid #C3C3C3; /* Reduced by 25% */
     background: #F3F3F3;
-    width: 778px;
-    height: 62px;
+    width: 583px; /* Reduced by 25% */
+    height: 46.5px; /* Reduced by 25% */
 }
 
 #message {
-    height: 154px;
+    height: 115.5px; /* Reduced by 25% */
 }
 
-
 #con-submission {
-    margin-top: 50px;
-    width: 464px;
-    height: 80px;
-    border-radius: 40px;
-    border-top: 1px solid #F1F1F1;
-    border-left: 1px solid #F1F1F1;
+    margin-top: 37.5px; /* Adjusted proportionally */
+    width: 348px; /* Reduced by 25% */
+    height: 60px; /* Reduced by 25% */
+    border-radius: 30px; /* Reduced by 25% */
+    border-top: 0.75px solid #F1F1F1; /* Reduced by 25% */
+    border-left: 0.75px solid #F1F1F1; /* Reduced by 25% */
     background: #354B86;
-    box-shadow: 4px 4px 8px 2px rgba(181, 181, 181, 0.30), 4px 2px 4px 0px rgba(0, 0, 0, 0.03) inset, -4px -4px 4px 0px rgba(255, 255, 255, 0.25);
+    box-shadow: 3px 3px 6px 1.5px rgba(181, 181, 181, 0.30), 3px 1.5px 3px 0px rgba(0, 0, 0, 0.03) inset, -3px -3px 3px 0px rgba(255, 255, 255, 0.25);
     color: #FDFDFD;
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 18px; /* Reduced by 25% */
+    line-height: 21px; /* Reduced by 25% */
 }
 
 @media only screen and (max-width: 920px) {
@@ -72,7 +70,7 @@ input {
     }
 
     input {
-        width: 125%;
+        width: 150%; /* Adjusted proportionally */
     }
 
     form{

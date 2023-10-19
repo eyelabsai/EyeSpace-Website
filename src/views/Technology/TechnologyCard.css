@@ -16,50 +16,52 @@
     border-radius: 40px;
 
     margin-bottom: 5%;
+    width: 100%; /* Reduced by 35% */
+    height: auto;
 }
 
-#article{
+#article {
     display: flex;
 }
 
-#blog-detail{
+#blog-detail {
     margin-left: 5%;
     margin-top: 5%;
     margin-bottom: 3%;
 }
 
-#blog-title{
-    font-size: 32px;
-    line-height: 40px;
+#blog-title {
+    font-size: 20.8px; /* Reduced by 35% */
+    line-height: 26px; /* Adjusted proportionally */
     color: #424242;
-    margin-bottom: 20px;
+    margin-bottom: 13px; /* Adjusted proportionally */
 }
 
-#blog-content{
+#blog-content {
     font-weight: 300;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: 15.6px; /* Reduced by 35% */
+    line-height: 26px; /* Adjusted proportionally */
     color: #515151;
-    margin-bottom: 40px;
+    margin-bottom: 26px; /* Adjusted proportionally */
 }
 
-#blog-date{
+#blog-date {
     font-weight: 300;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 13px; /* Reduced by 35% */
+    line-height: 13px; /* Adjusted proportionally */
     color: #787878;
 }
 
 @media only screen and (max-width: 920px) {
-    #article{
+    #article {
         display: block;
     }
 
-    #blog-detail{
+    #blog-detail {
         margin-right: 5%;
     }
 
-    #blog-img{
+    #blog-img {
         margin-top: -5%;
         margin-left: 20%;
         margin-right: auto;

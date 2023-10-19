@@ -1,5 +1,5 @@
 .FoundersCards {
-  @media screen and (max-width:920px) {
+  @media screen and (max-width: 920px) {
     display: flex;
     flex-direction: column;
   }
@@ -8,10 +8,10 @@
   width: 100%;
   gap: 24px;
   justify-content: center;
-  /* flex: none;
-  order: 0;
-  flex-grow: 0; */
-  background-color: rgb(246, 246, 246)
+  background-color: rgb(246, 246, 246);
+}
 
-
+/* Apply a 35% font size reduction to all text within .FoundersCards */
+.FoundersCards * {
+  font-size: 65%; /* 35% smaller than the original size */
 }
