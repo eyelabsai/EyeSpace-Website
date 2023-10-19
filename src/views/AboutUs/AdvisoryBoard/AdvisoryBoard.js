@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types"; 
 import './AdvisoryBoard.css';
 import AdvisoryCard from './AdvisoryCard/AdvisoryCard';
-import Arjan_Hura from '../../../assets/Arjan_Hura.svg';
+import Helen_Wu from '../../../assets/Wu Headshot.svg';
 import Jella_An from '../../../assets/Jella_An.svg';
-import Bradley_Barnett from '../../../assets/Bradley_Barnett.svg';
+// import Bradley_Barnett from '../../../assets/Bradley_Barnett.svg';
 import James_Landreneau from '../../../assets/James_Landreneau.svg';
 import Taj_Nasser from '../../../assets/Taj_Nasser.svg';
 
@@ -16,13 +16,13 @@ export default class AdvisoryBoard extends React.Component {
   // Javascript Object for each of the advisory board people
   information = [
     {
-      name: "Arjan Hura",
+      name: "Helen Wu",
       title: "MD",
       text: "Dr. Hura is a refractive surgeon at the Maloney-Shamie Vision Institute in Los Angeles, California who completed a refractive, cataract, and anterior segment surgery fellowship with the Cleveland Eye Clinic. He is invested in technology, mentorship, and innovation.",
       twitter: "https://twitter.com/ArjanHuraMD",
       linkedin: "https://www.linkedin.com/in/arjanhura/?original_referer=https%3A%2F%2Feyespace.ai%2F",
       youtube: "https://www.youtube.com/channel/UC0SRlPbAES_MBKUA6TBq25A",
-      picture: Arjan_Hura,
+      picture: Helen_Wu,
     },
     {
       name: "Jella An",
@@ -33,15 +33,15 @@ export default class AdvisoryBoard extends React.Component {
       youtube: "https://www.youtube.com/@JellaAnMD",
       picture: Jella_An,
     },
-    {
-      name: "Bradley Barnett",
-      title: "MD, PhD",
-      text: "Dr. Barnett is the founder, owner, and medical director of California LASIK & Eye in Sacramento California. He completed a fellowship at the Shiley Eye Institute holds patents in cutting-edge IOL technology and is dedicated to surgical innovation.",
-      twitter: "https://twitter.com/CALASIKandEye",
-      linkedin: "https://www.linkedin.com/in/bradley-barnett/",
-      youtube: "",
-      picture: Bradley_Barnett,
-    },
+    // {
+    //   name: "Bradley Barnett",
+    //   title: "MD, PhD",
+    //   text: "Dr. Barnett is the founder, owner, and medical director of California LASIK & Eye in Sacramento California. He completed a fellowship at the Shiley Eye Institute holds patents in cutting-edge IOL technology and is dedicated to surgical innovation.",
+    //   twitter: "https://twitter.com/CALASIKandEye",
+    //   linkedin: "https://www.linkedin.com/in/bradley-barnett/",
+    //   youtube: "",
+    //   picture: Bradley_Barnett,
+    // },
     {
       name: "James Landreneau",
       title: "MD",
