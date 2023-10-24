@@ -12,7 +12,7 @@ import Blog2 from '../../assets/blog2.svg'
 // import Blog5 from '../../assets/blog5.svg'
 import Bg from '../../assets/blogbg.svg'
 
-export default class Blogs extends React.Component {
+export default class FocalPoint extends React.Component {
   static propTypes = { // define any props here
     name: PropTypes.string,
   };
@@ -35,7 +35,7 @@ export default class Blogs extends React.Component {
   render() {
     return (
       <div className="blog-div" style={{backgroundImage: `url(${Bg})`}}>
-          <Header page="Blogs"/>
+          <Header page="FocalPoint"/>
           <div id = "blog">
             <div id = "top">
               <div id = "title">Blogs Articles & Testimonials</div>

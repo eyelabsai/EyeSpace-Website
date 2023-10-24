@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types"; 
 import './Banner.css'; // replace "TestComponent" with your own component
 import appstore from "../../../assets/appstore.svg"
-import iphone from "../../../assets/iphone.svg"
+import iphone from "../../../assets/Home Page Graphic.svg"
 // import Bckg from "../../../assets/eyespaceNewlogo.svg";
 
 

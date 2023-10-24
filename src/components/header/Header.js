@@ -30,8 +30,8 @@ export default class Button extends React.Component {
   // }, []);
 
 
-  buttonsList = ["Home","Technology","About Us", "Contact", "Blogs", ];
-  buttonsDict = {"Home": "/", "Technology":"/Technology", "About Us":"/AboutUs", "Contact":"/Contact", "Blogs":"/Blogs"}; // maps the button names to the link to travel to
+  buttonsList = ["Home","Technology","About Us", "Contact", "FocalPoint", ];
+  buttonsDict = {"Home": "/", "Technology":"/Technology", "About Us":"/AboutUs", "Contact":"/Contact", "FocalPoint":"/FocalPoint"}; // maps the button names to the link to travel to
 
   f1 = () => {
     console.log("page is " + this.props.page);
