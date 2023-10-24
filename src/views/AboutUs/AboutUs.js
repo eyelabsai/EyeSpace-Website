@@ -3,9 +3,12 @@ import PropTypes from "prop-types";
 import './AboutUs.css'; 
 import Header from '../../components/header/Header';
 import Footer from "../../components/footer/Footer";
-import AdvisoryBoard from "./AdvisoryBoard/AdvisoryBoard";
+// import AdvisoryBoard from "./AdvisoryBoard/AdvisoryBoard";
+import EngBoard from "./AdvisoryBoard copy/AdvisoryBoard";
 import Founders from "./Founders/Founders";
 import IndustryAdvisors from "./IndustryAdvisors/IndustryAdvisors";
+
+
 
 export default class AboutUs extends React.Component {
   static propTypes = { // define any props here
@@ -17,8 +20,9 @@ export default class AboutUs extends React.Component {
     <div className="AboutUs">
       <Header page="About Us"/>
       <Founders/>
-      <AdvisoryBoard/>
+      {/* <AdvisoryBoard/> */}
       <IndustryAdvisors/>
+      <EngBoard/>
       <Footer/>
     </div>
     );
