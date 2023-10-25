@@ -28,7 +28,7 @@ import './Footer.css';
 import eyelab_logo from '../../assets/eyelabsLogo.svg';
 import eyeflymd_logo from '../../assets/EyeFlyMDLogo.svg';
 import instagram_logo from '../../assets/instagramLogo.svg';
-import fb_logo from '../../assets/facebookLogo.svg';
+import twitter_logo from '../../assets/twitter.svg';
 import gmail_logo from '../../assets/gmailLogo.svg';
 
 export default class Footer extends React.Component {
@@ -53,13 +53,20 @@ export default class Footer extends React.Component {
           </div>
         </div>
 
-          <div className="socials">
-            <img className="socials-img-tag" src={instagram_logo} alt="Instagram logo"/>
-            <img className="socials-img-tag" src={fb_logo} alt="Facebook logo"/>
-            <img className="socials-img-tag" src={gmail_logo} alt="Gmail logo"/>
-          </div>
+        <div className="socials">
+  <a href="https://www.instagram.com/eyespace.ai/" target="_blank" rel="noopener noreferrer">
+    <img className="socials-img-tag" src={instagram_logo} alt="Instagram logo" />
+  </a>
+  <a href="mailto:youremail@example.com">
+    <img className="socials-img-tag gmail-logo" src={gmail_logo} alt="Gmail logo" />
+  </a>
+  <a href="https://twitter.com/EyeSpace_AI" target="_blank" rel="noopener noreferrer">
+    <img className="socials-img-tag" src={twitter_logo} alt="Twitter logo" />
+  </a>
+</div>
+
           <div className="copyrightText">
-            Copyright 2022 Matt Hirabayashi MD | Gurpal Virdi MD
+          2023 Copyright EYESPACE LLC | Matt Hirabayashi MD | Gurpal Virdi MD
           </div>
         </div>
       );

@@ -49,6 +49,7 @@
     color: #000000;
 }
 
+
 @media only screen and (max-width: 920px) { 
     .copyrightText {
         /* Copyright 2022 Matt Hirabayashi MD | Gurpal Virdi MD */

@@ -52,6 +52,11 @@
     color: #787878;
 }
 
+#blog-img {
+    height: 280px;
+    width: 500px;
+}
+
 @media only screen and (max-width: 920px) {
     #article {
         display: block;
