@@ -3,7 +3,7 @@
 Website
 =======
 # FirstTime
-## Cloning the Repository
+## Cloning the Repositor
 - `git clone git@github.com:EH67/Eyespace.git`
 - make sure there's an ssh key in your computer. If not:
     - `ssh-keygen`
