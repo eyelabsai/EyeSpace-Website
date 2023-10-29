@@ -1,0 +1,194 @@
+.IndustryAdvisors {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center; /* yeah idk how to fix this part yet --> figure out how to align TitleText */
+
+}
+
+
+.TitleText {
+    /* Industry Advisors */
+    display: flex;
+    flex-direction: row;
+    width: 686px;
+    height: 64px;
+    justify-content: center;
+    align-content: center;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 64px;
+    /* identical to box height, or 80% */
+
+    /* text-align: right; */
+
+    color: #48627E;
+}
+
+.LogosAndLinkedin {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+ 
+    padding: 0px;
+    gap: 200px;
+
+    width: 100%;
+    height: 248px;
+    margin-top: 88px;
+} 
+
+/* .ZacharyJohnson {
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+
+    margin-top: 18px;
+    margin-left: 14px;
+
+
+    color: #48627E;
+}
+
+.CharlieGreen {
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+
+    margin-top: 22px;
+    margin-left: 14px;
+
+
+    color: #48627E;
+}
+
+.PaulEricson {
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+
+    margin-top: 14px;
+    margin-left: 14px;
+
+
+    color: #48627E;
+}
+
+.position {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+
+    margin-left: 14px;
+    margin-bottom: 20px;
+
+    color: #515151;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    width: 428px;
+    margin-top: 0px;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    width: 428px;
+    margin-top: 0px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 428px;
+    height: 0px;
+}
+
+
+.johnsonLogo {
+    display: absolute;
+    margin-bottom: 10px;
+}
+
+.alconLogo {
+    display: absolute;
+    align-items: center;
+    justify-content: center;
+    margin-top: 46px;
+}
+
+.rxSightLogo {
+    display: absolute;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.linkedinLogo {
+    position: absolute;
+    margin-top: 171px;
+    margin-left: 355px;
+
+}
+.rectangle {
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 168px;
+
+}
+
+.Disclaimer {
+    position: flex;
+    width: 1684px;
+    height: 132px;
+    margin-top: 90px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 44px;
+
+    text-align: center;
+
+    color: #484848;
+
+    opacity: 0.9;   
+}
+
+.Button {
+
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 464px;
+    height: 80px;
+    left: 728px;
+    top: 4196px;
+
+    background: #354B86;
+    border-width: 1px 0px 0px 1px;
+    border-style: solid;
+    border-color: #F1F1F1;
+    box-shadow: -4px -4px 4px rgba(255, 255, 255, 0.25), 4px 4px 8px 2px rgba(181, 181, 181, 0.3), inset 4px 2px 4px rgba(0, 0, 0, 0.03);
+    border-radius: 40px;
+} */
