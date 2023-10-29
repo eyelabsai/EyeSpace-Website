@@ -23,7 +23,10 @@ export default class BlogCard extends React.Component {
                             <div id="blog-title">{title}</div>
                             <div id="blog-content">{content}</div>
                             <div id="blog-date">{date}</div>
-                            <div className="bottomblock">
+                        </div>
+                        <div>
+                        <img id="blog-img" className="card-img" src={image} alt={title} />
+                        <div className="bottomblock">
                                 <a href="appstore://" className="download">
                                     <div className="downloadpad">
                                         <table className="button-info">
@@ -60,7 +63,6 @@ export default class BlogCard extends React.Component {
                                 </table>
                             </div>
                         </div>
-                        <img id="blog-img" className="card-img" src={image} alt={title} />
                     </div>
                 </div>
             );

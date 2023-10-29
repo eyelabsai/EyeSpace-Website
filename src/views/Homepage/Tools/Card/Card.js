@@ -18,7 +18,7 @@ export default class Card extends React.Component {
       return (
         <div className="current_tools">
 
-          <div className="title">Current Tools</div>
+          <div className="title">Current Technology</div>
 
           <div className="tool">
             <div className="card">
