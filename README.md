@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-# EyeSpace
-Website
-=======
-# FirstTime
-## Cloning the Repositor
+# First Time
+## Cloning the Repository
 - `git clone git@github.com:EH67/Eyespace.git`
 - make sure there's an ssh key in your computer. If not:
     - `ssh-keygen`
@@ -53,4 +49,3 @@ Website
     - `App.js`: root component (where the rest of the components go)
 - `old/`: Irrelavent to the project, contains files for me to refer back to for syntax
 - `config-overrides.js`: contains the path alias (this doesn't work properly for some reason)
->>>>>>> t
