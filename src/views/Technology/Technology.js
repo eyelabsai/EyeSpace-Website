@@ -1,14 +1,13 @@
-// Inside your Technology.js file
 import React from "react";
-import PropTypes from "prop-types";
+import PropTypes from "prop-types"; 
 import Header from '../../components/header/Header';
 import Footer from "../../components/footer/Footer";
 import BlogCard from './TechnologyCard';
 import './Technology.css'; 
-import Blog3 from '../../assets/OptiCalc SVG.svg'
+// import { Link } from 'react-router-dom';
+import Blog3 from '../../assets/blog3.svg'
 import Blog4 from '../../assets/blog4.svg'
 import Blog5 from '../../assets/blog5.svg'
-import Blog6 from '../../assets/eyeSpace Logo-2.png' // Ensure the image path is correct
 import Bg from '../../assets/blogbg.svg'
 
 export default class Technology extends React.Component {
@@ -35,38 +34,32 @@ export default class Technology extends React.Component {
       date: "04/04/2023",
       image: Blog5
     },
-    {
-      title: "Eyespace App",
-      content: "EYESPACE is a technology consulting firm co-owned and managed by Matt Hirabayashi MD and Gurpal Virdi MD. The eyeSpace iOS Application is a cross-platform ophthalmology utility, social media, networking service that provides users with a wide array of eye care tools to optimize and track their surgical outcomes.",
-      date: "04/04/2023",
-      image: Blog6,
-      
-    },
   ]
 
   render() {
     return (
       <div className="blog-div" style={{backgroundImage: `url(${Bg})`}}>
-        <Header page="Technology" />
-        <div id="blog">
-          <div id="top">
-            <div id="title">Technology</div>
+          <Header page="Technology"/>
+          <div id = "blog">
+            <div id = "top">
+              <div id = "title">Technology</div>
+              {/* <div id = "btn" className="blog-aboutus">
+                <Link to="/AboutUs" style={{textDecoration: 'none'}}><button>Learn More About Us &gt; </button></Link>
+              </div> */}
+            </div>
+
+            <div className="BlogCards">
+              {
+                this.info.map((obj) => {
+                  return (
+                    <BlogCard title={obj.title} content={obj.content} date={obj.date} image={obj.image}/>
+                  )
+                })
+              }
+            </div>
           </div>
-          <div className="BlogCards">
-            {this.info.map((obj) => {
-              return (
-                <BlogCard
-                  title={obj.title}
-                  content={obj.content}
-                  date={obj.date}
-                  image={obj.image}
-                />
-              )
-            })}
-          </div>
-        </div>
-        <Footer/>
+          <Footer/>
       </div>
-    );
+  );
   }
 }

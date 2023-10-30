@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types"; 
 import Header from '../../components/header/Header';
 import Footer from "../../components/footer/Footer";
-import Bg from "../../assets/vect.jpeg";
+import Bg from "../../assets/contactbg.svg";
 import './Contact.css'; 
 
 export default class Contact extends React.Component { 
