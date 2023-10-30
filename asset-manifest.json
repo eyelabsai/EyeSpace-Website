@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/EyeSpace-Website/static/css/main.dc1eef8d.css",
-    "main.js": "/EyeSpace-Website/static/js/main.21286da7.js",
+    "main.css": "/EyeSpace-Website/static/css/main.3cd715b5.css",
+    "main.js": "/EyeSpace-Website/static/js/main.fb9ed6a5.js",
     "static/media/appstore.svg": "/EyeSpace-Website/static/media/appstore.69db64899db12922e5e6605558641dbe.svg",
     "static/media/Gurpal_Virdi.svg": "/EyeSpace-Website/static/media/Gurpal_Virdi.3284472cc1dde044e3b062a42bc5647a.svg",
     "static/media/Matthew_Hirabayashi.svg": "/EyeSpace-Website/static/media/Matthew_Hirabayashi.b14a4a938a10b9972ac94ff01dcac3e0.svg",
@@ -13,7 +13,6 @@
     "static/media/eyelabsLogo.svg": "/EyeSpace-Website/static/media/eyelabsLogo.e81e1f5763b523e036f341658effcde7.svg",
     "static/media/alconLogo.svg": "/EyeSpace-Website/static/media/alconLogo.fec6366b4ada77740dc2fc902d0c285c.svg",
     "static/media/JohnsonJohnsonLogo.svg": "/EyeSpace-Website/static/media/JohnsonJohnsonLogo.8674db1745e3794c30fc7fb4dcef4cc4.svg",
-    "static/media/vect.jpeg": "/EyeSpace-Website/static/media/vect.8432727dc5e8ba2142f1.jpeg",
     "static/media/card2.svg": "/EyeSpace-Website/static/media/card2.155e545aaff4d80a5d59163241118738.svg",
     "static/media/blog2.svg": "/EyeSpace-Website/static/media/blog2.d1450e6582e0cde32c362b535ec16548.svg",
     "static/media/card3.svg": "/EyeSpace-Website/static/media/card3.4bc64f17a8cf54c89c0a394d9637b229.svg",
@@ -28,14 +27,14 @@
     "static/media/youtube.svg": "/EyeSpace-Website/static/media/youtube.be2f07ce51b2807bebb2e72838ed57cd.svg",
     "static/media/linkedin.svg": "/EyeSpace-Website/static/media/linkedin.001de4d6f4c9b4b1cf6c001aaa82ab25.svg",
     "static/media/linkedinLogo.svg": "/EyeSpace-Website/static/media/linkedinLogo.85168e9f195a39a59a5a6fc8c1e6cf97.svg",
-    "index.html": "/EyeSpace-Website/index.html",
     "static/media/gmailLogo.svg": "/EyeSpace-Website/static/media/gmailLogo.2d3ed607f3e27116791405bb40aab27c.svg",
+    "index.html": "/EyeSpace-Website/index.html",
     "static/media/blogbg.svg": "/EyeSpace-Website/static/media/blogbg.3ed70244fcca1afafd0432e111708c19.svg",
-    "main.dc1eef8d.css.map": "/EyeSpace-Website/static/css/main.dc1eef8d.css.map",
-    "main.21286da7.js.map": "/EyeSpace-Website/static/js/main.21286da7.js.map"
+    "main.3cd715b5.css.map": "/EyeSpace-Website/static/css/main.3cd715b5.css.map",
+    "main.fb9ed6a5.js.map": "/EyeSpace-Website/static/js/main.fb9ed6a5.js.map"
   },
   "entrypoints": [
-    "static/css/main.dc1eef8d.css",
-    "static/js/main.21286da7.js"
+    "static/css/main.3cd715b5.css",
+    "static/js/main.fb9ed6a5.js"
   ]
 }
