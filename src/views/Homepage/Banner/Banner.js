@@ -20,7 +20,7 @@ export default class Banner extends React.Component { // replace "TestCOmponent"
                 eyeSpace<br/>opthamology
             </div>
             <div className="desc">
-                <p>Welcome to the future of integrated ophthalmic surgery. eyeSpace is a technology company and consulting firm specializing in delivering innovative and AI-based solutions to problems facing surgeons.</p>
+                <p>Advancing ophthalmic surgery with innovative machine learning technology and data-centric solutions</p>
             </div>
             <div className="bottomblock">
                 <a href="appstore://" className="download">

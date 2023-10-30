@@ -13,8 +13,8 @@ export default class Founders extends React.Component {
   // Javascript Object for each of the advisory board people
   information = [
     {
-      name: "Gurpal Virdi",
-      title: "MD",
+      name: "Gurpal Virdi, MD",
+      // title: "MD",
       text: "A Palo Alto native who graduated from Washington University in St. Louis. He is currently an ophthalmology resident",
       twitter: "https://twitter.com/gurpalvirdi",
       linkedin: "https://www.linkedin.com/in/gurpalvirdi/",
@@ -22,8 +22,8 @@ export default class Founders extends React.Component {
       picture: Gurpal_Virdi,
     },
     {
-      name: "Matthew Hirabayashi",
-      title: "MD",
+      name: "Matthew Hirabayashi, MD",
+      // title: "MD",
       text: "A current resident at the University of Missouri Columbia Ophthalmology Program planning to pursue a fellowship in refractive surgery.",
       twitter: "https://twitter.com/EyeFlyMD",
       linkedin: "https://www.linkedin.com/in/matt-hirabayash/",

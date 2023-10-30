@@ -13,7 +13,7 @@ export default class Contact extends React.Component {
   render() {
     return (
     <div className="cards">
-      <div  className="contact-div" style={{backgroundImage: `url(${Bg})`}}>
+      {/* <div  className="contact-div" style={{backgroundImage: `url(${Bg})`}}> */}
       <Header page="Contact"/>
       <div className="contact-container">
         <div className="contact-left">
@@ -37,7 +37,7 @@ export default class Contact extends React.Component {
         </div>
       </div>
       <Footer/>
-      </div>
+      {/* </div> */}
     </div>
     );
   }

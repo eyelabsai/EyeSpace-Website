@@ -51,6 +51,23 @@
     line-height: 13px; /* Adjusted proportionally */
     color: #787878;
 }
+.bottomblock {
+
+  margin-left: 0px;
+  margin-right: -100px;
+  margin-bottom: 50px;
+  margin-top: -100px;
+  font-size: small;
+}
+#downloadtext{
+    padding-left: 10px;
+    font-size: small;
+}
+
+#blog-img {
+    height: 280px;
+    width: 500px;
+}
 
 @media only screen and (max-width: 920px) {
     #article {
