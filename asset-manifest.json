@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/EyeSpace-Website/static/css/main.dc1eef8d.css",
+    "main.js": "/EyeSpace-Website/static/js/main.21286da7.js",
+    "static/media/appstore.svg": "/EyeSpace-Website/static/media/appstore.69db64899db12922e5e6605558641dbe.svg",
+    "static/media/Gurpal_Virdi.svg": "/EyeSpace-Website/static/media/Gurpal_Virdi.3284472cc1dde044e3b062a42bc5647a.svg",
+    "static/media/Matthew_Hirabayashi.svg": "/EyeSpace-Website/static/media/Matthew_Hirabayashi.b14a4a938a10b9972ac94ff01dcac3e0.svg",
+    "static/media/LOGO HORIZONTAL SVG.svg": "/EyeSpace-Website/static/media/LOGO HORIZONTAL SVG.29f0cc5c0126008f20a2999852e20017.svg",
+    "static/media/Home Page Graphic.svg": "/EyeSpace-Website/static/media/Home Page Graphic.9db47162a83749c1e0c5a4f7ffdf23a6.svg",
+    "static/media/EyeFlyMDLogo.svg": "/EyeSpace-Website/static/media/EyeFlyMDLogo.f4e18ff78034c2d1a270fc360f4ab7c4.svg",
+    "static/media/RxSight.svg": "/EyeSpace-Website/static/media/RxSight.f92a871fbada4801163878929cc88267.svg",
+    "static/media/transpose tool icon.svg": "/EyeSpace-Website/static/media/transpose tool icon.58f06dcd4abe871cdb8ca67b7c57d60f.svg",
+    "static/media/eyelabsLogo.svg": "/EyeSpace-Website/static/media/eyelabsLogo.e81e1f5763b523e036f341658effcde7.svg",
+    "static/media/alconLogo.svg": "/EyeSpace-Website/static/media/alconLogo.fec6366b4ada77740dc2fc902d0c285c.svg",
+    "static/media/JohnsonJohnsonLogo.svg": "/EyeSpace-Website/static/media/JohnsonJohnsonLogo.8674db1745e3794c30fc7fb4dcef4cc4.svg",
+    "static/media/vect.jpeg": "/EyeSpace-Website/static/media/vect.8432727dc5e8ba2142f1.jpeg",
+    "static/media/card2.svg": "/EyeSpace-Website/static/media/card2.155e545aaff4d80a5d59163241118738.svg",
+    "static/media/blog2.svg": "/EyeSpace-Website/static/media/blog2.d1450e6582e0cde32c362b535ec16548.svg",
+    "static/media/card3.svg": "/EyeSpace-Website/static/media/card3.4bc64f17a8cf54c89c0a394d9637b229.svg",
+    "static/media/card1.svg": "/EyeSpace-Website/static/media/card1.f57f7e72aa05b52694d05f8b52415f58.svg",
+    "static/media/sulcus icon.svg": "/EyeSpace-Website/static/media/sulcus icon.fbf62c756a0500110f8c9ba11db4fe10.svg",
+    "static/media/blog4.svg": "/EyeSpace-Website/static/media/blog4.709151152ec350925523a540cbba01dd.svg",
+    "static/media/blog1.svg": "/EyeSpace-Website/static/media/blog1.2216dd742776fdf2bd382aa57eb170ba.svg",
+    "static/media/OptiCalc SVG.svg": "/EyeSpace-Website/static/media/OptiCalc SVG.1d2fd3287641edddb739ccb006496d3d.svg",
+    "static/media/instagramLogo.svg": "/EyeSpace-Website/static/media/instagramLogo.8631729094ff523b72b52a09efbd63a3.svg",
+    "static/media/blog5.svg": "/EyeSpace-Website/static/media/blog5.7c93869e9f3845619bc7c2d52222147c.svg",
+    "static/media/twitter.svg": "/EyeSpace-Website/static/media/twitter.d8d9a452a3a78f1fd34176ab82542577.svg",
+    "static/media/youtube.svg": "/EyeSpace-Website/static/media/youtube.be2f07ce51b2807bebb2e72838ed57cd.svg",
+    "static/media/linkedin.svg": "/EyeSpace-Website/static/media/linkedin.001de4d6f4c9b4b1cf6c001aaa82ab25.svg",
+    "static/media/linkedinLogo.svg": "/EyeSpace-Website/static/media/linkedinLogo.85168e9f195a39a59a5a6fc8c1e6cf97.svg",
+    "static/media/gmailLogo.svg": "/EyeSpace-Website/static/media/gmailLogo.2d3ed607f3e27116791405bb40aab27c.svg",
+    "index.html": "/EyeSpace-Website/index.html",
+    "static/media/blogbg.svg": "/EyeSpace-Website/static/media/blogbg.3ed70244fcca1afafd0432e111708c19.svg",
+    "main.dc1eef8d.css.map": "/EyeSpace-Website/static/css/main.dc1eef8d.css.map",
+    "main.21286da7.js.map": "/EyeSpace-Website/static/js/main.21286da7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc1eef8d.css",
+    "static/js/main.21286da7.js"
+  ]
+}
