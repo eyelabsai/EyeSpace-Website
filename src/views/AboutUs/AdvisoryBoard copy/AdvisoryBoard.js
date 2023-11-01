@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types"; 
 import './AdvisoryBoard.css';
 import AdvisoryCard from './AdvisoryCard/AdvisoryCard';
-// import Adnan_Al from '../../../assets/msuheadshot-57.jpg';
+// import Helen_Wu from '../../../assets/Wu Headshot.svg';
 // import Jella_An from '../../../assets/Jella_An.svg';
 
 
