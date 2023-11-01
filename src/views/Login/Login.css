@@ -1,0 +1,100 @@
+.loginpage {
+    font-family: 'Inter';
+    @media screen and (min-width:1030px) {
+        display: flex;
+        gap: 10%;
+    }
+    margin-top: 20px;
+    padding-left: 20px;
+    justify-content: center;
+}
+
+.left-login {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 100px;
+    color: #515151;
+    flex: 1;
+}
+
+#titlelogin {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 70px;
+    /* identical to box height, or 88% */
+
+
+    color: #48627E;
+
+}
+
+.right {
+    width: 500px;
+    flex: 1;
+}
+
+#accprompt {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 50px;
+    /* or 83% */
+
+
+    color: #585858;
+}
+
+.inputborder {
+    box-sizing: border-box;
+    width: 400px;
+    height: 47px;
+
+    background: #F3F3F3;
+    border: 0.5px solid #C4C4C4;
+    border-radius: 20px;
+}
+
+.inloginsubmit {
+    cursor: pointer;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    text-decoration: none;
+    /* identical to box height, or 117% */
+
+
+    color: #FDFDFD;
+    display: block;
+    box-sizing: border-box;
+
+    width: 400px;
+    height: 60px;
+
+    background: #354B86;
+    border-width: 1px 0px 0px 1px;
+    border-style: solid;
+    border-color: #F1F1F1;
+    box-shadow: -4px -4px 4px rgba(255, 255, 255, 0.25), 4px 4px 8px 2px rgba(181, 181, 181, 0.3), inset 4px 2px 4px rgba(0, 0, 0, 0.03);
+    border-radius: 40px;
+}
+
+a {
+    color: #FDFDFD;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#forgotpw {
+    color: #FF0000;
+    text-decoration: none;
+}

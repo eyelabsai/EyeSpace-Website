@@ -1,0 +1,15 @@
+.footer-div {
+    margin-top: 230px;
+}
+
+.body-div {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+@media only screen and (max-width: 920px) {
+    .footer-div {
+        margin-top: 230px;
+    }
+}

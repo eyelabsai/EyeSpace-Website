@@ -1,0 +1,39 @@
+.IndustryAdvisors {
+    @media screen and (min-width: 920px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  .LogosAndLinkedin {
+    @media screen and (min-width: 920px) {
+      display: flex;
+      flex-direction: row;
+      background-color: rgb(246, 246, 246);
+    }
+    justify-content: center;
+    padding: 0px;
+    width: 100%;
+    gap: 3.25%; /* Reduced by 35% */
+    margin-top: 57.5px; /* Reduced by 35% */
+  }
+  
+  .Disclaimer {
+    width: 90%;
+    margin-top: 58.5px; /* Reduced by 35% */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11.7px; /* Reduced by 35% */
+    line-height: 28.6px; /* Reduced by 35% */
+    text-align: center;
+    align-self: center;
+    color: #484848;
+    opacity: 0.9;
+  }
+  
+  .Button {
+    align-self: center;
+    margin-top: 39px; /* Reduced by 35% */
+  }
+  

@@ -1,0 +1,35 @@
+.AboutUs {
+    display: flex;
+    flex-direction: column;
+  }
+  /* .about-us-background {
+    background: url('/src/assets/circ.png') no-repeat center center fixed;
+    background-size: cover;
+  }
+   */
+  
+  .AdvisoryBoard {
+    margin-top: 130px; /* Adjusted proportionally */
+  }
+  
+  .IndustryAdvisors {
+    margin-top: 160.75px; /* Adjusted proportionally */
+  }
+  
+  .AboutUsTitle {
+    @media screen and (max-width:1280px) {
+      font-size: 52px; /* Reduced by 35% */
+    }
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 52px; /* Reduced by 35% */
+    line-height: 41.6px; /* Reduced by 35% */
+    text-align: center;
+    color: #48627E;
+    margin-bottom: 39px; /* Adjusted proportionally */
+    margin-top: 13px; /* Adjusted proportionally */
+    padding-bottom: 9.75px; /* Adjusted proportionally */
+    padding-top: 3.25px; /* Adjusted proportionally */
+  }
+  
