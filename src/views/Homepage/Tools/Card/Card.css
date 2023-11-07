@@ -20,7 +20,11 @@
   justify-content: center;
   margin-bottom: 0; 
 }
-
+.bottom-button {
+  margin-left: 570px;
+margin-bottom: 100px;
+  margin-top: 0px; /* Reduced by 35% */
+}
 .card {
   width: 340px;
   height: 500px;

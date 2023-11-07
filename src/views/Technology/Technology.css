@@ -44,3 +44,26 @@
         margin-left: auto;
     }
 }
+
+/* <table className="stats">
+                                    <tbody>
+                                        <tr className="topstats">
+                                            <td>
+                                                <div className="stars">
+                                                    <span className="star">&#9733;</span><span className="star">&#9733;</span><span className="star">&#9733;</span><span className="star">&#9733;</span><span className="star">&#9733;</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                50+
+                                            </td>
+                                            <td>
+                                                1000+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rating</td>
+                                            <td>Countries</td>
+                                            <td>Downloads</td>
+                                        </tr>
+                                    </tbody>
+                                </table> */

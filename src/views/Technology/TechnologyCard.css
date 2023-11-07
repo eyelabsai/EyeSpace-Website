@@ -22,6 +22,20 @@
 
 #article {
     display: flex;
+    flex-direction: row; /* Display elements horizontally */
+    align-items: center;
+}
+.right-align {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bottomblock{
+    margin-left: 700px;
+/* margin-bottom: 100px; */
+padding-bottom: 150px;
+width: 450px;
+
 }
 
 #blog-detail {

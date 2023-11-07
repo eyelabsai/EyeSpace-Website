@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import './TechnologyCard.css';
 import appstore from "../../assets/appstore.svg";
 
+
 export default class BlogCard extends React.Component {
     static propTypes = {
         title: PropTypes.string,
@@ -18,50 +19,29 @@ export default class BlogCard extends React.Component {
         if (title === "Eyespace App") {
             return (
                 <div id="blog-card">
-                    <div id="article">
+                    <div id="article" className="right-align">
                         <div id="blog-detail">
                             <div id="blog-title">{title}</div>
                             <div id="blog-content">{content}</div>
                             <div id="blog-date">{date}</div>
-                            <div className="bottomblock">
-                                <a href="appstore://" className="download">
-                                    <div className="downloadpad">
-                                        <table className="button-info">
-                                            <tbody>
-                                                <tr>
-                                                    <td><img id="downloadpic" src={appstore} width="30px" alt="App Store logo"></img></td>
-                                                    <td><span id="downloadtext"> Download The App</span></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </a>
-                                <table className="stats">
+                        </div>
+                        <img id="blog-img" className="card-img" src={image} alt={title} />
+                    </div>
+                    <div className="bottomblock">
+                        <a href="appstore://" className="download">
+                            <div className="downloadpad">
+                                <table className="button-info">
                                     <tbody>
-                                        <tr className="topstats">
-                                            <td>
-                                                <div className="stars">
-                                                    <span className="star">&#9733;</span><span className="star">&#9733;</span><span className="star">&#9733;</span><span className="star">&#9733;</span><span className="star">&#9733;</span>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                50+
-                                            </td>
-                                            <td>
-                                                1000+
-                                            </td>
-                                        </tr>
                                         <tr>
-                                            <td>Rating</td>
-                                            <td>Countries</td>
-                                            <td>Downloads</td>
+                                            <td><img id="downloadpic" src={appstore} width="30px" alt="App Store logo" /></td>
+                                            <td><span id="downloadtext"> Download The App</span></td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
-                        <img id="blog-img" className="card-img" src={image} alt={title} />
+                        </a>
                     </div>
+                    
                 </div>
             );
         } else {
