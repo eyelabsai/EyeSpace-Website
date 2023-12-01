@@ -43,7 +43,7 @@ export default class Footer extends React.Component {
   // For now, don't use any {} inside the return(). Anything inside {} will be treated as javascript, not html
     render() {
       return (
-        <div className="footer">
+        <div className="footer" style={{ backgroundColor: '#f0f0f0' }}>
           {/** start your html here! (delete this whole line, including the {}) */}
           <div className="logos">
             <img className="footer-logo-img-tag" src={eyelab_logo} alt="Eyelab logo"/>
@@ -52,7 +52,7 @@ export default class Footer extends React.Component {
             <img className="footer-logo-img-tag" src={eyeflymd_logo} alt="EyeFlyMD logo"/>
           </div>
         </div>
-
+{/* 
         <div className="socials">
   <a href="https://www.instagram.com/eyespace.ai/" target="_blank" rel="noopener noreferrer">
     <img className="socials-img-tag" src={instagram_logo} alt="Instagram logo" />
@@ -63,7 +63,7 @@ export default class Footer extends React.Component {
   <a href="https://twitter.com/EyeSpace_AI" target="_blank" rel="noopener noreferrer">
     <img className="socials-img-tag" src={twitter_logo} alt="Twitter logo" />
   </a>
-</div>
+</div> */}
 
           <div className="copyrightText">
           2023 Copyright EYESPACE LLC | Matt Hirabayashi MD | Gurpal Virdi MD

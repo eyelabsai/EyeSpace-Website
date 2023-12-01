@@ -5,12 +5,13 @@
 .title {
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 600;
-  font-size: 52px; /* Reduced by 35% */
+  font-weight: 900;
+  font-size: 40px; /* Reduced by 35% */
   line-height: 0px;
   text-align: center;
-  color: #446087;
-  /* margin-top: 1%; */
+  color: #3a3a3a;
+  margin-top: 5%;
+
   margin-bottom: 1%;
 }
 
@@ -26,25 +27,28 @@ margin-bottom: 100px;
   margin-top: 0px; /* Reduced by 35% */
 }
 .card {
-  width: 340px;
-  height: 500px;
+  width: 580px;
+  height: auto;
   flex: none;
   order: 0;
   flex-grow: 0;
   box-sizing: border-box;
-  width: 340px;
-  height: 500px;
   left: 0px;
   top: 0px;
   background: #FDFDFD;
   border: 1px solid #EBEBEB;
   box-shadow: 4px 4px 30px 10px rgba(181, 181, 181, 0.3);
   border-radius: 40px;
-  margin: 20px;
+  margin: 10px;
+  margin-top: 0px;
 }
 
 .card-img {
   padding: 8%;
+  /* margin-right: auto; */
+  margin-left: 100px;
+  margin-bottom: -190px;
+  margin-top: -100px;
 }
 
 .card-title {
@@ -57,20 +61,20 @@ margin-bottom: 100px;
   color: #515151;
   margin: 5%;
 }
-
 .card-content {
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 500;
-  font-size: 15px; /* Reduced by 35% */
+  font-weight: 550;
+  font-size: 20px; /* Reduced by 35% */
   line-height: 22px;
   color: #515151;
   margin: 12%;
+  margin-bottom: 100px;
 }
 
-#card2 {
+/* #card2 {
   margin-top: -2%;
-}
+} */
 
 @media only screen and (max-width: 920px) {
   .body {
@@ -143,7 +147,7 @@ margin-bottom: 100px;
     margin: 12%;
   }
 
-  #card2 {
+  /* #card2 {
     margin-top: -2%;
-  }
+  } */
 }

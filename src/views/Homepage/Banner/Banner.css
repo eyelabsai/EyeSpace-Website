@@ -1,8 +1,8 @@
 .banner-title {
     font-style: normal;
-    font-size: 65px; /* Reduced by 35% */
-    font-weight: 900;
-    color: #354B86;
+    font-size: 40px; /* Reduced by 35% */
+    font-weight: 700;
+    color: #094b78;
     fill: solid;
     margin-top: 32.5px; /* Adjusted proportionally */
     text-align: center;
@@ -13,7 +13,7 @@
     margin-left: 2px;
     text-align: center;
     font-style: normal;
-    font-weight: 600;
+    /* font-weight: 600; */
     font-size: 20.8px; /* Reduced by 35% */
     line-height: 26px; /* Adjusted proportionally */
     color: #585858;
@@ -61,9 +61,8 @@
     margin-right: 20%;
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 600;
     position: relative;
-    margin-bottom: 10%;
+    margin-bottom: 40px;
 }
 
 .stats {
@@ -103,7 +102,8 @@
 }
 
 .right {
-    margin-top: 0px;
+    margin-top: 30px;
+    margin-right: 70px;
 }
 
 @media only screen and (max-width: 920px) {
@@ -120,7 +120,7 @@
 
     .desc {
         font-style: normal;
-        font-weight: 600;
+        /* font-weight: 600; */
         font-size: 20.8px; /* Reduced by 35% */
         line-height: 26px; /* Adjusted proportionally */
         color: #585858;

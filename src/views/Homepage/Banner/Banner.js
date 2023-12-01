@@ -17,10 +17,12 @@ export default class Banner extends React.Component { // replace "TestCOmponent"
       {/* <div  className="contact-div" style={{backgroundImage: `url(${Bckg})`}}> */}
         <div className="left">
             <div className="banner-title">
-                eyeSpace<br/>opthamology
+                <strong>EYESPACE Opthamology</strong>
             </div>
             <div className="desc">
-                <p>Welcome to the future of integrated ophthalmic surgery. eyeSpace is a technology company and consulting firm specializing in delivering innovative and AI-based solutions to problems facing surgeons.</p>
+                <p>Welcome to the future of integrated ophthalmic surgery. EYESPACE is a technology company 
+                    and consulting firm that specializes in delivering innovative and AI-based solutions
+                     to problems facing surgeons and patients to improve outcomes and positively impact the field of ophthalmology.</p>
             </div>
             {/* <div className="bottomblock">
                 <a href="appstore://" className="download">
@@ -60,7 +62,7 @@ export default class Banner extends React.Component { // replace "TestCOmponent"
             </div> */}
         </div>
         <div className="right">
-            <img src={iphone} width="300px" alt="phone"></img>
+            <img src={iphone} width="575px" alt="phone"></img>
         </div>
     </div>
 //   </div>
