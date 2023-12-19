@@ -4,7 +4,10 @@ import Header from '../../components/header/Header';
 import Footer from "../../components/footer/Footer";
 import './CreateAccount.css';
 import { auth } from "../../firebase";
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { firestore } from "../../firebase";
+import { collection, doc ,setDoc} from "firebase/firestore";
+import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
+//import { getFirestore } from "firebase/firestore";
 
 export default class Login extends React.Component { 
   static propTypes = { // define any props here
@@ -18,7 +21,31 @@ export default class Login extends React.Component {
       e.preventDefault();
       createUserWithEmailAndPassword(auth, this.state.email, this.state.password)
       .then((userCredential) => {
-        console.log(userCredential);
+        sendEmailVerification(userCredential.user)
+        .then (() => {
+          let uid = userCredential.user.uid;
+          let docref = doc(firestore, 'users', uid);
+          setDoc(docref, {
+            credential: "N/A",
+            email: this.state.email,
+            firstName: this.state.firstname,
+            lastName: this.state.lastname,
+            position: "N/A",
+            specialty: "N/A",
+            state: "N/A"
+          })
+          /*
+          collection(firestore ,'users').doc(uid).set({
+            credential: "N/A",
+            email: this.state.email,
+            firstName: this.state.firstname,
+            lastName: this.state.lastname,
+            position: "N/A",
+            specialty: "N/A",
+            state: "N/A"
+          })*/
+        })
+        //console.log(userCredential);
       }).catch((error) => {
         console.log(error);
       })
