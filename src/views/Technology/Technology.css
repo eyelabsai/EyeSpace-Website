@@ -6,18 +6,16 @@
     /* font-style: normal; */
     font-weight: 600;
 }
-
-#title {
-    font-size: 52px; /* Reduced by 35% */
-    line-height: 49.4px; /* Adjusted proportionally */
-    /* identical to box height, or 80% */
-    color: #48627E;
-    width: 35%;
-}
-
 #top {
     display: flex;
-    margin-bottom: 52px; /* Adjusted proportionally */
+    margin-top: -80px;
+    margin-bottom: 0px; /* Adjusted proportionally */
+    margin-left: 300px;
+    font-size: 40px; /* Reduced by 35% */
+    line-height: 49.4px; 
+    /* identical to box height, or 80% */
+    color: #3a3a3a;
+
 }
 
 .blog-aboutus {
@@ -35,7 +33,7 @@
     #title {
         font-size: 52px; /* Reduced by 35% */
         line-height: 49.4px; /* Adjusted proportionally */
-        width: 100%;
+        /* width: 100%; */
         text-align: center;
     }
 

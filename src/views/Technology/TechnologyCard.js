@@ -20,12 +20,15 @@ export default class BlogCard extends React.Component {
             return (
                 <div id="blog-card">
                     <div id="article" className="right-align">
+                    <img id="blog-img" className="card-img" src={image} alt={title} />
+
                         <div id="blog-detail">
-                            <div id="blog-title">{title}</div>
                             <div id="blog-content">{content}</div>
-                            <div id="blog-date">{date}</div>
+                            {/* <div id="blog-date">{date}</div> */}
+                            <div id="blog-title">{title}</div>
+
                         </div>
-                        <img id="blog-img" className="card-img" src={image} alt={title} />
+                        {/* <img id="blog-img" className="card-img" src={image} alt={title} /> */}
                     </div>
                     <div className="bottomblock">
                         <a href="appstore://" className="download">
@@ -49,12 +52,15 @@ export default class BlogCard extends React.Component {
             return (
                 <div id="blog-card">
                     <div id="article">
+                    <img id="blog-img" className="card-img" src={image} alt={title} />
+
                         <div id="blog-detail">
-                            <div id="blog-title">{title}</div>
                             <div id="blog-content">{content}</div>
-                            <div id="blog-date">{date}</div>
+                            {/* <div id="blog-date">{date}</div> */}
+                            <div id="blog-title">{title}</div>
+
                         </div>
-                        <img id="blog-img" className="card-img" src={image} alt={title} />
+                        {/* <img id="blog-img" className="card-img" src={image} alt={title} /> */}
                     </div>
                 </div>
             );
