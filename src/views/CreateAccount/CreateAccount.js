@@ -34,18 +34,7 @@ export default class Login extends React.Component {
             specialty: "N/A",
             state: "N/A"
           })
-          /*
-          collection(firestore ,'users').doc(uid).set({
-            credential: "N/A",
-            email: this.state.email,
-            firstName: this.state.firstname,
-            lastName: this.state.lastname,
-            position: "N/A",
-            specialty: "N/A",
-            state: "N/A"
-          })*/
         })
-        //console.log(userCredential);
       }).catch((error) => {
         console.log(error);
       })

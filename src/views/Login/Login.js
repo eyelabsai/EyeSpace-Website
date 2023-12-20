@@ -5,6 +5,7 @@ import Footer from "../../components/footer/Footer";
 import './Login.css';
 import { auth } from "../../firebase";
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import { Link } from 'react-router-dom';
 
 export default class Login extends React.Component { 
   static propTypes = { // define any props here
@@ -57,7 +58,7 @@ export default class Login extends React.Component {
               <input className="inputborder" type="password" value={this.state.password} onChange={(e) => this.setPassword(e.target.value)}></input>
             </div>
             <p>
-            <a href="/Login" id="forgotpw">Forgot password?</a>
+            <a href="/ForgotPassword" id="forgotpw">Forgot password?</a>
             </p>
             <button type="submit" className="inloginsubmit">Submit</button>
           </form>
