@@ -1,105 +1,86 @@
-import React from "react";
-import PropTypes from "prop-types"; 
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Header from '../../components/header/Header';
-import Footer from "../../components/footer/Footer";
+import Footer from '../../components/footer/Footer';
 import './CreateAccount.css';
-import { auth } from "../../firebase";
-import { firestore } from "../../firebase";
-import { collection, doc ,setDoc} from "firebase/firestore";
+import { auth, firestore } from '../../firebase';
+import { collection, doc, setDoc } from 'firebase/firestore';
 import { createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from 'firebase/auth';
-//import { getFirestore } from "firebase/firestore";
+import { useNavigate } from 'react-router-dom';
 
-export default class Login extends React.Component { 
-  static propTypes = { // define any props here
-    name: PropTypes.string,
-  };
+function CreateAccount(props) {
+  // State management with useState hook
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const navigate = useNavigate();
 
-  signUp = (e) => {
-    if (this.state.password != this.state.confirmpassword) {
-      window.alert("Passwords does not match");
-    }else {
-      e.preventDefault();
-      createUserWithEmailAndPassword(auth, this.state.email, this.state.password)
-      .then((userCredential) => {
-        sendEmailVerification(userCredential.user)
-        .then (() => {
-          let uid = userCredential.user.uid;
-          let docref = doc(firestore, 'users', uid);
-          setDoc(docref, {
-            credential: "N/A",
-            email: this.state.email,
-            firstName: this.state.firstname,
-            lastName: this.state.lastname,
-            position: "N/A",
-            specialty: "N/A",
-            state: "N/A"
-          })
-          updateProfile(userCredential.user, {displayName: this.state.firstname})
-        })
-      }).catch((error) => {
-        console.log(error);
-      })
+  // signUp function
+  const signUp = (e) => {
+    e.preventDefault();
+    if (password !== confirmPassword) {
+      window.alert('Passwords do not match');
+    } else {
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          sendEmailVerification(userCredential.user)
+            .then(() => {
+              let uid = userCredential.user.uid;
+              let docRef = doc(firestore, 'users', uid);
+              setDoc(docRef, {
+                credential: "N/A",
+                email: email,
+                firstName: firstName,
+                lastName: lastName,
+                position: "N/A",
+                specialty: "N/A",
+                state: "N/A"
+              });
+              console.log(firstName);
+            })
+            .then(async ()=> {
+              await updateProfile(userCredential.user, {
+                displayName: firstName
+              });
+              console.log(userCredential.user.displayName);
+            }).then(()=> {
+              navigate('/');
+            })
+        }).catch((error) => {
+          console.log(error);
+        });
     }
-  }
-
-  constructor(props) {
-    super(props);
-    this.state = { 
-      firstname: '',
-      lastname: '',
-      email: '', 
-      password: '',
-      confirmpassword: ''
-    };
-  }
-
-  setFirstName = (firstname) => {
-    this.setState({ firstname });
   };
 
-  setLastName = (lastname) => {
-    this.setState({ lastname });
-  };
-
-  setEmail = (email) => {
-    this.setState({ email });
-  };
-
-  setPassword = (password) => {
-    this.setState({ password });
-  }
-
-  setConfirmPassword = (confirmpassword) => {
-    this.setState({ confirmpassword });
-  }
-
-  render() {
-    return (
+  // Render
+  return (
     <div>
         <Header page="CreateAccount"/>
         <div className="createacc-page">
             <div id="ca-main">
                 <h1 className="ca-title">Create Account</h1>
-                <form action="CreateAccount" method="post" onSubmit={this.signUp}>
+                <form onSubmit={signUp}>
                     <label>First Name</label>
                     <br />
-                    <input className="inputborder" type="text" value={this.state.firstname} onChange={(e) => this.setFirstName(e.target.value)}></input>
+                    <input className="inputborder" type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)}></input>
                     <br /><br />
                     <label>Last Name</label>
                     <br />
-                    <input className="inputborder" type="text" value={this.state.lastname} onChange={(e) => this.setLastName(e.target.value)}></input>
+                    <input className="inputborder" type="text" value={lastName} onChange={(e) => setLastName(e.target.value)}></input>
                     <br /><br />
                     <label>Email</label>
                     <br />
-                    <input className="inputborder" type="text" value={this.state.email} onChange={(e) => this.setEmail(e.target.value)}></input>
+                    <input className="inputborder" type="text" value={email} onChange={(e) => setEmail(e.target.value)}></input>
                     <br /><br />
                     <label>Password</label>
                     <br />
-                    <input className="inputborder" type="text" value={this.state.password} onChange={(e) => this.setPassword(e.target.value)}></input>
+                    <input className="inputborder" type="text" value={password} onChange={(e) => setPassword(e.target.value)}></input>
                     <br /><br />
                     <label>Confirm Password</label>
                     <br />
-                    <input className="inputborder" type="text" value={this.state.confirmpassword} onChange={(e) => this.setConfirmPassword(e.target.value)}></input>
+                    <input className="inputborder" type="text" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}></input>
                     <br /><br />
                     <input type="checkbox"></input>
                     <label id="makered">Agree to T&C</label>
@@ -108,9 +89,8 @@ export default class Login extends React.Component {
                 </form>
             </div>
         </div>
-    <Footer/>
     </div>
     );
-  }
 }
 
+export default CreateAccount;

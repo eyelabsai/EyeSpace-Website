@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
 import './Login.css';
 import { auth } from "../../firebase";
 import { signInWithEmailAndPassword } from 'firebase/auth';
