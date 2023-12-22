@@ -65,7 +65,6 @@ export default class Technology extends React.Component {
             })}
           </div>
         </div>
-        <Footer/>
       </div>
     );
   }

@@ -6,7 +6,7 @@ import './CreateAccount.css';
 import { auth } from "../../firebase";
 import { firestore } from "../../firebase";
 import { collection, doc ,setDoc} from "firebase/firestore";
-import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
+import { createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from 'firebase/auth';
 //import { getFirestore } from "firebase/firestore";
 
 export default class Login extends React.Component { 
@@ -34,6 +34,7 @@ export default class Login extends React.Component {
             specialty: "N/A",
             state: "N/A"
           })
+          updateProfile(userCredential.user, {displayName: this.state.firstname})
         })
       }).catch((error) => {
         console.log(error);

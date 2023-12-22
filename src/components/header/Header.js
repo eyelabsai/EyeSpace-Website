@@ -3,11 +3,22 @@ import PropTypes from "prop-types";
 import './Header.css';
 import logo from '../../assets/LOGO HORIZONTAL SVG.svg';
 import { Link } from 'react-router-dom';
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../../firebase";
 
 export default class Button extends React.Component {
   static propTypes = {
     page: PropTypes.string,
   };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      userEmail : '',
+      isUserLoggedIn: false,
+    };
+  }
+
 
   buttonsList = [
     // "Home", 
@@ -23,6 +34,30 @@ export default class Button extends React.Component {
     "FocalPoint": "/FocalPoint",
     "Contact": "/Contact",
   };
+
+  componentDidMount() {
+    this.authListener = auth.onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ isUserLoggedIn: true, userEmail: user.displayName });
+      } else {
+        this.setState({ isUserLoggedIn: false });
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    this.authListener(); // Unsubscribe from the listener when the component unmounts
+  }
+
+  getUserButtonContent() {
+    if (this.state.isUserLoggedIn) {
+      // Return custom content for logged-in user
+      return this.state.userEmail; // Customize as needed
+    } else {
+      // Return content for guests
+      return "Login/Register";
+    }
+  }
 
   render() {
     return (
@@ -48,7 +83,9 @@ export default class Button extends React.Component {
         </div>
         <div>
           <Link to="/Login" style={{ textDecoration: 'none' }}>
-            <button className="login-button" onClick={this.f1}>Login/Register</button>
+            <button className="login-button" onClick={this.f1}>
+            {this.getUserButtonContent()}
+            </button>
           </Link>
         </div>
       </div>

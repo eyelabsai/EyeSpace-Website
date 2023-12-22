@@ -54,7 +54,6 @@ export default class FocalPoint extends React.Component {
               }
             </div>
           </div>
-          <Footer/>
       </div>
   );
   }
