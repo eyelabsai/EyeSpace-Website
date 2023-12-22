@@ -59,6 +59,16 @@ export default class Button extends React.Component {
     }
   }
 
+  getLoginNavigationPage() {
+    if (this.state.isUserLoggedIn) {
+      // Return custom content for logged-in user
+      return "/UserProfile"; // Customize as needed
+    } else {
+      // Return content for guests
+      return "/Login";
+    }
+  }
+
   render() {
     return (
       <div className="navbar">
@@ -82,7 +92,7 @@ export default class Button extends React.Component {
           })}
         </div>
         <div>
-          <Link to="/Login" style={{ textDecoration: 'none' }}>
+          <Link to={this.getLoginNavigationPage()} style={{ textDecoration: 'none' }}>
             <button className="login-button" onClick={this.f1}>
             {this.getUserButtonContent()}
             </button>

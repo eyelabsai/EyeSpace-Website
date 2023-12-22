@@ -8,6 +8,7 @@ import Login from "./views/Login/Login";
 import Technology from "./views/Technology/Technology";
 import CreateAccount from "./views/CreateAccount/CreateAccount"
 import ForgotPassword from "./views/ForgotPassword/ForgotPassword";
+import UserProfile from "./views/UserProfile/UserProfile";
 //import './App.css';
 
 export default class App extends React.Component {
@@ -26,6 +27,7 @@ export default class App extends React.Component {
             <Route path="/Technology" element={ <Technology/> }></Route>
             <Route path="/CreateAccount" element={ <CreateAccount/> }></Route>
             <Route path="/ForgotPassword" element={ <ForgotPassword/> }></Route>
+            <Route path="/UserProfile" element={ <UserProfile/> }></Route>
           </Routes>
         </BrowserRouter>
       </div>
