@@ -20,7 +20,6 @@ export default class AboutUs extends React.Component {
         <Founders/>
         <IndustryAdvisors/>
         <EngBoard/>
-        <Footer/>
       </div>
     );
   }

@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import './Header.css';
 import logo from '../../assets/LOGO HORIZONTAL SVG.svg';
 import { Link } from 'react-router-dom';
-import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../firebase";
 
 export default class Button extends React.Component {
@@ -24,14 +23,14 @@ export default class Button extends React.Component {
     // "Home", 
     "Technology", 
     "About Us", 
-    "FocalPoint",
+    "eXchange",
     "Contact", ];
 
   buttonsDict = {
     // "Home": "/",
     "Technology": "/Technology",
     "About Us": "/AboutUs",
-    "FocalPoint": "/FocalPoint",
+    "eXchange": "/Exchange",
     "Contact": "/Contact",
   };
 
