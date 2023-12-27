@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types"; 
 import Header from '../../components/header/Header';
-import Footer from "../../components/footer/Footer";
 // import Bg from "../../assets/vect.jpeg"; style={{backgroundImage: `url(${Bg})`}}
 import './Contact.css'; 
 
@@ -16,12 +15,12 @@ export default class Contact extends React.Component {
       <div  className="contact-div" >
       <Header page="Contact"/>
       <div className="contact-container">
-        <div className="contact-left">
-          <h3 id="lefthead">
-            Send Us A<br/>Message
-          </h3>
-          <p>
-            We’d love to hear from you! We value comments, questions, corrections, feedback, potential partnerships, and relationship with industry. Simply complete the form below and we will respond soon
+        <div className>
+          <div className="contct-title">
+            Get In Touch
+          </div>
+          <p className="contact-text">
+            Is there a problem facing the field of ophthalmology you would like help solving? Work with us! We value comments, questions, corrections, feedback, potential partnerships, and relationship with industry. Simply complete the form below and we will respond soon.
           </p>
         </div>
         <div className="contact-right">
@@ -32,6 +31,7 @@ export default class Contact extends React.Component {
             <input type="text" name="email"></input>
             <p>Message</p>
             <input type="text" name="email" id="message"></input>
+            <br></br>
             <input type="submit" id="con-submission"></input>
           </form>
         </div>

@@ -1,8 +1,9 @@
 .contact-container {
     font-family: 'Inter';
     font-style: normal;
-    display: flex;
-    margin-top: 15px; /* Adjusted proportionally */
+    margin-top: 2%; /* Adjusted proportionally */
+    margin-left: 16%;
+    margin-right: 16%;
     justify-content: center;
     margin-bottom: 75px; /* Adjusted proportionally */
 }
@@ -11,7 +12,6 @@
     margin-right: 7.5%; /* Adjusted proportionally */
     margin-left: 150px; /* Adjusted proportionally */
     width: 375px; /* Reduced by 25% */
-    font-weight: 600;
     color: #585858;
     font-size: 24px; /* Reduced by 25% */
     line-height: 30px; /* Reduced by 25% */
@@ -26,10 +26,15 @@
     line-height: 21px; /* Reduced by 25% */
 }
 
-#lefthead {
-    color: #48627E;
-    font-size: 60px; /* Reduced by 25% */
+.contct-title{
+    text-align: center;
+    font-weight: 600;
+    font-size: 38px; /* Reduced by 25% */
     line-height: 52.5px; /* Reduced by 25% */
+}
+
+.contact-text {
+    font-size: 20px;
 }
 
 input {

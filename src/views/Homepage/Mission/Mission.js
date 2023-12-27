@@ -16,9 +16,9 @@ export default class Mission extends React.Component {
     return (
     <div id="mission-div">
       <div id = "mission-title">
-        EYESPACE Mission
+        <strong>EYESPACE Mission</strong>
       </div>
-      <div id = "content">
+      <div className = "mission-content">
         <p>Our mission is to empower ophthalmologists and surgeons with the
            tools they need to optimize their outcomes while providing an inclusive space to
             discuss topics with colleagues, mentors, and mentees. Our mission is impact: providing novel 
@@ -29,16 +29,16 @@ export default class Mission extends React.Component {
       </div>
 
       <div className="socials">
-  <a href="https://www.instagram.com/eyespace.ai/" target="_blank" rel="noopener noreferrer">
-    <img className="socials-img-tag" src={instagram_logo} alt="Instagram logo" />
-  </a>
-  <a href="mailto:youremail@example.com">
-    <img className="socials-img-tag gmail-logo" src={gmail_logo} alt="Gmail logo" />
-  </a>
-  <a href="https://twitter.com/EyeSpace_AI" target="_blank" rel="noopener noreferrer">
-    <img className="socials-img-tag" src={twitter_logo} alt="Twitter logo" />
-  </a>
-</div>
+        <a href="https://www.instagram.com/eyespace.ai/" target="_blank" rel="noopener noreferrer">
+          <img className="socials-img-tag" src={instagram_logo} alt="Instagram logo" />
+        </a>
+        <a href="mailto:youremail@example.com">
+          <img className="socials-img-tag gmail-logo" src={gmail_logo} alt="Gmail logo" />
+        </a>
+        <a href="https://twitter.com/EyeSpace_AI" target="_blank" rel="noopener noreferrer">
+          <img className="socials-img-tag" src={twitter_logo} alt="Twitter logo" />
+        </a>
+      </div>
     </div>
     );
   }
