@@ -1,4 +1,4 @@
-.blog-card {
+.exchange-blog-card {
     /* width: 100%;
     height:auto;
     
@@ -18,25 +18,25 @@
     margin-bottom: 5%;
 }
 
-.card-img {
+.exchange-card-img {
     margin-left: -7%;
     margin-top: -7.3%;
     width: 12%;
     height: 12%;
 }
 
-.article{
+.exchange-article{
     display: flex;
 }
 
-.blog-detail{
+.exchange-blog-detail{
     width: 50%;
     margin-left: 5%;
     margin-top: 0%;
     margin-bottom: 0%;
 }
 
-.blog-title{
+.exchange-blog-title{
     margin-left: -7%;
     width: 20%;
     font-size: 20px;
@@ -45,7 +45,7 @@
     margin-bottom: 20px;
 }
 
-.blog-content{
+.exchange-blog-content{
     width: 100%;
     font-weight: 300;
     font-size: 18px;
@@ -54,7 +54,7 @@
     color: #515151;
 }
 
-.blog-date {
+.exchange-blog-date {
     margin-top: 3%;
     font-weight: 300;
     font-size: 18px;

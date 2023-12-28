@@ -12,13 +12,13 @@ export default class BlogCard extends React.Component {
 
   render() {
     return (
-        <div className = "blog-card">
-            <div className = "article">
-              <img className="card-img" src={this.props.image} alt={this.props.title}/>
-              <div className="blog-title">{this.props.title}</div>
-              <div className="blog-detail">
-                <div className="blog-content">{this.props.content}</div>
-                <div className="blog-date">Date: {this.props.date}</div>
+        <div className = "exchange-blog-card">
+            <div className = "exchange-article">
+              <img className="exchange-card-img" src={this.props.image} alt={this.props.title}/>
+              <div className="exchange-blog-title">{this.props.title}</div>
+              <div className="exchange-blog-detail">
+                <div className="exchange-blog-content">{this.props.content}</div>
+                <div className="exchange-blog-date">Date: {this.props.date}</div>
               </div>    
             </div>
         </div>
