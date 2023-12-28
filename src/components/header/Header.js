@@ -3,26 +3,70 @@ import PropTypes from "prop-types";
 import './Header.css';
 import logo from '../../assets/LOGO HORIZONTAL SVG.svg';
 import { Link } from 'react-router-dom';
+import { auth } from "../../firebase";
 
 export default class Button extends React.Component {
   static propTypes = {
     page: PropTypes.string,
   };
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      userEmail : '',
+      isUserLoggedIn: false,
+    };
+  }
+
+
   buttonsList = [
     // "Home", 
     "Technology", 
     "About Us", 
-    "FocalPoint",
+    "eXchange",
     "Contact", ];
 
   buttonsDict = {
     // "Home": "/",
     "Technology": "/Technology",
     "About Us": "/AboutUs",
-    "FocalPoint": "/FocalPoint",
+    "eXchange": "/Exchange",
     "Contact": "/Contact",
   };
+
+  componentDidMount() {
+    this.authListener = auth.onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ isUserLoggedIn: true, userEmail: user.displayName });
+      } else {
+        this.setState({ isUserLoggedIn: false });
+      }
+    });
+  }
+
+  componentWillUnmount() {
+    this.authListener(); // Unsubscribe from the listener when the component unmounts
+  }
+
+  getUserButtonContent() {
+    if (this.state.isUserLoggedIn) {
+      // Return custom content for logged-in user
+      return this.state.userEmail; // Customize as needed
+    } else {
+      // Return content for guests
+      return "Login/Register";
+    }
+  }
+
+  getLoginNavigationPage() {
+    if (this.state.isUserLoggedIn) {
+      // Return custom content for logged-in user
+      return "/UserProfile"; // Customize as needed
+    } else {
+      // Return content for guests
+      return "/Login";
+    }
+  }
 
   render() {
     return (
@@ -47,8 +91,10 @@ export default class Button extends React.Component {
           })}
         </div>
         <div>
-          <Link to="/Login" style={{ textDecoration: 'none' }}>
-            <button className="login-button" onClick={this.f1}>Login/Register</button>
+          <Link to={this.getLoginNavigationPage()} style={{ textDecoration: 'none' }}>
+            <button className="login-button" onClick={this.f1}>
+            {this.getUserButtonContent()}
+            </button>
           </Link>
         </div>
       </div>

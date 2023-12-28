@@ -15,7 +15,7 @@
     box-shadow: 4px 4px 22px 10px rgba(181, 181, 181, 0.3);
     border-radius: 40px;
 
-    margin-bottom: 1%;
+    margin-bottom: 2%;
     width: 100%; /* Reduced by 35% */
     height: auto;
 }
@@ -30,17 +30,19 @@
     justify-content: flex-end;
 }
 
-.bottomblock{
-    margin-left: 700px;
-/* margin-bottom: 100px; */
-padding-bottom: 150px;
-width: 450px;
+#logo-appstore-align {
+    margin-bottom: 0%;
+}
 
+.technology-appstore-img {
+    margin-top: -15%;
+    margin-left: -18%;
+    scale: 20%;
 }
 
 #blog-detail {
     margin-left: 5%;
-    /* margin-top: 5%; */
+    margin-top: 1%;
     margin-bottom: 3%;
 }
 
@@ -53,25 +55,53 @@ width: 450px;
 
 #blog-content {
     font-weight: 300;
-    font-size: 15.6px; /* Reduced by 35% */
+    font-size: 20px; /* Reduced by 35% */
     line-height: 26px; /* Adjusted proportionally */
     color: #515151;
-    margin-bottom: 26px; /* Adjusted proportionally */
+    margin-bottom: 1%; /* Adjusted proportionally */
 }
 
-#blog-date {
+.technology-card-img {
+    margin-left: 1%;
+    scale: 100%;
+}
+
+.eyespace-card-container {
+    margin-top: -10%;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-bottom: 0; 
+}
+
+.eyespace-card {
+    border: 1px solid #EBEBEB;
+    box-shadow: 4px 4px 22px 10px rgba(181, 181, 181, 0.3);
+    border-radius: 40px;
+    margin-right: 1.5%;
+    margin-bottom: 1.5%;
+    width: 48%; /* Reduced by 35% */
+    height: auto; 
+}
+
+.eyespace-card-title {
+    margin-top: 1%;
+    margin-bottom: 2%;
+    font-size: 24px;
+    text-align: center;
+}
+
+.eyespace-card-img {
+    margin-left: 42%;
+    margin-bottom: 2%;
+    width: 125px;
+    height: 125px;
+}
+
+.eyespace-card-content {
     font-weight: 300;
-    font-size: 13px; /* Reduced by 35% */
-    line-height: 13px; /* Adjusted proportionally */
-    color: #787878;
-}
-
-#blog-img {
-    height: 480px;
-    width: 500px;
-    margin-right: -130px;
-    margin-left: -70px;
-    margin-top: -200px;
+    font-size: 20px;
+    text-align: center;
 }
 
 @media only screen and (max-width: 920px) {

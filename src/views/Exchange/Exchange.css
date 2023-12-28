@@ -1,18 +1,7 @@
-#blog{
-    margin-top: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
-    font-family: 'Inter';
-    /* font-style: normal; */
-    font-weight: 600;
-}
 
-#title{
-    font-size: 80px;
-    line-height: 76px;
-    /* identical to box height, or 80% */
-    color: #48627E;
-    width: 35%;
+.title{
+    text-align: center;
+    font-size: 24px;
 }
 
 #top{
@@ -24,6 +13,33 @@
     margin-top: 10%;
     width: 100%;
     margin-left: 20%;
+}
+
+.blogcontainer {
+    display: flex;
+    margin-left: 1%;
+    margin-right: 3%;
+}
+
+.BlogCards {
+    width: 75%;
+}
+
+.editor {
+    margin-left: 3%;
+    margin-right: 0%;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+}
+
+.editor-img {
+    width: 80%;
+    height: 80%;
+}
+
+.editor-name {
+    font-size: 21px;
 }
 
 @media only screen and (max-width: 920px) {

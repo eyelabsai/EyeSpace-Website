@@ -6,6 +6,7 @@ import Card2 from '../../../../assets/blog5.svg'
 import Card3 from '../../../../assets/OptiCalc SVG.svg'
 import Card4 from '../../../../assets/blog4.svg'
 import Card5 from '../../../../assets/transpose tool icon.svg';
+import Appstore from '../../../../assets/download-on-appstore.png'
 import { Link } from 'react-router-dom';
 
 export default class Card extends React.Component {
@@ -16,11 +17,11 @@ export default class Card extends React.Component {
     render() {
         return (
             <div className="current_tools" style={{ backgroundColor: '#f0f0f0' }}>
-                <div className="title"> CURRENT TECHNOLOGY</div>
-
+                <br></br><br></br>
+                <h1 style={{ textAlign: 'center' }}>CURRENT TECHNOLOGY</h1>
                 <div className="tool">
                     <div className="card">
-                        <img className="card-img" src={Card1} alt="Card1 Logo" />
+                        <img className="homepage-card-img" src={Card1} alt="Card1 Logo" />
                         <div className="detail">
                             {/* <div className="card-title">IOL Reference</div> */}
                             <div className="card-content">
@@ -29,10 +30,13 @@ export default class Card extends React.Component {
                             Download in the app store today or access the web-based tools under our TECHNOLOGY page.
                             </div>
                         </div>
+                        <a href="https://apps.apple.com/us/app/eye-space/id1626671895" target="_blank" rel="noopener noreferrer">
+                            <img className="homepage-appstore-img" src={Appstore} alt="Download On Appstore" />
+                        </a>
                     </div>
 
                     <div className="card">
-                        <img className="card-img" src={Card2} alt="Card2 Logo" />
+                        <img className="homepage-card-img" src={Card2} alt="Card2 Logo" />
                         <div className="detail">
                             {/* <div className="card-title">Refractive Outcome Tracking</div> */}
                             <div className="card-content" id="card2">
@@ -42,23 +46,9 @@ export default class Card extends React.Component {
                             </div>
                         </div>
                     </div>
-
-                    {/* <div className="card">
-                        <img className="card-img" src={Card3} alt="Card3 Logo" />
-                        <div className="detail">
-                            <div className="card-title">eyeSpace Forum</div>
-                            <div className="card-content">
-                                Connect with colleagues, mentors, and mentees to discuss cases, gather wisdom, and gain support
-                            </div>
-                        </div>
-                    </div> */}
-                </div>
-
-                <div className="tool">
                     <div className="card">
-                        <img className="card-img" src={Card3} alt="Card4 Logo" />
+                        <img className="homepage-card-img" src={Card3} alt="Card4 Logo" />
                         <div className="detail">
-                            {/* <div className="card-title">Sulcus Correction Calculator</div> */}
                             <div className="card-content">
                             OptiCalc is an AI-Driven IOL formula that utilizes pre-operative imaging routinely obtained with biometry. These include the 
                             OCT and topography images from the ZEISS IOLMaster® and Scheimpflug images from the OCULUS Pentacam®. This novel, image-driven approach provides additional benefits for machine learning models beyond simply feeding algorithms raw numbers. Important anatomical 
@@ -68,7 +58,7 @@ export default class Card extends React.Component {
                     </div>
 
                     <div className="card">
-                        <img className="card-img" src={Card4} alt="Card5 Logo" />
+                        <img className="homepage-card-img" src={Card4} alt="Card5 Logo" />
                         <div className="detail">
                             {/* <div className="card-title">Transposition Tool</div> */}
                             <div className="card-content">
@@ -79,13 +69,9 @@ export default class Card extends React.Component {
                         </div>
                     </div>
                 </div>
-                
-                {/* Button to link to the /Technology page */}
-                {/* <div className="bottom-button">
-                    <Link to="/Technology" style={{ textDecoration: 'none' }}>
-                        <button className="contact-button">Learn More &gt;</button>
-                    </Link>
-                </div> */}
+
+                <div className="tool">
+                </div>
             </div>
         );
     }

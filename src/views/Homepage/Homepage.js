@@ -14,7 +14,6 @@ export default class Homepage extends React.Component {
           <div className="body-div"><Banner/></div>
           <div className="body-div"><Card/></div>
           <div className="body-div"><Mission/></div>
-          <div className="footer-div"><Footer/></div>
         </div>
       );
     }
