@@ -29,7 +29,7 @@ export default class Technology extends React.Component {
       image: Blog3
     },
     {
-      title: "Collaborators: Jack Holladay MD, Taj Nasser MD, James Landreneau MD",
+      title: "The Perfect Test",
       content: "The PERFECT Test is an image-based machine learning project aiming to create an accurate, repeatable, and continuously improving tool for the prediction of corneal ectasia development. This will assist clinicians in the diagnosis of corneal ectasia as well as screening for refractive surgery candidates.",
       collaborators: "Jack Holladay MD, Taj Nasser MD, James Landreneau MD",
       image: Blog4
