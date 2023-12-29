@@ -42,6 +42,7 @@ export default class AboutUs extends React.Component {
           </div>
           <Founders/>
           <DevelopersBoard/>
+          <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         </div>
       </div>
     );
