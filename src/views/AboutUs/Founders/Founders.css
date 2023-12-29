@@ -17,3 +17,12 @@
 .FoundersCardsLarge {
   border-radius: 24px;
 }
+
+.FoundersCardsSmall {
+  display: flex;
+  justify-content: space-between;
+}
+
+.board-of-directors {
+  text-align: center;
+}

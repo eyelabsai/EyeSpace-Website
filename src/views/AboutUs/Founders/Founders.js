@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import './Founders.css';
 import FounderCard from './FounderCard/FounderCard';
 import FounderCardLarge from "./FounderCardLarge/FounderCardLarge";
+import FounderCardSmall from "./FounderCardSmall/FounderCardSmall";
 import Matthew_Hirabayashi from '../../../assets/Matthew_Hirabayashi.svg';
 import Gurpal_Virdi from '../../../assets/Gurpal_Virdi.svg';
 
@@ -55,6 +56,20 @@ export default class Founders extends React.Component {
       picture: Gurpal_Virdi,
     }
   ];
+  founders_small_information = [
+    {
+      name:"Brett Mueller, DO PhD",
+      picture: Gurpal_Virdi,
+    },
+    {
+      name:"James Landreneau, MD",
+      picture: Gurpal_Virdi,
+    },
+    {
+      name:"Name",
+      picture: Gurpal_Virdi,
+    }
+  ];
 
   render() {
     return ( 
@@ -73,7 +88,17 @@ export default class Founders extends React.Component {
       {
           this.founders_large_information.map((obj) => {
             return (
-              <FounderCardLarge name={obj.name} title={obj.title} text={obj.text} texts={obj.texts} twitter={obj.twitter} linkedin={obj.linkedin} youtube={obj.youtube} picture={obj.picture}/>
+              <FounderCardLarge name={obj.name} title={obj.title} texts={obj.texts} twitter={obj.twitter} linkedin={obj.linkedin} youtube={obj.youtube} picture={obj.picture}/>
+            )
+          })
+        }
+      </div>
+      <h1 className="board-of-directors">Board of Directors</h1>
+      <div className="FoundersCardsSmall">
+      {
+          this.founders_small_information.map((obj) => {
+            return (
+              <FounderCardSmall name={obj.name}twitter={obj.twitter} linkedin={obj.linkedin} youtube={obj.youtube} picture={obj.picture}/>
             )
           })
         }
