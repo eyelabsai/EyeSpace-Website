@@ -2,10 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import './AboutUs.css';
 import Header from '../../components/header/Header';
-import Footer from "../../components/footer/Footer";
-import EngBoard from "./AdvisoryBoard copy/AdvisoryBoard";
 import Founders from "./Founders/Founders";
 import IndustryAdvisors from "./IndustryAdvisors/IndustryAdvisors";
+import DevelopersBoard from "./DevelopersBoard/DevelopersBoard";
 import GM from "../../assets/Gurpal-Matthew.png"
 
 export default class AboutUs extends React.Component {
@@ -31,7 +30,7 @@ export default class AboutUs extends React.Component {
               EYESPACE is a private entity with no financial relationship to any of the manufacturers whose data is archived. Neither of the founders have conflicts of interest.
               </div>
             </div>
-            <img className="aboutus-header-img" src={GM}/>
+            <img className="aboutus-header-img" src={GM} alt="Gurpal-Matthew"/>
           </div>
           <div className="aboutus-title">
             <strong>EYESPACE Mission</strong>
@@ -42,10 +41,10 @@ export default class AboutUs extends React.Component {
           <div className="aboutus-title">
             <strong>Leadership</strong>
           </div>
+          <DevelopersBoard/>
         </div>
         <Founders/>
         <IndustryAdvisors/>
-        <EngBoard/>
       </div>
     );
   }

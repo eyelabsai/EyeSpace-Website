@@ -1,0 +1,19 @@
+.developer-board {
+    background: rgb(245, 245, 245);
+    border-radius: 50px;
+    padding-bottom: 3%;
+}
+
+.developer-title {
+    text-align: center;
+}
+
+.developer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.developer-names {
+    font-size: 20px;
+    text-align: center;
+}
