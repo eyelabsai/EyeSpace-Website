@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import './AboutUs.css';
 import Header from '../../components/header/Header';
 import Founders from "./Founders/Founders";
-import IndustryAdvisors from "./IndustryAdvisors/IndustryAdvisors";
 import DevelopersBoard from "./DevelopersBoard/DevelopersBoard";
 import GM from "../../assets/Gurpal-Matthew.png"
 
@@ -41,10 +40,9 @@ export default class AboutUs extends React.Component {
           <div className="aboutus-title">
             <strong>Leadership</strong>
           </div>
+          <Founders/>
           <DevelopersBoard/>
         </div>
-        <Founders/>
-        <IndustryAdvisors/>
       </div>
     );
   }

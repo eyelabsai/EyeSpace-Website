@@ -14,6 +14,7 @@ export default class FounderCard extends React.Component {
     name: PropTypes.string, // name of the person on the card
     title: PropTypes.string, // title of the person (MD, PHD, etc)
     text: PropTypes.string, // person's description
+    texts: PropTypes.array,
     twitter: PropTypes.string, // twitter link (optional)
     linkedin: PropTypes.string, // linkedin link (optional)
     youtube: PropTypes.string, // youtube link (optional)
@@ -24,14 +25,15 @@ export default class FounderCard extends React.Component {
     return (
     <div className="founders-card">
       <div className="founder-pic"><img className="img-tag" src={this.props.picture} alt={this.props.name}/></div>
-      <div className="founder-name">{this.props.name}<br/>{this.props.title}</div>
-      <div className="founder-desc">{this.props.text}</div>
+      <div className="founder-name">{this.props.title}<br/>Co-Founder<br/>{this.props.name}</div>
+      <div>{this.props.texts.map((text) => (
+        <div className="founder-desc">{text}</div>
+      ))}</div>
       <div className="mediaIcons">
         {/* only display the icon if the person has social media links associated with it */}
-        {(this.props.twitter !== "") && <div className="twitter"><a href={this.props.twitter} target="_blank" rel="noreferrer"><img src={Twitter} alt="Twitter"/></a></div>}
-        {(this.props.linkedin !== "") && <div className="linkedin"><a href={this.props.linkedin} target="_blank" rel="noreferrer"><img src={Linkedin} alt="Linkedin"/></a></div>}
-        {(this.props.youtube !== "") && <div className="youtube"><a href={this.props.youtube} target="_blank" rel="noreferrer"><img src={Youtube} alt="Youtube"/></a></div>}
-
+        {(this.props.twitter !== "") && <div className="mediaIcon"><a href={this.props.twitter} target="_blank" rel="noreferrer"><img src={Twitter} alt="Twitter"/></a></div>}
+        {(this.props.linkedin !== "") && <div className="mediaIcon"><a href={this.props.linkedin} target="_blank" rel="noreferrer"><img src={Linkedin} alt="Linkedin"/></a></div>}
+        {(this.props.youtube !== "") && <div className="mediaIcon"><a href={this.props.youtube} target="_blank" rel="noreferrer"><img src={Youtube} alt="Youtube"/></a></div>}
       </div>
     </div>
     );

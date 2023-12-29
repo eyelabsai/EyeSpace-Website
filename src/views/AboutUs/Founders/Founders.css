@@ -4,14 +4,16 @@
     flex-direction: column;
   }
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   gap: 24px;
-  justify-content: center;
-  background-color: rgb(246, 246, 246);
 }
 
 /* Apply a 35% font size reduction to all text within .FoundersCards */
-.FoundersCards * {
-  font-size: 65%; /* 35% smaller than the original size */
+.FoundersCards{
+  border-radius: 24px;
+}
+
+.FoundersCardsLarge {
+  border-radius: 24px;
 }
