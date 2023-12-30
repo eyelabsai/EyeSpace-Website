@@ -3,19 +3,24 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  width: 100%;
+  margin-left: -1%;
+  width: 104%;
   box-shadow: 0px 0px 25px 1px rgb(240, 240, 240);
   margin-bottom: 3%;
 }
 
-.founder-pic-large {
+.founder-pic-large-container {
   margin-left: 5%;
   margin-top: 20px;
-  width: 300px;
-  height: 295px;
+  margin-right: 5%;
   flex-shrink: 0;
   border-radius: 240px;
   background: #FEFEFE;
+}
+
+.founder-pic-large {
+  width: 250px;
+  height: 250px;
 }
 
 .founder-name-large {

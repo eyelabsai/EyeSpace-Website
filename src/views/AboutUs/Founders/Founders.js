@@ -8,6 +8,8 @@ import Matthew_Hirabayashi from '../../../assets/Matthew_Hirabayashi.svg';
 import Gurpal_Virdi from '../../../assets/Gurpal_Virdi.svg';
 import Taj_Nasser from '../../../assets/Taj_Nasser.svg';
 import James_Landreneau from '../../../assets/James_Landreneau.svg'
+import Brett_Muller from '../../../assets/Brett_Muller.png'
+import Person_Icon from '../../../assets/Person_Icon.png'
 
 export default class Founders extends React.Component {
   static propTypes = {
@@ -55,22 +57,27 @@ export default class Founders extends React.Component {
       texts: [
         "The EYESPACE CTO is responsible for technological strategy, innovation, execution, strategic planning, and ensuring that the technological infrastructure aligns with our mission.",
       ],
-      picture: Gurpal_Virdi,
+      picture: Person_Icon,
     }
   ];
   founders_small_information = [
     {
       name:"Brett Mueller, DO PhD",
-      mail: 'aaa',
-      picture: Gurpal_Virdi,
+      youtube: 'aaa',
+      twitter:'aaa',
+      linkedin:'aaa',
+      instagram: 'aaa',
+      picture: Brett_Muller,
     },
     {
       name:"James Landreneau, MD",
+      youtube: 'aaa',
       picture: James_Landreneau,
     },
     {
       name:"Name",
-      picture: Gurpal_Virdi,
+      youtube: 'aaa',
+      picture: Person_Icon,
     }
   ];
 
@@ -101,7 +108,7 @@ export default class Founders extends React.Component {
       {
           this.founders_small_information.map((obj) => {
             return (
-              <FounderCardSmall name={obj.name}twitter={obj.twitter} linkedin={obj.linkedin} youtube={obj.youtube} mail={obj.mail} picture={obj.picture}/>
+              <FounderCardSmall name={obj.name}twitter={obj.twitter} linkedin={obj.linkedin} youtube={obj.youtube} instagram={obj.instagram} mail={obj.mail} picture={obj.picture}/>
             )
           })
         }

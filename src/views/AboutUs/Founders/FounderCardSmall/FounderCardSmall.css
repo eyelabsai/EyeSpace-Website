@@ -12,18 +12,20 @@
   .founder-pic-small {
     margin-left: 5%;
     margin-top: 20px;
-    height: 295px;
-    flex-shrink: 0;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 5%;
     border-radius: 240px;
     background: #FEFEFE;
   }
   
   .founder-name-small {
     text-align: center;
-    font-size: 28px; /* 35% smaller */
+    font-size: 24px; /* 35% smaller */
     font-family: Inter;
     font-weight: 600;
     margin-top: -5%;
+    margin-bottom: 3%;
   }
   
   .founder-desc-small {
@@ -42,5 +44,6 @@
   }
   
   .mediaIcon-small {
-    scale: 60%;
+    width: 50px;
+    height: 50px;
   }
