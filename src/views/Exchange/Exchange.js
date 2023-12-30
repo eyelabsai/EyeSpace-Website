@@ -2,7 +2,6 @@ import React from "react";
 import Header from '../../components/header/Header';
 import BlogCard from './BlogCard';
 import './Exchange.css'; 
-import { Link } from 'react-router-dom';
 import Blog1 from '../../assets/blog1.svg'
 import Blog2 from '../../assets/blog2.svg'
 import ForumReplacement from '../../assets/forum_replacement.png'

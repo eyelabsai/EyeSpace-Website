@@ -3,8 +3,6 @@ import Header from '../../components/header/Header';
 import './ForgotPassword.css';
 import { auth } from "../../firebase";
 import { sendPasswordResetEmail } from 'firebase/auth';
-import { Link } from 'react-router-dom';
-
 function ForgotPassword() {
     const handleSubmit = async(e) => {
         e.preventDefault();

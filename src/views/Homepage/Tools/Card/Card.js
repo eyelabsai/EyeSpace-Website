@@ -5,9 +5,7 @@ import Card1 from '../../../../assets/eyeSpace Logo-2.png'
 import Card2 from '../../../../assets/blog5.svg'
 import Card3 from '../../../../assets/OptiCalc SVG.svg'
 import Card4 from '../../../../assets/blog4.svg'
-import Card5 from '../../../../assets/transpose tool icon.svg';
 import Appstore from '../../../../assets/download-on-appstore.png'
-import { Link } from 'react-router-dom';
 
 export default class Card extends React.Component {
     static propTypes = {
