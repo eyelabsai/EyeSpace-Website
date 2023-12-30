@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Header from '../../components/header/Header';
-import Footer from '../../components/footer/Footer';
 import './CreateAccount.css';
 import { auth, firestore } from '../../firebase';
 import { collection, doc, setDoc } from 'firebase/firestore';

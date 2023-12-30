@@ -2,7 +2,6 @@ import React from "react";
 import Mission from "./Mission/Mission";
 import Header from "../../components/header/Header";
 import Card from "./Tools/Card/Card";
-import Footer from "../../components/footer/Footer";
 import "./Homepage.css";
 import Banner from "./Banner/Banner";
 
