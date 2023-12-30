@@ -27,9 +27,11 @@ export default class FounderCardLarge extends React.Component {
       <div className="founder-pic-large-container"><img className="founder-pic-large" src={this.props.picture} alt={this.props.name}/></div>
       <div>
         <div className="founder-name-large">{this.props.title}<br/>{this.props.name}</div>
-        <div>{this.props.texts.map((text) => (
+        <div>
+          {this.props.texts.map((text) => (
           <div className="founder-desc-large">{text}</div>
-        ))}</div>
+          ))}
+        </div>
         <div className="mediaIcons-large">
           {/* only display the icon if the person has social media links associated with it */}
           {(this.props.twitter !== "") && <div className="mediaIcon-large"><a href={this.props.twitter} target="_blank" rel="noreferrer"><img src={Twitter} alt="Twitter"/></a></div>}
