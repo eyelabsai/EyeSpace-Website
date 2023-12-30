@@ -6,6 +6,8 @@ import FounderCardLarge from "./FounderCardLarge/FounderCardLarge";
 import FounderCardSmall from "./FounderCardSmall/FounderCardSmall";
 import Matthew_Hirabayashi from '../../../assets/Matthew_Hirabayashi.svg';
 import Gurpal_Virdi from '../../../assets/Gurpal_Virdi.svg';
+import Taj_Nasser from '../../../assets/Taj_Nasser.svg';
+import James_Landreneau from '../../../assets/James_Landreneau.svg'
 
 export default class Founders extends React.Component {
   static propTypes = {
@@ -45,7 +47,7 @@ export default class Founders extends React.Component {
         "Dedicated to restoring vision and enhancing the quality of life for patients, Dr. Nasser blends innovative techniques with heartfelt compassion. Driven by a passion for process improvement and high-quality, patient-centered care, Dr. Nasser gravitated towards specializing in refractive surgery. He cherishes the opportunity to have gained extensive experience in this realm and is excited to embark on exciting novel projects to improve the patient and provider experience.",
         "The EYESPACE CMO is responsible for overseeing the medical affairs and policies including providing clinical expertise, strategic planning, risk management, research, innovation, and external relations."
       ],
-      picture: Gurpal_Virdi,
+      picture: Taj_Nasser,
     },
     {
       name:"",
@@ -63,7 +65,7 @@ export default class Founders extends React.Component {
     },
     {
       name:"James Landreneau, MD",
-      picture: Gurpal_Virdi,
+      picture: James_Landreneau,
     },
     {
       name:"Name",
