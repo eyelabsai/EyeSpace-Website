@@ -61,6 +61,7 @@ export default class Founders extends React.Component {
   founders_small_information = [
     {
       name:"Brett Mueller, DO PhD",
+      mail: 'aaa',
       picture: Gurpal_Virdi,
     },
     {
@@ -100,7 +101,7 @@ export default class Founders extends React.Component {
       {
           this.founders_small_information.map((obj) => {
             return (
-              <FounderCardSmall name={obj.name}twitter={obj.twitter} linkedin={obj.linkedin} youtube={obj.youtube} picture={obj.picture}/>
+              <FounderCardSmall name={obj.name}twitter={obj.twitter} linkedin={obj.linkedin} youtube={obj.youtube} mail={obj.mail} picture={obj.picture}/>
             )
           })
         }
