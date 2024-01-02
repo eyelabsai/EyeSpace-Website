@@ -48,7 +48,7 @@ function Login() {
             <button type="submit" className="inloginsubmit">Submit</button>
           </form>
         </div>
-        <div className="right">
+        <div className="right-login">
           <h1 id="accprompt">Don't Have An Account?</h1>
           <form action="CreateAccount/">
             <button type="submit" className="inloginsubmit">Create account</button>

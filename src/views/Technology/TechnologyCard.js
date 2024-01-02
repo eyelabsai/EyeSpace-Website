@@ -24,7 +24,7 @@ export default class TechnologyCard extends React.Component {
         if (title === "Eyespace App") {
             return (
                 <div id="blog-card">
-                    <div id="article" className="right-align">
+                    <div id="article" className="technology-right-align">
                         <div>
                             <img className="technology-card-img" src={image} alt={title} />
                         </div>
