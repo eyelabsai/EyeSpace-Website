@@ -13,8 +13,8 @@
 .founder-pic {
   margin-left: 3%;
   margin-top: 20px;
-  width: 300px;
-  height: 295px;
+  width: 250px;
+  height: 250px;
   flex-shrink: 0;
   border-radius: 240px;
   background: #FEFEFE;
@@ -25,7 +25,6 @@
   font-size: 28px; /* 35% smaller */
   font-family: Inter;
   font-weight: 600;
-  margin-top: -5%;
 }
 
 .founder-desc {

@@ -24,7 +24,7 @@ export default class FounderCard extends React.Component {
   render() {
     return (
     <div className="founders-card">
-      <div className="founder-pic"><img className="img-tag" src={this.props.picture} alt={this.props.name}/></div>
+      <div><img className="founder-pic" src={this.props.picture} alt={this.props.name}/></div>
       <div className="founder-name">{this.props.title}<br/>Co-Founder<br/>{this.props.name}</div>
       <div>{this.props.texts.map((text) => (
         <div className="founder-desc">{text}</div>

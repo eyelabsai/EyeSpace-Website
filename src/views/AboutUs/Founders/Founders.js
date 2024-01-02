@@ -4,7 +4,7 @@ import './Founders.css';
 import FounderCard from './FounderCard/FounderCard';
 import FounderCardLarge from "./FounderCardLarge/FounderCardLarge";
 import FounderCardSmall from "./FounderCardSmall/FounderCardSmall";
-import Matthew_Hirabayashi from '../../../assets/Matthew_Hirabayashi.svg';
+import Matthew_Hirabayashi from '../../../assets/Matt Headshot SVG.svg';
 import Gurpal_Virdi from '../../../assets/Gurpal_Virdi.svg';
 import Taj_Nasser from '../../../assets/Taj_Nasser.svg';
 import James_Landreneau from '../../../assets/James_Landreneau.svg'
