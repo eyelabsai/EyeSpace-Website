@@ -31,9 +31,9 @@ export default class FounderCard extends React.Component {
       ))}</div>
       <div className="mediaIcons">
         {/* only display the icon if the person has social media links associated with it */}
-        {(this.props.twitter !== "") && <div className="mediaIcon"><a href={this.props.twitter} target="_blank" rel="noreferrer"><img src={Twitter} alt="Twitter"/></a></div>}
-        {(this.props.linkedin !== "") && <div className="mediaIcon"><a href={this.props.linkedin} target="_blank" rel="noreferrer"><img src={Linkedin} alt="Linkedin"/></a></div>}
-        {(this.props.youtube !== "") && <div className="mediaIcon"><a href={this.props.youtube} target="_blank" rel="noreferrer"><img src={Youtube} alt="Youtube"/></a></div>}
+        {(this.props.twitter !== "") && <div><a href={this.props.twitter} target="_blank" rel="noreferrer"><img className="mediaIcon" src={Twitter} alt="Twitter"/></a></div>}
+        {(this.props.linkedin !== "") && <div><a href={this.props.linkedin} target="_blank" rel="noreferrer"><img  className="mediaIcon" src={Linkedin} alt="Linkedin"/></a></div>}
+        {(this.props.youtube !== "") && <div><a href={this.props.youtube} target="_blank" rel="noreferrer"><img className="mediaIcon" src={Youtube} alt="Youtube"/></a></div>}
       </div>
     </div>
     );
