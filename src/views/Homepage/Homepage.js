@@ -13,6 +13,7 @@ export default class Homepage extends React.Component {
           <div className="body-div"><Banner/></div>
           <div className="body-div"><Card/></div>
           <div className="body-div"><Mission/></div>
+          <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         </div>
       );
     }

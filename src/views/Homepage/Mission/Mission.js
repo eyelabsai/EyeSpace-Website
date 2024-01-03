@@ -29,14 +29,14 @@ export default class Mission extends React.Component {
       </div>
 
       <div className="socials">
+        <a href="https://twitter.com/EyeSpace_AI" target="_blank" rel="noopener noreferrer">
+          <img className="homepage-socials-img" src={twitter_logo} alt="Twitter logo" />
+        </a>
         <a href="https://www.instagram.com/eyespace.ai/" target="_blank" rel="noopener noreferrer">
-          <img className="socials-img-tag" src={instagram_logo} alt="Instagram logo" />
+          <img className="homepage-socials-img" src={instagram_logo} alt="Instagram logo" />
         </a>
         <a href="mailto:youremail@example.com">
-          <img className="socials-img-tag gmail-logo" src={gmail_logo} alt="Gmail logo" />
-        </a>
-        <a href="https://twitter.com/EyeSpace_AI" target="_blank" rel="noopener noreferrer">
-          <img className="socials-img-tag" src={twitter_logo} alt="Twitter logo" />
+          <img className="homepage-socials-img" src={gmail_logo} alt="Gmail logo" />
         </a>
       </div>
     </div>
