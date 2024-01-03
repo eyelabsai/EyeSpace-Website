@@ -40,6 +40,8 @@
   
   .mediaIcons-small {
     display: flex;
+    margin-top: 3%;
+    margin-bottom: 3%;
   }
   
   .mediaIcon-small {
