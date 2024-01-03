@@ -9,6 +9,7 @@ import Technology from "./views/Technology/Technology";
 import CreateAccount from "./views/CreateAccount/CreateAccount"
 import ForgotPassword from "./views/ForgotPassword/ForgotPassword";
 import UserProfile from "./views/UserProfile/UserProfile";
+import Insight from "./views/Insight/Insight"
 //import './App.css';
 
 export default class App extends React.Component {
@@ -22,6 +23,7 @@ export default class App extends React.Component {
             <Route path="/" element={ <Homepage/> }></Route>
             <Route path="/AboutUs" element={ <AboutUs/> }></Route>
             <Route path="/Exchange" element={ <Exchange/> }></Route>
+            <Route path="/Insight" element={ <Insight/> }></Route>
             <Route path="/Contact" element={ <Contact/> }></Route>
             <Route path="/Login" element={ <Login/> }></Route>
             <Route path="/Technology" element={ <Technology/> }></Route>

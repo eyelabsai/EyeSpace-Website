@@ -24,6 +24,7 @@ export default class Button extends React.Component {
     "Technology", 
     "About Us", 
     "eXchange",
+    "inSight",
     "Contact", ];
 
   buttonsDict = {
@@ -31,6 +32,7 @@ export default class Button extends React.Component {
     "Technology": "/Technology",
     "About Us": "/AboutUs",
     "eXchange": "/Exchange",
+    "inSight": "/Insight",
     "Contact": "/Contact",
   };
 
