@@ -18,10 +18,10 @@ export default class FounderCardSmall extends React.Component {
     text: PropTypes.string, // person's description
     texts: PropTypes.array,
     twitter: PropTypes.string, // twitter link (optional)
-    linkedin: PropTypes.string, // linkedin link (optional)
-    youtube: PropTypes.string, // youtube link (optional)
+    linkedin: PropTypes.string, // linkedin link (optional)4
     instagram: PropTypes.string,
     mail: PropTypes.string,
+    youtube: PropTypes.string, // youtube link (optional)
     picture: PropTypes.string, // picture link
   };
 
@@ -34,9 +34,9 @@ export default class FounderCardSmall extends React.Component {
         {/* only display the icon if the person has social media links associated with it */}
         {(this.props.twitter !== undefined && this.props.twitter !== "") && <div><a href={this.props.twitter} target="_blank" rel="noreferrer"><img className="mediaIcon-small" src={Twitter} alt="Twitter"/></a></div>}
         {(this.props.linkedin !== undefined && this.props.linkedin !== "") && <div><a href={this.props.linkedin} target="_blank" rel="noreferrer"><img className="mediaIcon-small" src={Linkedin} alt="Linkedin"/></a></div>}
+        {(this.props.instagram !== undefined && this.props.instagram !== "") && <div><a href={this.props.instagram} target="_blank" rel="noreferrer"><img className="mediaIcon-small" src={Instagram} alt="Instagram"/></a></div>}
+        {(this.props.mail !== undefined && this.props.mail !== "") && <div><a href={this.props.mail} target="_blank" rel="noreferrer"><img className="mediaIcon-small" src={Mail } alt="Instagram"/></a></div>}
         {(this.props.youtube !== undefined && this.props.youtube !== "") && <div><a href={this.props.youtube} target="_blank" rel="noreferrer"><img className="mediaIcon-small" src={Youtube} alt="Youtube"/></a></div>}
-        {(this.props.instagram !== undefined && this.props.instagram !== "") && <div><a href={this.props.instagram} target="_blank" rel="noreferrer"><img className="mediaIcon-small" src={Mail} alt="Instagram"/></a></div>}
-        {(this.props.instagram !== undefined && this.props.instagram !== "") && <div><a href={this.props.instagram} target="_blank" rel="noreferrer"><img className="mediaIcon-small" src={Instagram  } alt="Instagram"/></a></div>}
       </div>
     </div>
     );

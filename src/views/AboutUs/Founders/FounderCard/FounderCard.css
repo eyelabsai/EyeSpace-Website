@@ -6,6 +6,7 @@
   width: 50%; /* Reduced by 15% */
   height: auto;
   flex-shrink: 0;
+  border-radius: 24px;
   box-shadow: 0px 0px 25px 1px rgb(240, 240, 240);
   margin-bottom: 3%;
 }
@@ -38,11 +39,11 @@
 
 .mediaIcons {
   display: flex;
-  flex-direction: row;
-  margin-right: 0%;
 }
 
 .mediaIcon {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
 }

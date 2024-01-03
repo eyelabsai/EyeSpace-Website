@@ -24,7 +24,8 @@ export default class Founders extends React.Component {
       texts: ["The EYESPACE CEO is responsible for talent acquisition, project management, operations, targets, and goal achievement.","       Gurpal Virdi MD is a Palo Alto native who graduated from Washington University in St. Louis. He is currently an ophthalmology resident."],
       twitter: "https://twitter.com/gurpalvirdi",
       linkedin: "https://www.linkedin.com/in/gurpalvirdi/",
-      youtube: "",
+      instagram: "https://www.instagram.com/gurpalv/",
+      mail: "mailto:gurpal@eyespace.ai",
       picture: Gurpal_Virdi,
     },
     {
@@ -35,6 +36,8 @@ export default class Founders extends React.Component {
         "Matthew Hirabayashi MD is a chief ophthalmology resident currently applying for fellowships in refractive surgery."],
       twitter: "https://twitter.com/EyeFlyMD",
       linkedin: "https://www.linkedin.com/in/matt-hirabayash/",
+      instagram: "https://www.instagram.com/eyeflymd/",
+      mail: "mailto:matt@eyespace.ai",
       youtube: "https://www.youtube.com/channel/UCLKR7pzPLSZgndzU8l1f0_w",
       picture: Matthew_Hirabayashi,
     },
@@ -49,6 +52,10 @@ export default class Founders extends React.Component {
         "Dedicated to restoring vision and enhancing the quality of life for patients, Dr. Nasser blends innovative techniques with heartfelt compassion. Driven by a passion for process improvement and high-quality, patient-centered care, Dr. Nasser gravitated towards specializing in refractive surgery. He cherishes the opportunity to have gained extensive experience in this realm and is excited to embark on exciting novel projects to improve the patient and provider experience.",
         "The EYESPACE CMO is responsible for overseeing the medical affairs and policies including providing clinical expertise, strategic planning, risk management, research, innovation, and external relations."
       ],
+      twitter: "https://twitter.com/tajnassermd",
+      linkedin: "https://www.linkedin.com/in/taj-nasser-md/",
+      instagram: "https://www.instagram.com/tajnassermd/",
+      mail: "mailto:tajnassermd@gmail.com",
       picture: Taj_Nasser,
     },
     {
@@ -57,26 +64,32 @@ export default class Founders extends React.Component {
       texts: [
         "The EYESPACE CTO is responsible for technological strategy, innovation, execution, strategic planning, and ensuring that the technological infrastructure aligns with our mission.",
       ],
+      twitter: "https://twitter.com/gurpalvirdi",
+      linkedin: "https://www.linkedin.com/in/matt-hirabayash/",
+      instagram: "https://www.instagram.com/gurpalv/",
+      mail: "mailto:gurpal@eyespace.ai;",
       picture: Person_Icon,
     }
   ];
   founders_small_information = [
     {
       name:"Brett Mueller, DO PhD",
-      youtube: 'aaa',
-      twitter:'aaa',
-      linkedin:'aaa',
-      instagram: 'aaa',
+      twitter: "https://twitter.com/drbrettmueller",
+      linkedin: "https://www.linkedin.com/in/brett-mueller-d-o-ph-d-52843191/",
+      instagram: "https://www.instagram.com/drbrettmueller/",
       picture: Brett_Muller,
     },
     {
       name:"James Landreneau, MD",
-      youtube: 'aaa',
+      twitter: "https://twitter.com/LandreneauMD",
       picture: James_Landreneau,
     },
     {
       name:"Name",
-      youtube: 'aaa',
+      twitter: "https://twitter.com/gurpalvirdi",
+      linkedin: "https://www.linkedin.com/in/matt-hirabayash/",
+      instagram: "https://www.instagram.com/gurpalv/",
+      mail: "mailto:gurpal@eyespace.ai",
       picture: Person_Icon,
     }
   ];
@@ -89,7 +102,7 @@ export default class Founders extends React.Component {
         {
           this.founders_information.map((obj) => {
             return (
-              <FounderCard name={obj.name} title={obj.title} text={obj.text} texts={obj.texts} twitter={obj.twitter} linkedin={obj.linkedin} youtube={obj.youtube} picture={obj.picture}/>
+              <FounderCard name={obj.name} title={obj.title} text={obj.text} texts={obj.texts} twitter={obj.twitter} linkedin={obj.linkedin} instagram={obj.instagram} mail={obj.mail} youtube={obj.youtube} picture={obj.picture}/>
             )
           })
         }
@@ -98,7 +111,7 @@ export default class Founders extends React.Component {
       {
           this.founders_large_information.map((obj) => {
             return (
-              <FounderCardLarge name={obj.name} title={obj.title} texts={obj.texts} twitter={obj.twitter} linkedin={obj.linkedin} youtube={obj.youtube} picture={obj.picture}/>
+              <FounderCardLarge name={obj.name} title={obj.title} texts={obj.texts} twitter={obj.twitter} linkedin={obj.linkedin} instagram={obj.instagram} mail={obj.mail} youtube={obj.youtube} picture={obj.picture}/>
             )
           })
         }
@@ -108,7 +121,7 @@ export default class Founders extends React.Component {
       {
           this.founders_small_information.map((obj) => {
             return (
-              <FounderCardSmall name={obj.name}twitter={obj.twitter} linkedin={obj.linkedin} youtube={obj.youtube} instagram={obj.instagram} mail={obj.mail} picture={obj.picture}/>
+              <FounderCardSmall name={obj.name}twitter={obj.twitter} linkedin={obj.linkedin} instagram={obj.instagram} mail={obj.mail} youtube={obj.youtube} picture={obj.picture}/>
             )
           })
         }
