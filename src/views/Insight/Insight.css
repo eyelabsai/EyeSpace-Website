@@ -1,0 +1,54 @@
+#top{
+    display: flex;
+    margin-bottom: 80px;
+}
+
+.blog-aboutus{
+    margin-top: 10%;
+    width: 100%;
+    margin-left: 20%;
+}
+
+.blogcontainer {
+    display: flex;
+    margin-left: 1%;
+    margin-right: 3%;
+}
+
+.BlogCards {
+    width: 75%;
+}
+
+.editor {
+    margin-left: 3%;
+    margin-right: 0%;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+}
+
+.editor-img {
+    width: 80%;
+    height: 80%;
+}
+
+.editor-name {
+    font-size: 21px;
+}
+
+@media only screen and (max-width: 920px) {
+    #top{
+        display: block;
+        margin-bottom: 80px; 
+    }
+
+    #title{
+        width: 100%;
+        text-align: center;
+    }
+
+    .blog-aboutus{
+        margin-top: 5%;
+        margin-left: auto;
+    }
+}
