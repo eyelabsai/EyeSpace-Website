@@ -15,7 +15,7 @@
     box-shadow: 4px 4px 22px 10px rgba(181, 181, 181, 0.3);
     border-radius: 40px;
     margin-bottom: 2%;
-    width: 100%; /* Reduced by 35% */
+    width: 90%; /* Reduced by 35% */
     height: auto;
 }
 
@@ -36,7 +36,7 @@
 .technology-appstore-img {
     margin-top: -10%;
     margin-left: -5%;
-    scale: 40%;
+    scale: 30%;
 }
 
 #blog-detail {
@@ -49,12 +49,12 @@
     font-size: 20.8px; /* Reduced by 35% */
     line-height: 26px; /* Adjusted proportionally */
     color: #424242;
-    margin-bottom: 13px; /* Adjusted proportionally */
+    margin-bottom: 9px; /* Adjusted proportionally */
 }
 
 #blog-content {
     font-weight: 300;
-    font-size: 20px; /* Reduced by 35% */
+    font-size: 15px; /* Reduced by 35% */
     line-height: 26px; /* Adjusted proportionally */
     color: #515151;
     margin-bottom: 1%; /* Adjusted proportionally */
@@ -79,27 +79,27 @@
     border-radius: 40px;
     margin-right: 1.5%;
     margin-bottom: 1.5%;
-    width: 48%; /* Reduced by 35% */
+    width: 35%; /* Reduced by 35% */
     height: auto; 
 }
 
 .eyespace-card-title {
     margin-top: 1%;
     margin-bottom: 2%;
-    font-size: 24px;
+    font-size: 17px;
     text-align: center;
 }
 
 .eyespace-card-img {
     margin-left: 42%;
     margin-bottom: 2%;
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
 }
 
 .eyespace-card-content {
     font-weight: 300;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
 }
 
