@@ -7,9 +7,10 @@ import { doc, getDoc } from 'firebase/firestore';
 
 const ForumPostCard = ({ didLike, imageURL, subreddit, title, text, timestamp, uid, upvotes }) => {
   const [username, setUsername] = useState('');
+  const [avatarUrl, setAvatarUrl] = useState('');
 
   useEffect(() => {
-    const getUserFirstNameAndLastName = async () => {
+    const getUserProfile = async () => {
       try {
         const userRef = doc(firestore, 'users', uid);
         const userDoc = await getDoc(userRef);
@@ -17,7 +18,9 @@ const ForumPostCard = ({ didLike, imageURL, subreddit, title, text, timestamp, u
         if (userDoc.exists()) {
           const userData = userDoc.data();
           const fullName = `${userData.firstName} ${userData.lastName}`;
+          const imgurl = userData.avatarUrl;
           setUsername(fullName);
+          setAvatarUrl(imgurl);
         } else {
           console.log('No such user!');
         }
@@ -26,15 +29,17 @@ const ForumPostCard = ({ didLike, imageURL, subreddit, title, text, timestamp, u
       }
     };
 
-    getUserFirstNameAndLastName();
+    getUserProfile();
   }, [uid]);
+
+  const imageSrc = avatarUrl || Person_Icon;
 
   return (
     <div className="forum-postcard">
       <div className="forum-postcard-header">
-        <img className="forum-postcard-header-img" src={Person_Icon} alt="person_icon"/>
+        <img className="forum-postcard-header-img" src={imageSrc} alt="person_icon"/>
         <div className="forum-postcard-header-content">
-          <div className="forum-postcard-header-title">
+          <div className="forum-postcard-header-content2">
             <div className="forum-postcard-header-username">{username || uid}</div>
             <div className="forum-postcard-header-date">{timestamp}</div>
           </div>
@@ -42,7 +47,8 @@ const ForumPostCard = ({ didLike, imageURL, subreddit, title, text, timestamp, u
         </div>
       </div>
       <div className="forum-postcard-body">
-        {text}
+        <div>{title}</div>
+        <div>{text}</div>
       </div>
     </div>
   );
