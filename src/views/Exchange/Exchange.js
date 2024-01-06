@@ -61,31 +61,6 @@ function Exchange(props) {
     return formattedDateTime;
   }
   
-  async function getUserFirstNameAndLastName(uid) {
-    try {
-      // Get a reference to the user's document
-      const userRef = doc(firestore, 'users', uid);
-      // Get the document
-      const userDoc = await getDoc(userRef);
-      if (userDoc.exists()) {
-        // Extract the first name and last name from the document
-        const userData = userDoc.data();
-        const firstName = userData.firstName;
-        const lastName = userData.lastName;
-        // Return the first name and last name
-        return (firstName.toString() + " " + lastName.toString()).toString();
-      } else {
-        // Handle the case where the user does not exist
-        console.log('No such user!');
-        return null;
-      }
-    } catch (error) {
-      // Handle any errors that occurred during the get operation
-      console.error("Error fetching user data:", error);
-      return null;
-    }
-  }
-
   if (posts === null || posts === undefined) {
     return <div>Loading...</div>;
   }
@@ -101,9 +76,6 @@ function Exchange(props) {
           <div className="forum-postcard-container">
           {
             posts.map((obj) => {
-              //const username = getUserFirstNameAndLastName(obj.uid)
-              //console.log((username))
-              //console.log(obj.title);
               return (
                 <ForumPostCard didLike={obj.didLike} imageURL={obj.imageURL} subreddit={obj.subreddit} title={obj.title} text={obj.text} timestamp={formatDateTime(new Date(obj.timestamp.seconds*1000))} uid={obj.uid} upvotes={obj.upvotes} />
               )
