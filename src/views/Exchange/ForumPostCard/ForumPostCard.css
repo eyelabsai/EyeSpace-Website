@@ -1,3 +1,37 @@
 .forum-postcard {
+    margin-left: 1%;
+}
+
+.forum-postcard-header {
     display: flex;
+}
+
+.forum-postcard-header-title {
+    display: flex;
+}
+
+.forum-postcard-header-username {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.forum-postcard-header-date {
+    text-indent: 15px;
+    font-size: 18px;
+    color: rgb(150, 150, 150);
+}
+
+.forum-postcard-header-subreddit {
+    font-size: 18px;
+    color: rgb(210, 210, 210);
+}
+
+.forum-postcard-header-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 240px;
+}
+
+.forum-postcard-body {
+    color: blue;
 }

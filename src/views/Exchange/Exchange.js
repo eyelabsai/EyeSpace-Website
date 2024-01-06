@@ -7,7 +7,7 @@ import Bg from '../../assets/blogbg.svg'
 import ForumPostCard from "./ForumPostCard/ForumPostCard";
 import './ForumPostCard/ForumPostCard.css';
 import { auth, firestore } from '../../firebase';
-import { doc, getDocs, collection } from 'firebase/firestore';
+import { doc, getDoc, getDocs, collection } from 'firebase/firestore';
 
 function Exchange(props) {
   const [posts, setPosts] = useState(null);
@@ -36,10 +36,55 @@ function Exchange(props) {
       id: doc.id,
       ...doc.data(),
     }));
-    //console.log(postsData[0].title);
+    //console.log(new Date(postsData[0].timestamp.seconds*1000))
     setPosts(postsData);
   }
   console.log(posts)
+
+  function formatDateTime(date) {
+    // Get the individual components of the date
+    const month = date.getMonth() + 1; // getMonth() returns 0-11
+    const day = date.getDate();
+    const year = date.getFullYear();
+    let hour = date.getHours(); // 24-hour clock
+    const minute = date.getMinutes();
+  
+    // Pad the month, day, hour and minute with leading zeros if necessary
+    const monthStr = month.toString().padStart(2, '0');
+    const dayStr = day.toString().padStart(2, '0');
+    const hourStr = hour.toString().padStart(2, '0');
+    const minuteStr = minute.toString().padStart(2, '0');
+  
+    // Construct the formatted date-time string
+    const formattedDateTime = `${monthStr}/${dayStr}/${year} ${hourStr}:${minuteStr}`;
+    console.log(formatDateTime);
+    return formattedDateTime;
+  }
+  
+  async function getUserFirstNameAndLastName(uid) {
+    try {
+      // Get a reference to the user's document
+      const userRef = doc(firestore, 'users', uid);
+      // Get the document
+      const userDoc = await getDoc(userRef);
+      if (userDoc.exists()) {
+        // Extract the first name and last name from the document
+        const userData = userDoc.data();
+        const firstName = userData.firstName;
+        const lastName = userData.lastName;
+        // Return the first name and last name
+        return (firstName.toString() + " " + lastName.toString()).toString();
+      } else {
+        // Handle the case where the user does not exist
+        console.log('No such user!');
+        return null;
+      }
+    } catch (error) {
+      // Handle any errors that occurred during the get operation
+      console.error("Error fetching user data:", error);
+      return null;
+    }
+  }
 
   if (posts === null || posts === undefined) {
     return <div>Loading...</div>;
@@ -56,8 +101,11 @@ function Exchange(props) {
           <div className="forum-postcard-container">
           {
             posts.map((obj) => {
+              //const username = getUserFirstNameAndLastName(obj.uid)
+              //console.log((username))
+              //console.log(obj.title);
               return (
-                <ForumPostCard title={obj.title} text={obj.text}/>
+                <ForumPostCard didLike={obj.didLike} imageURL={obj.imageURL} subreddit={obj.subreddit} title={obj.title} text={obj.text} timestamp={formatDateTime(new Date(obj.timestamp.seconds*1000))} uid={obj.uid} upvotes={obj.upvotes} />
               )
             })
           }
