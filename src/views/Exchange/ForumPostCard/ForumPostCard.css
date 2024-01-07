@@ -6,8 +6,13 @@
 }
 
 .forum-postcard-header {
+    margin-top: 0.5%;
     margin-left: 1%;
     display: flex;
+}
+
+.forum-postcard-header-content {
+    margin-left: 0.5%;
 }
 
 .forum-postcard-header-content2 {
