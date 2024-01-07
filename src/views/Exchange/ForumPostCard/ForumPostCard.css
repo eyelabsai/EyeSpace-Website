@@ -59,3 +59,22 @@
     width: 600px;
     height: auto;
 }
+
+.forum-postcard-comment {
+    margin-left: 1%;
+    display: flex;
+    margin-bottom: 1%;
+    align-items: center;
+}
+
+.forum-postcard-like-button {
+    width: 20px;
+    height: 20px;
+}
+
+.forum-postcard-comment-button {
+    margin-left: 2%;
+    padding-top: 0.5%;
+    width: 20px;
+    height: 20px;
+}

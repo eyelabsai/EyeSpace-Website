@@ -4,6 +4,8 @@ import './ForumPostCard.css';
 import Person_Icon from '../../../assets/Person_Icon.png';
 import { firestore } from '../../../firebase';
 import { doc, getDoc } from 'firebase/firestore';
+import LikeButton from '../../../assets/like_postsvg.svg';
+import CommentButton from '../../../assets/comment_post.svg'
 
 const ForumPostCard = ({ didLike, imageURL, subreddit, title, text, timestamp, uid, upvotes }) => {
   const [username, setUsername] = useState('');
@@ -50,6 +52,12 @@ const ForumPostCard = ({ didLike, imageURL, subreddit, title, text, timestamp, u
         <div className='forum-postcard-body-title'><strong>{title}</strong></div>
         <div className='forum-postcard-body-text '>{text}</div>
         {(imageURL!==undefined && imageURL!=="") && <img className="forum-postcard-body-img" src={imageURL} alt="imageURL"/>}
+      </div>
+      <div className='forum-postcard-comment'>
+        <img className='forum-postcard-like-button' src={LikeButton} alt='like-button'/>
+        <div>Like</div>
+        <img className='forum-postcard-comment-button' src={CommentButton} alt='comment-button'/>
+        <div>Comment</div>
       </div>
     </div>
   );
