@@ -3,11 +3,10 @@ import Header from '../../components/header/Header';
 import { useNavigate } from 'react-router-dom';
 import './Exchange.css'; 
 import ForumReplacement from '../../assets/forum_replacement.png'
-import Bg from '../../assets/blogbg.svg'
 import ForumPostCard from "./ForumPostCard/ForumPostCard";
 import './ForumPostCard/ForumPostCard.css';
 import { auth, firestore } from '../../firebase';
-import { doc, getDoc, getDocs, collection } from 'firebase/firestore';
+import {getDocs, collection } from 'firebase/firestore';
 
 function Exchange(props) {
   const [posts, setPosts] = useState(null);
@@ -35,11 +34,10 @@ function Exchange(props) {
     const postsData = querySnapshot.docs.map(doc => ({
       id: doc.id,
       ...doc.data(),
+      postID: doc.id,
     }));
-    //console.log(new Date(postsData[0].timestamp.seconds*1000))
     setPosts(postsData);
   }
-  console.log(posts)
 
   function formatDateTime(date) {
     // Get the individual components of the date
@@ -57,7 +55,7 @@ function Exchange(props) {
   
     // Construct the formatted date-time string
     const formattedDateTime = `${monthStr}/${dayStr}/${year} ${hourStr}:${minuteStr}`;
-    console.log(formatDateTime);
+    //console.log(formatDateTime);
     return formattedDateTime;
   }
   
@@ -77,7 +75,7 @@ function Exchange(props) {
           {
             posts.map((obj) => {
               return (
-                <ForumPostCard didLike={obj.didLike} imageURL={obj.imageURL} subreddit={obj.subreddit} title={obj.title} text={obj.text} timestamp={formatDateTime(new Date(obj.timestamp.seconds*1000))} uid={obj.uid} upvotes={obj.upvotes} />
+                <ForumPostCard  postID={obj.postID} didLike={obj.didLike} imageURL={obj.imageURL} subreddit={obj.subreddit} title={obj.title} text={obj.text} timestamp={formatDateTime(new Date(obj.timestamp.seconds*1000))} uid={obj.uid} upvotes={obj.upvotes} />
               )
             })
           }

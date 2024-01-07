@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import './ForumPostCard.css';
 import Person_Icon from '../../../assets/Person_Icon.png';
 import { auth, firestore } from '../../../firebase';
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc, updateDoc, FieldValue, arrayUnion, arrayRemove } from 'firebase/firestore';
 import LikeButton from '../../../assets/like_post.svg';
 import LikeButtonLiked from '../../../assets/like_post_liked.svg';
 import CommentButton from '../../../assets/comment_post.svg'
 
-const ForumPostCard = ({ didLike, imageURL, subreddit, title, text, timestamp, uid, upvotes }) => {
+const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, timestamp, uid, upvotes }) => {
   
   const [username, setUsername] = useState('');
   const [avatarUrl, setAvatarUrl] = useState('');
@@ -38,17 +38,37 @@ const ForumPostCard = ({ didLike, imageURL, subreddit, title, text, timestamp, u
   }, [uid]);
   const imageSrc = avatarUrl || Person_Icon;
 
-  const currentUser = auth.currentUser;
+  const currentUserID = auth.currentUser.uid;
 
   const likeHandler = () => {
     if (likebuttonsrc === LikeButton) {
         setLikeButtonSrc(LikeButtonLiked);
-        //TODO remove user uid from upvotes
+        addToArray(currentUserID);
       } else {
         setLikeButtonSrc(LikeButton);
-        //TODO, remove user uid from upvotes
+        removeFromArray(currentUserID);
       }
   }
+  const addToArray = async (newValue) => {
+    const docRef = doc(firestore, 'posts', postID);
+    try {
+      await updateDoc(docRef, {
+        upvotes: arrayUnion(currentUserID)
+      });
+    } catch (error) {
+      console.error("Error updating document:", error);
+    }
+  };
+  const removeFromArray = async (newValue) => {
+    const docRef = doc(firestore, 'posts', postID);
+    try {
+      await updateDoc(docRef, {
+        upvotes: arrayRemove(currentUserID)
+      });
+    } catch (error) {
+      console.error("Error updating document:", error);
+    }
+  };
 
   return (
     <div className="forum-postcard">
@@ -64,7 +84,6 @@ const ForumPostCard = ({ didLike, imageURL, subreddit, title, text, timestamp, u
       </div>
       <div className="forum-postcard-body">
         <div className='forum-postcard-body-title'><strong>{title}</strong></div>
-        <div>{currentUser.uid}</div>
         <div className='forum-postcard-body-text '>{text}</div>
         {(imageURL!==undefined && imageURL!=="") && <img className="forum-postcard-body-img" src={imageURL} alt="imageURL"/>}
       </div>
@@ -79,14 +98,15 @@ const ForumPostCard = ({ didLike, imageURL, subreddit, title, text, timestamp, u
 };
 
 ForumPostCard.propTypes = {
-  didLike: PropTypes.bool,
-  imageURL: PropTypes.string,
-  subreddit: PropTypes.string,
-  title: PropTypes.string,
-  text: PropTypes.string,
-  timestamp: PropTypes.string,
-  uid: PropTypes.string,
-  upvotes: PropTypes.array,
+    postID: PropTypes.string,
+    didLike: PropTypes.bool,
+    imageURL: PropTypes.string,
+    subreddit: PropTypes.string,
+    title: PropTypes.string,
+    text: PropTypes.string,
+    timestamp: PropTypes.string,
+    uid: PropTypes.string,
+    upvotes: PropTypes.array,
 };
 
 export default ForumPostCard;
