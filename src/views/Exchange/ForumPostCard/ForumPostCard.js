@@ -4,12 +4,14 @@ import './ForumPostCard.css';
 import Person_Icon from '../../../assets/Person_Icon.png';
 import { firestore } from '../../../firebase';
 import { doc, getDoc } from 'firebase/firestore';
-import LikeButton from '../../../assets/like_postsvg.svg';
+import LikeButton from '../../../assets/like_post.svg';
+import LikeButtonLiked from '../../../assets/like_post_liked.svg';
 import CommentButton from '../../../assets/comment_post.svg'
 
 const ForumPostCard = ({ didLike, imageURL, subreddit, title, text, timestamp, uid, upvotes }) => {
   const [username, setUsername] = useState('');
   const [avatarUrl, setAvatarUrl] = useState('');
+  const [likebuttonsrc, setLikeButtonSrc] = useState(LikeButton);
 
   useEffect(() => {
     const getUserProfile = async () => {
@@ -36,6 +38,16 @@ const ForumPostCard = ({ didLike, imageURL, subreddit, title, text, timestamp, u
 
   const imageSrc = avatarUrl || Person_Icon;
 
+  const likeHandler = () => {
+    if (likebuttonsrc === LikeButton) {
+        setLikeButtonSrc(LikeButtonLiked);
+        //TODO remove user uid from upvotes
+      } else {
+        setLikeButtonSrc(LikeButton);
+        //TODO, remove user uid from upvotes
+      }
+  }
+
   return (
     <div className="forum-postcard">
       <div className="forum-postcard-header">
@@ -54,7 +66,7 @@ const ForumPostCard = ({ didLike, imageURL, subreddit, title, text, timestamp, u
         {(imageURL!==undefined && imageURL!=="") && <img className="forum-postcard-body-img" src={imageURL} alt="imageURL"/>}
       </div>
       <div className='forum-postcard-comment'>
-        <img className='forum-postcard-like-button' src={LikeButton} alt='like-button'/>
+        <img className='forum-postcard-like-button' src={likebuttonsrc} alt='like-button' onClick={likeHandler}/>
         <div>Like</div>
         <img className='forum-postcard-comment-button' src={CommentButton} alt='comment-button'/>
         <div>Comment</div>
