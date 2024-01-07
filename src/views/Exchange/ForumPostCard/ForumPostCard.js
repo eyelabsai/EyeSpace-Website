@@ -12,34 +12,38 @@ const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, time
   
   const [username, setUsername] = useState('');
   const [avatarUrl, setAvatarUrl] = useState('');
+  const [liked, setLiked] = useState('false');
   const [likebuttonsrc, setLikeButtonSrc] = useState(LikeButton);
+  const [showComment, setShowComment] = useState(false);
+  const [commentInput, setInputValue] = useState("");
 
   useEffect(() => {
     const getUserProfile = async () => {
-      try {
+    try {
         const userRef = doc(firestore, 'users', uid);
-        const userDoc = await getDoc(userRef);
+         const userDoc = await getDoc(userRef);
 
         if (userDoc.exists()) {
-          const userData = userDoc.data();
-          const fullName = `${userData.firstName} ${userData.lastName}`;
-          const imgurl = userData.avatarUrl;
-          setUsername(fullName);
-          setAvatarUrl(imgurl);
-        } else {
-          console.log('No such user!');
+            const userData = userDoc.data();
+            const fullName = `${userData.firstName} ${userData.lastName}`;
+            const imgurl = userData.avatarUrl;
+            setUsername(fullName);
+            setAvatarUrl(imgurl);
+            } else {
+            console.log('No such user!');
+            }
+        } catch (error) {
+            console.error("Error fetching user data:", error);
         }
-      } catch (error) {
-        console.error("Error fetching user data:", error);
-      }
-    };
+        };
 
-    getUserProfile();
-  }, [uid]);
-  const imageSrc = avatarUrl || Person_Icon;
+        getUserProfile();
+    }, [uid]);
+    const imageSrc = avatarUrl || Person_Icon;
 
-  const currentUserID = auth.currentUser.uid;
+    const currentUserID = auth.currentUser.uid;
 
+  //console.log(liked);
   const likeHandler = () => {
     if (likebuttonsrc === LikeButton) {
         setLikeButtonSrc(LikeButtonLiked);
@@ -70,29 +74,54 @@ const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, time
     }
   };
 
+  const commentHandler = () => {
+    setShowComment(!showComment);
+    console.log("comment became" + " " + showComment);
+  }
+
+  const handleCommentChange = (event) => {
+    setInputValue(event.target.value);
+
+    // Automatically adjust height to fit content
+    event.target.style.height = 'inherit';
+    event.target.style.height = `${event.target.scrollHeight}px`;
+    event.target.style.width = '95%'
+};
+
+
   return (
     <div className="forum-postcard">
-      <div className="forum-postcard-header">
-        <img className="forum-postcard-header-img" src={imageSrc} alt="person_icon"/>
-        <div className="forum-postcard-header-content">
-          <div className="forum-postcard-header-content2">
-            <div className="forum-postcard-header-username">{username || uid}</div>
-            <div className="forum-postcard-header-date">{timestamp}</div>
-          </div>
-          <div className="forum-postcard-header-subreddit">{subreddit}</div>
+        <div className="forum-postcard-header">
+            <img className="forum-postcard-header-img" src={imageSrc} alt="person_icon"/>
+            <div className="forum-postcard-header-content">
+            <div className="forum-postcard-header-content2">
+                <div className="forum-postcard-header-username">{username || uid}</div>
+                <div className="forum-postcard-header-date">{timestamp}</div>
+            </div>
+            <div className="forum-postcard-header-subreddit">{subreddit}</div>
+            </div>
         </div>
-      </div>
-      <div className="forum-postcard-body">
-        <div className='forum-postcard-body-title'><strong>{title}</strong></div>
-        <div className='forum-postcard-body-text '>{text}</div>
-        {(imageURL!==undefined && imageURL!=="") && <img className="forum-postcard-body-img" src={imageURL} alt="imageURL"/>}
-      </div>
-      <div className='forum-postcard-comment'>
-        <img className='forum-postcard-like-button' src={likebuttonsrc} alt='like-button' onClick={likeHandler}/>
-        <div>Like</div>
-        <img className='forum-postcard-comment-button' src={CommentButton} alt='comment-button'/>
-        <div>Comment</div>
-      </div>
+        <div className="forum-postcard-body">
+            <div className='forum-postcard-body-title'><strong>{title}</strong></div>
+            <div className='forum-postcard-body-text '>{text}</div>
+            {(imageURL!==undefined && imageURL!=="") && <img className="forum-postcard-body-img" src={imageURL} alt="imageURL"/>}
+        </div>
+        <div className='forum-postcard-comment'>
+            <img className='forum-postcard-like-button' src={likebuttonsrc} alt='like-button' onClick={likeHandler}/>
+            <div>Like</div>
+            <img className='forum-postcard-comment-button' src={CommentButton} alt='comment-button' onClick={commentHandler}/>
+            <div>Comment</div>
+        </div>
+        {showComment && (
+                <div>
+                    <textarea 
+                    value={commentInput}
+                    onChange={handleCommentChange}
+                    style={{ height: '35px', width:'95%',  overflowY: 'hidden' }}
+                    />
+                    <div>Post Comment</div>
+                </div>
+        )}
     </div>
   );
 };

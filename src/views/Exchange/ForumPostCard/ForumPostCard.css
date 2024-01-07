@@ -78,3 +78,9 @@
     width: 20px;
     height: 20px;
 }
+
+.forum-postcard-input {
+    margin-left: 1%;
+    height: auto;
+    border-radius: 0px;
+}
