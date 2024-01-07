@@ -47,8 +47,8 @@ const ForumPostCard = ({ didLike, imageURL, subreddit, title, text, timestamp, u
         </div>
       </div>
       <div className="forum-postcard-body">
-        <div>{title}</div>
-        <div>{text}</div>
+        <div className='forum-postcard-body-title'><strong>{title}</strong></div>
+        <div className='forum-postcard-body-text '>{text}</div>
       </div>
     </div>
   );

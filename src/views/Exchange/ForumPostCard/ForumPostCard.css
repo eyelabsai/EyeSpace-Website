@@ -33,5 +33,12 @@
 }
 
 .forum-postcard-body {
-    color: blue;
+}
+
+.forum-postcard-body-title {
+    font-size: 24px;
+}
+
+.forum-postcard-body-text {
+    font-size: 20px;
 }
