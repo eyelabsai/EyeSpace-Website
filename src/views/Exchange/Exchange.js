@@ -65,7 +65,7 @@ function Exchange(props) {
     return <div>Loading...</div>;
   }
   return (
-    <div className="blog-div" style={{backgroundImage: `url(${Bg})`}}>
+    <div>
         <Header page="eXchange"/>
         <div>
           <div className = 'exchange-title'>
