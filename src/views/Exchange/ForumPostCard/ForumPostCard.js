@@ -49,6 +49,7 @@ const ForumPostCard = ({ didLike, imageURL, subreddit, title, text, timestamp, u
       <div className="forum-postcard-body">
         <div className='forum-postcard-body-title'><strong>{title}</strong></div>
         <div className='forum-postcard-body-text '>{text}</div>
+        {(imageURL!==undefined && imageURL!=="") && <img className="forum-postcard-body-img" src={imageURL} alt="imageURL"/>}
       </div>
     </div>
   );
