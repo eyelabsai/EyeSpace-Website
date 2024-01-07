@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './ForumPostCard.css';
 import Person_Icon from '../../../assets/Person_Icon.png';
-import { firestore } from '../../../firebase';
+import { auth, firestore } from '../../../firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import LikeButton from '../../../assets/like_post.svg';
 import LikeButtonLiked from '../../../assets/like_post_liked.svg';
 import CommentButton from '../../../assets/comment_post.svg'
 
 const ForumPostCard = ({ didLike, imageURL, subreddit, title, text, timestamp, uid, upvotes }) => {
+  
   const [username, setUsername] = useState('');
   const [avatarUrl, setAvatarUrl] = useState('');
   const [likebuttonsrc, setLikeButtonSrc] = useState(LikeButton);
@@ -35,8 +36,9 @@ const ForumPostCard = ({ didLike, imageURL, subreddit, title, text, timestamp, u
 
     getUserProfile();
   }, [uid]);
-
   const imageSrc = avatarUrl || Person_Icon;
+
+  const currentUser = auth.currentUser;
 
   const likeHandler = () => {
     if (likebuttonsrc === LikeButton) {
@@ -62,6 +64,7 @@ const ForumPostCard = ({ didLike, imageURL, subreddit, title, text, timestamp, u
       </div>
       <div className="forum-postcard-body">
         <div className='forum-postcard-body-title'><strong>{title}</strong></div>
+        <div>{currentUser.uid}</div>
         <div className='forum-postcard-body-text '>{text}</div>
         {(imageURL!==undefined && imageURL!=="") && <img className="forum-postcard-body-img" src={imageURL} alt="imageURL"/>}
       </div>
