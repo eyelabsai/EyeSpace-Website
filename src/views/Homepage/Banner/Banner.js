@@ -17,7 +17,7 @@ export default class Banner extends React.Component { // replace "TestCOmponent"
       {/* <div  className="contact-div" style={{backgroundImage: `url(${Bckg})`}}> */}
         <div className="left">
             <div className="banner-title">
-                <strong>EYESPACE Opthamology</strong>
+                <strong>EYESPACE Ophthalmology</strong>
             </div>
             <div className="desc">
                 <p>Welcome to the future of integrated ophthalmic surgery. EYESPACE is a technology company 
