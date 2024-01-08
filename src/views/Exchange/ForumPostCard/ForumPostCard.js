@@ -13,6 +13,7 @@ const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, time
   const [username, setUsername] = useState('');
   const [avatarUrl, setAvatarUrl] = useState('');
   const [liked, setLiked] = useState('false');
+  const [likesCount, setLikesCount] = useState(upvotes.length);
   const [likebuttonsrc, setLikeButtonSrc] = useState(LikeButton);
   const [showComment, setShowComment] = useState(false);
   const [commentInput, setInputValue] = useState("");
@@ -59,6 +60,7 @@ const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, time
       await updateDoc(docRef, {
         upvotes: arrayUnion(currentUserID)
       });
+      setLikesCount(likesCount+1);
     } catch (error) {
       console.error("Error updating document:", error);
     }
@@ -69,6 +71,7 @@ const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, time
       await updateDoc(docRef, {
         upvotes: arrayRemove(currentUserID)
       });
+      setLikesCount(likesCount-1);
     } catch (error) {
       console.error("Error updating document:", error);
     }
@@ -108,7 +111,7 @@ const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, time
         </div>
         <div className='forum-postcard-comment'>
             <img className='forum-postcard-like-button' src={likebuttonsrc} alt='like-button' onClick={likeHandler}/>
-            <div>Like</div>
+            <div>Like {likesCount}</div>
             <img className='forum-postcard-comment-button' src={CommentButton} alt='comment-button' onClick={commentHandler}/>
             <div>Comment</div>
         </div>
@@ -125,6 +128,13 @@ const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, time
     </div>
   );
 };
+
+
+/*
+TODO:把comment的behavior写好
+当post comment点击了之后，把目前的value上传发哦firebase里（comments）的collection，然后这个box消失
+可以弄出一个submitted的variable
+*/
 
 ForumPostCard.propTypes = {
     postID: PropTypes.string,
