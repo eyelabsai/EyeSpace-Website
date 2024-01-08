@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './ForumPostCard.css';
 import Person_Icon from '../../../assets/Person_Icon.png';
 import { auth, firestore } from '../../../firebase';
-import { doc, getDoc, updateDoc, FieldValue, arrayUnion, arrayRemove } from 'firebase/firestore';
+import { doc, getDoc, getDocs, updateDoc, arrayUnion, arrayRemove, collection, query, where } from 'firebase/firestore';
 import LikeButton from '../../../assets/like_post.svg';
 import LikeButtonLiked from '../../../assets/like_post_liked.svg';
 import CommentButton from '../../../assets/comment_post.svg'
@@ -12,39 +12,59 @@ const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, time
   
   const [username, setUsername] = useState('');
   const [avatarUrl, setAvatarUrl] = useState('');
-  const [liked, setLiked] = useState('false');
   const [likesCount, setLikesCount] = useState(upvotes.length);
+  const [commentsCount, setCommentsCount] = useState(0);
   const [likebuttonsrc, setLikeButtonSrc] = useState(LikeButton);
   const [showComment, setShowComment] = useState(false);
   const [commentInput, setInputValue] = useState("");
+  const commentsArray=[];
 
   useEffect(() => {
-    const getUserProfile = async () => {
-    try {
-        const userRef = doc(firestore, 'users', uid);
-         const userDoc = await getDoc(userRef);
+        const getUserProfile = async () => {
+            try {
+                const userRef = doc(firestore, 'users', uid);
+                const userDoc = await getDoc(userRef);
 
-        if (userDoc.exists()) {
-            const userData = userDoc.data();
-            const fullName = `${userData.firstName} ${userData.lastName}`;
-            const imgurl = userData.avatarUrl;
-            setUsername(fullName);
-            setAvatarUrl(imgurl);
-            } else {
-            console.log('No such user!');
+                if (userDoc.exists()) {
+                    const userData = userDoc.data();
+                    const fullName = `${userData.firstName} ${userData.lastName}`;
+                    const imgurl = userData.avatarUrl;
+                    setUsername(fullName);
+                    setAvatarUrl(imgurl);
+                    } else {
+                    console.log('No such user!');
+                    }
+            } catch (error) {
+                console.error("Error fetching user data:", error);
             }
-        } catch (error) {
-            console.error("Error fetching user data:", error);
-        }
-        };
-
+            };
         getUserProfile();
+        const getComments = async () => {
+            try {
+                const commentsRef = collection(firestore, "comments");
+                const q = query(commentsRef, where("postId", "==", postID));
+                getDocs(q).then((querySnapshot) => {
+                    commentsArray.length=0;
+                    querySnapshot.forEach((doc) => {
+                      // Push each document's data into the array
+                      commentsArray.push({ id: doc.id, ...doc.data() });
+                    });
+                    setCommentsCount(commentsArray.length);
+                    console.log(commentsArray.length)
+                    //setCommentsArray(commentsArray)
+                  }).catch((error) => {
+                    console.error("Error getting documents: ", error);
+                  });
+            } catch (error) {
+                console.error("Error occured when trying to retrieve posts!");
+            }
+        }
+        getComments()
     }, [uid]);
     const imageSrc = avatarUrl || Person_Icon;
 
     const currentUserID = auth.currentUser.uid;
 
-  //console.log(liked);
   const likeHandler = () => {
     if (likebuttonsrc === LikeButton) {
         setLikeButtonSrc(LikeButtonLiked);
@@ -79,7 +99,6 @@ const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, time
 
   const commentHandler = () => {
     setShowComment(!showComment);
-    console.log("comment became" + " " + showComment);
   }
 
   const handleCommentChange = (event) => {
@@ -111,17 +130,20 @@ const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, time
         </div>
         <div className='forum-postcard-comment'>
             <img className='forum-postcard-like-button' src={likebuttonsrc} alt='like-button' onClick={likeHandler}/>
-            <div>Like {likesCount}</div>
+            <div>Likes {likesCount}</div>
             <img className='forum-postcard-comment-button' src={CommentButton} alt='comment-button' onClick={commentHandler}/>
-            <div>Comment</div>
+            <div>Comments {commentsCount}</div>
         </div>
         {showComment && (
                 <div>
-                    <textarea 
-                    value={commentInput}
-                    onChange={handleCommentChange}
-                    style={{ height: '35px', width:'95%',  overflowY: 'hidden' }}
-                    />
+                    <textarea value={commentInput}onChange={handleCommentChange}style={{ height: '35px', width:'95%',  overflowY: 'hidden' }}/>
+                    <div>
+                    {
+                        commentsArray.map((obj) => {
+                            <div>{obj.text}</div>    
+                        })
+                    }
+                    </div>
                     <div>Post Comment</div>
                 </div>
         )}
