@@ -17,6 +17,7 @@ const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, time
   const [likebuttonsrc, setLikeButtonSrc] = useState(LikeButton);
   const [showComment, setShowComment] = useState(false);
   const [commentInput, setInputValue] = useState("");
+  const [comments, setComments] = useState([]);
   const commentsArray=[];
 
   useEffect(() => {
@@ -50,8 +51,8 @@ const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, time
                       commentsArray.push({ id: doc.id, ...doc.data() });
                     });
                     setCommentsCount(commentsArray.length);
-                    console.log(commentsArray.length)
-                    //setCommentsArray(commentsArray)
+                    //console.log(commentsArray.length)
+                    setComments(commentsArray)
                   }).catch((error) => {
                     console.error("Error getting documents: ", error);
                   });
@@ -110,7 +111,6 @@ const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, time
     event.target.style.width = '95%'
 };
 
-
   return (
     <div className="forum-postcard">
         <div className="forum-postcard-header">
@@ -139,12 +139,14 @@ const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, time
                     <textarea value={commentInput}onChange={handleCommentChange}style={{ height: '35px', width:'95%',  overflowY: 'hidden' }}/>
                     <div>
                     {
-                        commentsArray.map((obj) => {
-                            <div>{obj.text}</div>    
+                        comments.map((obj) => {
+                            return (
+                                <div>{obj.text}</div> 
+                            )   
                         })
                     }
                     </div>
-                    <div>Post Comment</div>
+                    <div>Post Comment Button</div>
                 </div>
         )}
     </div>
