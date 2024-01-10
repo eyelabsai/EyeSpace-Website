@@ -18,6 +18,7 @@ const ForumPostCard = ({ currentUID, postID, didLike, imageURL, subreddit, title
   const [likebuttonsrc, setLikeButtonSrc] = useState(LikeButton);
   const [showComment, setShowComment] = useState(false);
   const [commentInput, setInputValue] = useState("");
+  const [submitted, setSubmitted] = useState("false");
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
@@ -110,18 +111,27 @@ const ForumPostCard = ({ currentUID, postID, didLike, imageURL, subreddit, title
     event.target.style.width = '95%';
   };
 
-  const handleSubmitComment =async () => {
-    console.log(commentInput);
-    console.log(currentUID);
+  const handleSubmitComment =async (event) => {
+    console.log(event.target.value);
     const commentsRef = collection(firestore, 'comments');
     try {
       const submitted_commentRef = await addDoc(commentsRef, {
         uid: currentUID,
-        postID: postID,
+        postId: postID,
         text: commentInput,
         timestamp: Timestamp.fromDate(new Date()),
       });
       console.log(submitted_commentRef);
+      commentHandler();
+      setInputValue("");
+      comments.push({
+        uid: currentUID,
+        postId: postID,
+        text: commentInput,
+        timestamp: Timestamp.fromDate(new Date()),
+      });
+      setCommentsCount(comments.length);
+      setComments(comments);
     } catch (error) {
       console.error("error creating comment");
     }
