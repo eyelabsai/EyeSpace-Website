@@ -10,6 +10,7 @@ import {getDocs, collection } from 'firebase/firestore';
 
 function Exchange(props) {
   const [posts, setPosts] = useState(null);
+  const [currentUID, setCurrentUID] = useState(null);
   const navigate = useNavigate();
   
   useEffect(() => {
@@ -17,6 +18,7 @@ function Exchange(props) {
     const unsubscribe = auth.onAuthStateChanged(user => {
       if (user) {
         // User is signed in, proceed to fetch data
+        setCurrentUID(user.uid);
         retrieveFirestoreData();
       } else {
         window.alert("Please login first!");
@@ -27,6 +29,8 @@ function Exchange(props) {
     // Cleanup subscription on unmount
     return () => unsubscribe();
   }, [navigate]); // Add navigate to the dependency array
+
+  console.log(currentUID);
 
   async function retrieveFirestoreData() {
     const postsRef = collection(firestore, "posts");
@@ -59,7 +63,7 @@ function Exchange(props) {
     return formattedDateTime;
   }
   
-  if (posts === null || posts === undefined) {
+  if (posts === null || posts === undefined || currentUID===null) {
     return <div>Loading...</div>;
   }
   return (
@@ -75,7 +79,7 @@ function Exchange(props) {
           {
             posts.map((obj) => {
               return (
-                <ForumPostCard  postID={obj.postID} didLike={obj.didLike} imageURL={obj.imageURL} subreddit={obj.subreddit} title={obj.title} text={obj.text} timestamp={formatDateTime(new Date(obj.timestamp.seconds*1000))} uid={obj.uid} upvotes={obj.upvotes} />
+                <ForumPostCard currentUID={currentUID} postID={obj.postID} didLike={obj.didLike} imageURL={obj.imageURL} subreddit={obj.subreddit} title={obj.title} text={obj.text} timestamp={formatDateTime(new Date(obj.timestamp.seconds*1000))} uid={obj.uid} upvotes={obj.upvotes} />
               )
             })
           }

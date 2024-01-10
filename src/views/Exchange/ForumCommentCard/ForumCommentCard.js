@@ -2,11 +2,12 @@ import React from "react";
 import PropTypes from 'prop-types';
 import './ForumCommentCard.css'
 
-const ForumCommentCard = ({author, text, timestamp}) => {
+const ForumCommentCard = ({uid, text, timestamp}) => {
     return (
         <div>
             <br></br>
-            <div>{author}</div>
+            {(uid!==undefined&&uid!=="") && <div>{uid}</div>}
+            {(uid===undefined||uid==="") && <div>Username Not Found</div>}
             <div>{text}</div>
             <br></br>
         </div>
@@ -14,7 +15,7 @@ const ForumCommentCard = ({author, text, timestamp}) => {
 }
 
 ForumCommentCard.prototype = {
-    author: PropTypes.string,
+    uid: PropTypes.string,
     test: PropTypes.string,
     timestamp: PropTypes.string,
 }

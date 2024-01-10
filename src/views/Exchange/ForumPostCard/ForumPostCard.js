@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import './ForumPostCard.css';
 import Person_Icon from '../../../assets/Person_Icon.png';
 import { auth, firestore } from '../../../firebase';
-import { doc, getDoc, getDocs, updateDoc, arrayUnion, arrayRemove, collection, query, where } from 'firebase/firestore';
+import { doc, getDoc, getDocs, addDoc, updateDoc, arrayUnion, arrayRemove, collection, query, where, Timestamp } from 'firebase/firestore';
 import LikeButton from '../../../assets/like_post.svg';
 import LikeButtonLiked from '../../../assets/like_post_liked.svg';
 import CommentButton from '../../../assets/comment_post.svg';
 import ForumCommentCard from '../ForumCommentCard/ForumCommentCard';
 import '../ForumCommentCard/ForumCommentCard.css'
 
-const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, timestamp, uid, upvotes }) => {
+const ForumPostCard = ({ currentUID, postID, didLike, imageURL, subreddit, title, text, timestamp, uid, upvotes }) => {
   const [username, setUsername] = useState('');
   const [avatarUrl, setAvatarUrl] = useState('');
   const [likesCount, setLikesCount] = useState(upvotes.length);
@@ -110,6 +110,23 @@ const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, time
     event.target.style.width = '95%';
   };
 
+  const handleSubmitComment =async () => {
+    console.log(commentInput);
+    console.log(currentUID);
+    const commentsRef = collection(firestore, 'comments');
+    try {
+      const submitted_commentRef = await addDoc(commentsRef, {
+        uid: currentUID,
+        postID: postID,
+        text: commentInput,
+        timestamp: Timestamp.fromDate(new Date()),
+      });
+      console.log(submitted_commentRef);
+    } catch (error) {
+      console.error("error creating comment");
+    }
+  }
+
   return (
   <div className="forum-postcard">
     <div className="forum-postcard-header">
@@ -136,13 +153,15 @@ const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, time
     {showComment && (
       <div>
         <textarea value={commentInput} onChange={handleCommentChange} style={{ height: '35px', width: '95%', overflowY: 'hidden' }} />
-        <div>submit button</div>
+        <div className='forum-post-card-submit' onClick={handleSubmitComment}>
+          submit button
+        </div>
         <div>
           {comments.map((obj) => {
-            console.log(obj.text);
+            //console.log(obj.text);
             return (
               //<div key={obj.id}>{obj.text}</div>
-              <ForumCommentCard author={"TBD"} text={obj.text} timestamp={"aaa"}/>
+              <ForumCommentCard author={obj.uid} text={obj.text} timestamp={"aaa"}/>
             )
           })}
         </div>
@@ -153,6 +172,7 @@ const ForumPostCard = ({ postID, didLike, imageURL, subreddit, title, text, time
 };
 
 ForumPostCard.propTypes = {
+  currentUID: PropTypes.string,
   postID: PropTypes.string,
   didLike: PropTypes.bool,
   imageURL: PropTypes.string,

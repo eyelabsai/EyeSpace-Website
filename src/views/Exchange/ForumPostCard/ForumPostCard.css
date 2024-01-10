@@ -84,3 +84,9 @@
     height: auto;
     border-radius: 0px;
 }
+
+.forum-post-card-submit {
+    border-style: solid;
+    border-color: red;
+    border-width: 6px;
+}
