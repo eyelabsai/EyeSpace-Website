@@ -30,8 +30,6 @@ function Exchange(props) {
     return () => unsubscribe();
   }, [navigate]); // Add navigate to the dependency array
 
-  console.log(currentUID);
-
   async function retrieveFirestoreData() {
     const postsRef = collection(firestore, "posts");
     const querySnapshot = await getDocs(postsRef);
@@ -69,6 +67,7 @@ function Exchange(props) {
   return (
     <div>
         <Header page="eXchange"/>
+        <button></button>
         <div>
           <div className = 'exchange-title'>
               <h1>Coming Soon</h1>

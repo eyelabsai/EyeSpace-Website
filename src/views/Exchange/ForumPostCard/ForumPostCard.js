@@ -18,7 +18,6 @@ const ForumPostCard = ({ currentUID, postID, didLike, imageURL, subreddit, title
   const [likebuttonsrc, setLikeButtonSrc] = useState(LikeButton);
   const [showComment, setShowComment] = useState(false);
   const [commentInput, setInputValue] = useState("");
-  const [submitted, setSubmitted] = useState("false");
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
@@ -114,27 +113,52 @@ const ForumPostCard = ({ currentUID, postID, didLike, imageURL, subreddit, title
   const handleSubmitComment =async (event) => {
     console.log(event.target.value);
     const commentsRef = collection(firestore, 'comments');
-    try {
-      const submitted_commentRef = await addDoc(commentsRef, {
-        uid: currentUID,
-        postId: postID,
-        text: commentInput,
-        timestamp: Timestamp.fromDate(new Date()),
-      });
-      console.log(submitted_commentRef);
-      commentHandler();
-      setInputValue("");
-      comments.push({
-        uid: currentUID,
-        postId: postID,
-        text: commentInput,
-        timestamp: Timestamp.fromDate(new Date()),
-      });
-      setCommentsCount(comments.length);
-      setComments(comments);
-    } catch (error) {
-      console.error("error creating comment");
+    if (commentInput!=="") {
+      try {
+        const submitted_commentRef = await addDoc(commentsRef, {
+          uid: currentUID,
+          postId: postID,
+          text: commentInput,
+          timestamp: Timestamp.fromDate(new Date()),
+        });
+        console.log(submitted_commentRef);
+        commentHandler();
+        comments.push({
+          uid: currentUID,
+          postId: postID,
+          text: commentInput,
+          timestamp: Timestamp.fromDate(new Date()),
+        });
+        setInputValue("");
+        console.log(currentUID);
+        setCommentsCount(comments.length);
+        setComments(comments);
+      } catch (error) {
+        console.error("error creating comment");
+      }
+    } else {
+      alert("Please have some input first!");
     }
+  }
+
+  function formatDateTime(date) {
+    // Get the individual components of the date
+    const month = date.getMonth() + 1; // getMonth() returns 0-11
+    const day = date.getDate();
+    const year = date.getFullYear();
+    let hour = date.getHours(); // 24-hour clock
+    const minute = date.getMinutes();
+  
+    // Pad the month, day, hour and minute with leading zeros if necessary
+    const monthStr = month.toString().padStart(2, '0');
+    const dayStr = day.toString().padStart(2, '0');
+    const hourStr = hour.toString().padStart(2, '0');
+    const minuteStr = minute.toString().padStart(2, '0');
+  
+    // Construct the formatted date-time string
+    const formattedDateTime = `${monthStr}/${dayStr}/${year} ${hourStr}:${minuteStr}`;
+    //console.log(formatDateTime);
+    return formattedDateTime;
   }
 
   return (
@@ -164,14 +188,14 @@ const ForumPostCard = ({ currentUID, postID, didLike, imageURL, subreddit, title
       <div>
         <textarea value={commentInput} onChange={handleCommentChange} style={{ height: '35px', width: '95%', overflowY: 'hidden' }} />
         <div className='forum-post-card-submit' onClick={handleSubmitComment}>
-          submit button
+          Submit
         </div>
         <div>
           {comments.map((obj) => {
             //console.log(obj.text);
             return (
               //<div key={obj.id}>{obj.text}</div>
-              <ForumCommentCard author={obj.uid} text={obj.text} timestamp={"aaa"}/>
+              <ForumCommentCard uid={obj.uid} text={obj.text} timestamp={formatDateTime(new Date(obj.timestamp.seconds*1000))}/>
             )
           })}
         </div>

@@ -86,7 +86,11 @@
 }
 
 .forum-post-card-submit {
-    border-style: solid;
-    border-color: red;
-    border-width: 6px;
+    width: 13%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: rgb(1, 112, 185);
+
 }
