@@ -67,7 +67,6 @@ function Exchange(props) {
   return (
     <div>
         <Header page="eXchange"/>
-        <button></button>
         <div>
           <div className = 'exchange-title'>
               <h1>Coming Soon</h1>
