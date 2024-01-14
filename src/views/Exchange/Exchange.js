@@ -6,7 +6,7 @@ import ForumReplacement from '../../assets/forum_replacement.png'
 import ForumPostCard from "./ForumPostCard/ForumPostCard";
 import './ForumPostCard/ForumPostCard.css';
 import { auth, firestore } from '../../firebase';
-import {getDocs, collection } from 'firebase/firestore';
+import {getDocs, collection, addDoc, Timestamp } from 'firebase/firestore';
 import AddCommentImg from '../../assets/add_comment.svg'
 
 function Exchange(props) {
@@ -14,6 +14,10 @@ function Exchange(props) {
   const [currentUID, setCurrentUID] = useState(null);
   const [showPost, setShowPost] = useState(false);
   const navigate = useNavigate();
+
+  const [newPostTitle, setNewPostTitle] = useState("");
+  const [newPostSubreddit, setNewPostSubreddit] = useState("");
+  const [newPostContent, setNewPostContent] = useState("");
   
   const subredditChoices = ["i/Anterior Segment, Cataract, & Cornea", "i/Glaucoma", "i/Retina", 
   "i/Neuro-Opthamology", "i/Pediatric Opthamology", "i/Ocular Oncology", "i/Oculoplastic Surgery", 
@@ -75,8 +79,32 @@ function Exchange(props) {
     setShowPost(!showPost);
   }
 
-  const handleSubmitPost = () => {
-    console.log("clicked");
+  const handleSubmitPost = async (event) => {
+    event.preventDefault()
+    console.log(newPostTitle);
+    console.log(newPostSubreddit);
+    console.log(newPostContent);
+    const postsRef = collection(firestore, 'posts');
+    if (newPostTitle!=="" && newPostSubreddit!=="" && newPostContent!=="") {
+      try {
+        const submitted_postRef = await addDoc(postsRef, {
+          didLike: false,
+          //imgurl to do
+          subreddit: newPostSubreddit,
+          text: newPostContent,
+          timestamp: Timestamp.fromDate(new Date()),
+          title: newPostTitle,
+          uid: currentUID,
+          upvotes: [],
+        });
+        console.log(submitted_postRef);
+        window.location.reload();
+      } catch (error) {
+        console.error("error creating comment");
+      }
+    } else {
+      alert("Please fill out all the categories!");
+    }
   }
 
   return (
@@ -95,16 +123,22 @@ function Exchange(props) {
             </div>
             {showPost && 
             <form className="add-post-input-container" onSubmit={handleSubmitPost}>
-              <input className="add-post-input-title" placeholder="Title"></input>
+              <input className="add-post-input-title" placeholder="Title" onChange={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                } else {
+                  setNewPostTitle(e.target.value)
+                }
+              }}></input>
               <br></br>
-              <select className="add-post-input-selection" name="fruit">
-                <option value="choose">Choose (Select a category)</option>
+              <select className="add-post-input-selection" name="subreddit-choices" onChange={(e) => setNewPostSubreddit(e.target.value)}>
+                <option value="choose">Choose a category</option>
                 {subredditChoices.map((obj)=>{
                   return <option value={obj}>{obj}</option>
                 })}
               </select>
               <br></br>
-              <input className="add-post-input-content" placeholder="Content"></input>
+              <textarea className="add-post-input-content" placeholder="Content" onChange={(e) => setNewPostContent(e.target.value)}></textarea>
               <button type="submit" className='add-post-submit'>Submit</button>
             </form>}
           </div>

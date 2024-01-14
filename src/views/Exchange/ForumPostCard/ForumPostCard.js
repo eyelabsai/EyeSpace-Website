@@ -111,7 +111,6 @@ const ForumPostCard = ({ currentUID, postID, didLike, imageURL, subreddit, title
   };
 
   const handleSubmitComment =async (event) => {
-    console.log(event.target.value);
     const commentsRef = collection(firestore, 'comments');
     if (commentInput!=="") {
       try {
@@ -192,9 +191,7 @@ const ForumPostCard = ({ currentUID, postID, didLike, imageURL, subreddit, title
         </div>
         <div>
           {comments.map((obj) => {
-            //console.log(obj.text);
             return (
-              //<div key={obj.id}>{obj.text}</div>
               <ForumCommentCard uid={obj.uid} text={obj.text} timestamp={formatDateTime(new Date(obj.timestamp.seconds*1000))}/>
             )
           })}
