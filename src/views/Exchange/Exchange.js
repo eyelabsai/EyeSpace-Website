@@ -15,6 +15,10 @@ function Exchange(props) {
   const [showPost, setShowPost] = useState(false);
   const navigate = useNavigate();
   
+  const subredditChoices = ["i/Anterior Segment, Cataract, & Cornea", "i/Glaucoma", "i/Retina", 
+  "i/Neuro-Opthamology", "i/Pediatric Opthamology", "i/Ocular Oncology", "i/Oculoplastic Surgery", 
+  "i/Uveitis", "i/Residents & Fellows", "i/Medical Students", "i/Company Representatives"];
+
   useEffect(() => {
     // Check the user's authentication status
     const unsubscribe = auth.onAuthStateChanged(user => {
@@ -92,6 +96,14 @@ function Exchange(props) {
             {showPost && 
             <form className="add-post-input-container" onSubmit={handleSubmitPost}>
               <input className="add-post-input-title" placeholder="Title"></input>
+              <br></br>
+              <select className="add-post-input-selection" name="fruit">
+                <option value="choose">Choose (Select a category)</option>
+                {subredditChoices.map((obj)=>{
+                  return <option value={obj}>{obj}</option>
+                })}
+              </select>
+              <br></br>
               <input className="add-post-input-content" placeholder="Content"></input>
               <button type="submit" className='add-post-submit'>Submit</button>
             </form>}

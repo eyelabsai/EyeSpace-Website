@@ -96,7 +96,12 @@
     border-radius: 20px;
     background-color: rgb(1, 112, 185);
     margin-top: 2%;
+}
 
+.add-post-input-selection{
+    margin-top: 3%;
+    width: 40%;
+    font-size: 20px;
 }
 
 @media only screen and (max-width: 920px) {
