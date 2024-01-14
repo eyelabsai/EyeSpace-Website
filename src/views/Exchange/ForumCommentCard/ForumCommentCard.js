@@ -31,7 +31,6 @@ const ForumCommentCard = ({uid, text, timestamp}) => {
         }
       }, [uid]);
     const imageSrc = avatarUrl || Person_Icon;
-    console.log(imageSrc);
     return (
         <div className='forum-comment-card-container'>
             <br></br>

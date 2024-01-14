@@ -49,6 +49,56 @@
     flex-direction: column;
 }
 
+.add-post-container {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5%;
+}
+
+.add-post-button {
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 24px;
+    padding: 1%;
+    display: flex;
+    width: 35%;
+    align-items: center;
+    
+}
+
+.add-post-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.add-post-text {
+    font-size: 24px;
+}
+
+.add-post-input-title {
+    width: 70%; 
+    font-size: 22px;
+    margin-top: 2%;
+}
+
+.add-post-input-content {
+    margin-top: 5%;
+    width: 100%;
+    font-size: 20px;
+}
+
+.add-post-submit {
+    width: 13%;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: rgb(1, 112, 185);
+    margin-top: 2%;
+
+}
+
 @media only screen and (max-width: 920px) {
     #top{
         display: block;

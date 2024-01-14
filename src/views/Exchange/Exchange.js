@@ -7,10 +7,12 @@ import ForumPostCard from "./ForumPostCard/ForumPostCard";
 import './ForumPostCard/ForumPostCard.css';
 import { auth, firestore } from '../../firebase';
 import {getDocs, collection } from 'firebase/firestore';
+import AddCommentImg from '../../assets/add_comment.svg'
 
 function Exchange(props) {
   const [posts, setPosts] = useState(null);
   const [currentUID, setCurrentUID] = useState(null);
+  const [showPost, setShowPost] = useState(false);
   const navigate = useNavigate();
   
   useEffect(() => {
@@ -64,6 +66,15 @@ function Exchange(props) {
   if (posts === null || posts === undefined || currentUID===null) {
     return <div>Loading...</div>;
   }
+
+  const postHandler = () => {
+    setShowPost(!showPost);
+  }
+
+  const handleSubmitPost = () => {
+    console.log("clicked");
+  }
+
   return (
     <div>
         <Header page="eXchange"/>
@@ -73,6 +84,18 @@ function Exchange(props) {
               <img src={ForumReplacement} alt="forum replacement"/>
           </div>
           <br></br><br></br><br></br><br></br>
+          <div className="add-post-container">
+            <div className="add-post-button" onClick={postHandler}>
+              <img src={AddCommentImg} className="add-post-icon" alt="add a post"/>
+              <div className="add-post-text">Create a new post</div>
+            </div>
+            {showPost && 
+            <form className="add-post-input-container" onSubmit={handleSubmitPost}>
+              <input className="add-post-input-title" placeholder="Title"></input>
+              <input className="add-post-input-content" placeholder="Content"></input>
+              <button type="submit" className='add-post-submit'>Submit</button>
+            </form>}
+          </div>
           <div className="forum-postcard-container">
           {
             posts.map((obj) => {
