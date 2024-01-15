@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './ForumPostCard.css';
 import Person_Icon from '../../../assets/Person_Icon.png';
 import { auth, firestore } from '../../../firebase';
-import { doc, getDoc, getDocs, addDoc, updateDoc, arrayUnion, arrayRemove, collection, query, where, Timestamp } from 'firebase/firestore';
+import { doc, getDoc, getDocs, addDoc, updateDoc, arrayUnion, arrayRemove, collection, query, where, Timestamp, orderBy } from 'firebase/firestore';
 import LikeButton from '../../../assets/like_post.svg';
 import LikeButtonLiked from '../../../assets/like_post_liked.svg';
 import CommentButton from '../../../assets/comment_post.svg';
@@ -43,7 +43,7 @@ const ForumPostCard = ({ currentUID, postID, didLike, imageURL, subreddit, title
     const getComments = async () => {
     try {
         const commentsRef = collection(firestore, "comments");
-        const q = query(commentsRef, where("postId", "==", postID));
+        const q = query(commentsRef, where("postId", "==", postID), orderBy("timestamp", "desc"));
         getDocs(q).then((querySnapshot) => {
           commentsArray.length = 0;
           querySnapshot.forEach((doc) => {

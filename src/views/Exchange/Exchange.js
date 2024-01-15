@@ -6,7 +6,7 @@ import ForumReplacement from '../../assets/forum_replacement.png'
 import ForumPostCard from "./ForumPostCard/ForumPostCard";
 import './ForumPostCard/ForumPostCard.css';
 import { auth, firestore } from '../../firebase';
-import {getDocs, collection, addDoc, Timestamp } from 'firebase/firestore';
+import {getDocs, collection, addDoc, Timestamp, query, orderBy } from 'firebase/firestore';
 import AddCommentImg from '../../assets/add_comment.svg'
 
 function Exchange(props) {
@@ -42,7 +42,8 @@ function Exchange(props) {
 
   async function retrieveFirestoreData() {
     const postsRef = collection(firestore, "posts");
-    const querySnapshot = await getDocs(postsRef);
+    const q = query(postsRef, orderBy("timestamp", "desc"));
+    const querySnapshot = await getDocs(q);
     const postsData = querySnapshot.docs.map(doc => ({
       id: doc.id,
       ...doc.data(),
