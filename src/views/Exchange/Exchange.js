@@ -7,7 +7,7 @@ import ForumPostCard from "./ForumPostCard/ForumPostCard";
 import './ForumPostCard/ForumPostCard.css';
 import { auth, firestore } from '../../firebase';
 import {getDocs, collection, addDoc, Timestamp, query, orderBy } from 'firebase/firestore';
-import AddCommentImg from '../../assets/add_comment.svg'
+import AddCommentImg from '../../assets/add_comment.svg';
 
 function Exchange(props) {
   const [posts, setPosts] = useState(null);
@@ -139,10 +139,12 @@ function Exchange(props) {
                 })}
               </select>
               <br></br>
+              <input className="add-post-image-upload" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg, image/jpg, image/svg, image/webp" />
               <textarea className="add-post-input-content" placeholder="Content" onChange={(e) => setNewPostContent(e.target.value)}></textarea>
               <button type="submit" className='add-post-submit'>Submit</button>
             </form>}
           </div>
+          
           <div className="forum-postcard-container">
           {
             posts.map((obj) => {
