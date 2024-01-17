@@ -5,7 +5,8 @@ import './Exchange.css';
 import ForumReplacement from '../../assets/forum_replacement.png'
 import ForumPostCard from "./ForumPostCard/ForumPostCard";
 import './ForumPostCard/ForumPostCard.css';
-import { auth, firestore } from '../../firebase';
+import { auth, firestore, storage } from '../../firebase';
+import {ref, uploadBytes, getDownloadURL} from 'firebase/storage';
 import {getDocs, collection, addDoc, Timestamp, query, orderBy } from 'firebase/firestore';
 import AddCommentImg from '../../assets/add_comment.svg';
 
@@ -17,6 +18,7 @@ function Exchange(props) {
 
   const [newPostTitle, setNewPostTitle] = useState("");
   const [newPostSubreddit, setNewPostSubreddit] = useState("");
+  const [newPostImage, setNewPostImage] = useState();
   const [newPostContent, setNewPostContent] = useState("");
   
   const subredditChoices = ["i/Anterior Segment, Cataract, & Cornea", "i/Glaucoma", "i/Retina", 
@@ -80,17 +82,35 @@ function Exchange(props) {
     setShowPost(!showPost);
   }
 
+  const uploadImage = async () => {
+    if (!newPostImage) {
+      return "";
+    }
+    const imageRef = ref(storage, `Post_Images/${newPostImage.name}`);
+    const snapshot = await uploadBytes(imageRef, newPostImage);
+    const url = await getDownloadURL(snapshot.ref);
+    return url;
+    /*uploadBytes(imageRef, newPostImage).then((snapshot) => {
+      getDownloadURL(snapshot.ref).then((url)=> {
+        console.log(url);
+        return url;
+      })
+    })*/
+  }
+ 
   const handleSubmitPost = async (event) => {
     event.preventDefault()
     console.log(newPostTitle);
     console.log(newPostSubreddit);
     console.log(newPostContent);
     const postsRef = collection(firestore, 'posts');
+    const newImageURL = await uploadImage();
     if (newPostTitle!=="" && newPostSubreddit!=="" && newPostContent!=="") {
       try {
+        console.log("inside upload " + newImageURL);
         const submitted_postRef = await addDoc(postsRef, {
           didLike: false,
-          //imgurl to do
+          imageURL: newImageURL,
           subreddit: newPostSubreddit,
           text: newPostContent,
           timestamp: Timestamp.fromDate(new Date()),
@@ -139,7 +159,13 @@ function Exchange(props) {
                 })}
               </select>
               <br></br>
-              <input className="add-post-image-upload" type="file" id="avatar" name="avatar" accept="image/png, image/jpeg, image/jpg, image/svg, image/webp" />
+              <input 
+                className="add-post-image-upload" type="file" id="avatar" name="avatar" 
+                accept="image/png, image/jpeg, image/jpg, image/svg, image/webp"
+                onChange={(event) => {
+                  setNewPostImage(event.target.files[0]);
+                }}
+              />
               <textarea className="add-post-input-content" placeholder="Content" onChange={(e) => setNewPostContent(e.target.value)}></textarea>
               <button type="submit" className='add-post-submit'>Submit</button>
             </form>}
