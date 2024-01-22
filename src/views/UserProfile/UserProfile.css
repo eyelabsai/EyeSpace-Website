@@ -1,3 +1,39 @@
 .userprofile {
     text-align: center;
 }
+
+.userprofile-container {
+    margin-top: 5%;
+    margin-bottom: 2%;
+    margin-left: 20%;
+    display: flex;
+}
+
+.userprofile-entry-container {
+    display: flex;
+    margin-bottom: 3%;
+}
+
+.userpofile-entry-title {
+    font-size: 25px;
+    font-weight: 600;
+    width: 30%;
+    text-align: left;
+}
+
+.userprofile-image-container {
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.userprofile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 240px;
+}
+
+.userprofile-logout {
+    margin-top: 5%;
+}
