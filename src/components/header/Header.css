@@ -65,7 +65,7 @@
   height: auto; /* Maintain aspect ratio */
 }
 
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 1300px) {
   .navbar {
     height: 78px; /* 40% smaller */
   }
@@ -81,6 +81,7 @@
   .buttons {
     gap: 36px; /* 40% smaller */
     margin-left: 20px;
+    padding-left: 0px; 
   }
 
   .button {
@@ -99,3 +100,4 @@
     line-height: 16.8px; /* Adjust this based on your design */
   }
 }
+
