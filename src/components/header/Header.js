@@ -72,6 +72,8 @@ export default class Button extends React.Component {
 
   render() {
     return (
+      
+      <>
       <div className="navbar">
         <div className="logo-div">
           {/* Make the logo a clickable link */}
@@ -100,6 +102,24 @@ export default class Button extends React.Component {
           </Link>
         </div>
       </div>
+        <header>
+      <nav>
+        <ul>
+          <li class="logo"><img className="logo-img-tag" src={logo} alt="EyeSpace Logo" /></li>
+          <li class="navigationLinks">
+            <ul>
+              <li>Technology</li>
+              <li>About Us</li>
+              <li>eXchange</li>
+              <li>inSight</li>
+              <li>Contact</li>
+            </ul>
+          </li>
+          <li class="login">Login/Register</li>
+        </ul>
+      </nav>
+    </header>
+      </>
     );
   }
 }
