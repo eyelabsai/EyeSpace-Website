@@ -74,9 +74,9 @@ export default class Button extends React.Component {
     return (
       
       <>
-      <div className="navbar">
+      {/* <div className="navbar">
         <div className="logo-div">
-          {/* Make the logo a clickable link */}
+      
           <Link to="/" style={{ textDecoration: 'none' }}>
             <img className="logo-img-tag" src={logo} alt="EyeSpace Logo" />
           </Link>
@@ -101,21 +101,38 @@ export default class Button extends React.Component {
             </button>
           </Link>
         </div>
-      </div>
+      </div> */}
         <header>
       <nav>
         <ul>
-          <li class="logo"><img className="logo-img-tag" src={logo} alt="EyeSpace Logo" /></li>
+          <li class="logo">
+          <Link to="/" style={{ textDecoration: 'none' }}>
+            <img className="logo" src={logo} alt="EyeSpace Logo" />
+          </Link>
+          </li>
           <li class="navigationLinks">
             <ul>
-              <li>Technology</li>
-              <li>About Us</li>
-              <li>eXchange</li>
-              <li>inSight</li>
-              <li>Contact</li>
+            {this.buttonsList.map((name) => {
+            return (
+              <li>
+                <div key={name}>
+                <Link to={this.buttonsDict[name]} style={{ textDecoration: 'none' }}>
+                  <div className="button" style={{ color: this.props.page === name ? '#FF6400' : '#48627E' }}>
+                    {name}
+                  </div>
+                </Link>
+              </div>
+              </li>
+            );
+          })}
             </ul>
           </li>
-          <li class="login">Login/Register</li>
+          <li class="login">
+            <Link to={this.getLoginNavigationPage()} style={{ textDecoration: 'none' }}>
+            <div className="login-button" onClick={this.f1}>
+            {this.getUserButtonContent()}
+            </div>
+          </Link></li>
         </ul>
       </nav>
     </header>
