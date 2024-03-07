@@ -48,7 +48,7 @@ export default class Technology extends React.Component {
         <Header page="Technology" />
         <div id="blog">
             <div className="technology-title"><strong>CURRENT TECHNOLOGY</strong></div>
-          <div>
+          <div className="blog-cards-container">
             {this.info.map((obj) => {
               return (
                 <TechnologyCard

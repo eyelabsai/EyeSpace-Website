@@ -3,11 +3,11 @@
 }
 
 .tool {
-  display: flex;
-  padding: 3%;
-  flex-wrap: wrap; 
-  justify-content: center;
-  margin-bottom: 0; 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 5rem;
 }
 .bottom-button {
   margin-left: 570px;
@@ -16,7 +16,6 @@
 }
 
 .card {
-  width: 38%;
   height: auto;
   order: 0;
   box-sizing: border-box;
@@ -24,16 +23,19 @@
   border: 1px solid #EBEBEB;
   box-shadow: 4px 4px 30px 10px rgba(181, 181, 181, 0.3);
   border-radius: 40px;
-  margin: 10px;
-  margin-top: 0px;
-  margin-bottom: 3%;
   align-items: center;
   justify-content: center;
+  padding: 1.5rem;
+}
+
+.homepage-card-img-container {
+  width: 100%;
+  display: grid;
+  place-items: center;
 }
 
 .homepage-card-img {
-  padding-top: -5%;
-  padding-left: 17%;
+
 }
 
 .card-title {
@@ -51,19 +53,20 @@
   font-style: normal;
   font-weight: 550;
   font-size: 20px; /* Reduced by 35% */
-  line-height: 22px;
+  line-height: 1.8rem;
   color: #515151;
-  margin-top: -7%;
-  margin-left: 12%;
-  margin-right: 12%;
-  margin-bottom: 3%;
-  text-indent: 8%;
+  padding: 2rem;
+}
+
+.homepage-appstore-btn {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 5rem;
 }
 
 .homepage-appstore-img {
-  margin-left: 2%;
-  margin-top: -8%;
-  scale: 50%;
+  width: 15rem;
 }
 
 /* #card2 {

@@ -30,18 +30,22 @@ export default class TechnologyCard extends React.Component {
                         </div>
                         <div id="blog-detail">
                             <div id="blog-content">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 {content}
                             </div>
                         </div>
                     </div>
-                    <a href="https://apps.apple.com/us/app/eye-space/id1626671895" target="_blank" rel="noopener noreferrer">
-                        <img className="technology-appstore-img" src={appstore} alt="Download On Appstore" />
-                    </a>
+                    <div className="blog-appstore-btn">
+                        <a href="https://apps.apple.com/us/app/eye-space/id1626671895" target="_blank" rel="noopener noreferrer">
+                            <img className="technology-appstore-img" src={appstore} alt="Download On Appstore" />
+                        </a>
+                    </div>
+                   
                     <div className="eyespace-card-container">
                         <div className="eyespace-card">
                             <div className="eyespace-card-title">IOL Reference</div>
-                            <img className="eyespace-card-img" src={iolreference} alt="iolreference"/>
+                            <div className="eyespace-card-img-container">
+                                <img className="eyespace-card-img" src={iolreference} alt="iolreference"/>
+                            </div>
                             <div className="eyespace-card-content">
                                 Browse the entire spectrum of current FDA approved IOLs and find the right lens for any case using a novel search function. This is the ONLY accurate and current source one FDA approved IOL information.
                             </div>
@@ -49,41 +53,47 @@ export default class TechnologyCard extends React.Component {
                         </div>
                         <div className="eyespace-card">
                             <div className="eyespace-card-title">Transposition Tool</div>
-                            <img className="eyespace-card-img" src={transposition} alt="iolreference"/>
+                            <div className="eyespace-card-img-container">
+                                <img className="eyespace-card-img" src={transposition} alt="iolreference"/>
+                            </div>
                             <div className="eyespace-card-content">
-                            Easily transpose between positive and negative cylinder.                            </div>
-                            <br></br><br></br><br></br><br></br>
+                            Easily transpose between positive and negative cylinder.                            
+                            </div>
                         </div>
                         <div className="eyespace-card">
                             <div className="eyespace-card-title">Sulcus Correction Tool</div>
-                            <img className="eyespace-card-img" src={sulcus} alt="iolreference"/>
+                            <div className="eyespace-card-img-container">
+                                <img className="eyespace-card-img" src={sulcus} alt="iolreference"/>
+                            </div>
                             <div className="eyespace-card-content">
                             Quickly perform adjustments to select the correct IOL power when moving an IOL from the capsule to the sulcus.                        </div>
-                            <br></br><br></br><br></br><br></br>
                         </div>
                         <div className="eyespace-card">
                             <div className="eyespace-card-title">Refractive Outcome Tracking</div>
-                            <img className="eyespace-card-img" src={outcome} alt="iolreference"/>
+                            <div className="eyespace-card-img-container">
+                                <img className="eyespace-card-img" src={outcome} alt="iolreference"/>
+                            </div>
                             <div className="eyespace-card-content">
                             This is a state of the art outcome tracking utility that analyzes your cataract cases to learn more about refractive outcomes, surgically induced astigmatism, and personalized A-constants. This feature is currently only available in the app but will have a web interface soon.
                             </div>
-                            <br></br><br></br><br></br><br></br>
                         </div>
                         <div className="eyespace-card">
                             <div className="eyespace-card-title">eyeSpace Exchange</div>
-                            <img className="eyespace-card-img" src={exchange} alt="iolreference"/>
+                            <div className="eyespace-card-img-container">
+                                <img className="eyespace-card-img" src={exchange} alt="iolreference"/>
+                            </div>
                             <div className="eyespace-card-content">
                             Connect with colleagues, mentors, and mentees to discuss cases, gather wisdom, and gain support.                           
                             </div>
-                            <br></br><br></br><br></br><br></br>
                         </div>
                         <div className="eyespace-card">
                             <div className="eyespace-card-title">inSight</div>
-                            <img className="eyespace-card-img" src={exchange} alt="iolreference"/>
+                            <div className="eyespace-card-img-container">
+                                <img className="eyespace-card-img" src={exchange} alt="iolreference"/>
+                            </div>
                             <div className="eyespace-card-content">
                             Read and submit short articles to stay up to date and keep others current on new technological advances in ophthalmology.                            
                             </div>
-                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                         </div>
                     </div>
                 </div>

@@ -1,12 +1,18 @@
+.Founders {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
 .FoundersCards {
   @media screen and (max-width: 920px) {
     display: flex;
     flex-direction: column;
   }
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   width: 100%;
-  gap: 24px;
+  gap: 1rem;
 }
 
 /* Apply a 35% font size reduction to all text within .FoundersCards */

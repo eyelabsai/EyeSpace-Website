@@ -19,7 +19,9 @@ export default class Card extends React.Component {
                 <h1 style={{ textAlign: 'center' }}>CURRENT TECHNOLOGY</h1>
                 <div className="tool">
                     <div className="card">
-                        <img className="homepage-card-img" src={Card1} alt="Card1 Logo" />
+                        <div className="homepage-card-img-container">
+                            <img className="homepage-card-img" src={Card1} alt="Card1 Logo" />
+                        </div>
                         <div className="detail">
                             {/* <div className="card-title">IOL Reference</div> */}
                             <div className="card-content">
@@ -28,13 +30,17 @@ export default class Card extends React.Component {
                             Download in the app store today or access the web-based tools under our TECHNOLOGY page.
                             </div>
                         </div>
-                        <a href="https://apps.apple.com/us/app/eye-space/id1626671895" target="_blank" rel="noopener noreferrer">
-                            <img className="homepage-appstore-img" src={Appstore} alt="Download On Appstore" />
-                        </a>
+                        <div className="homepage-appstore-btn">
+                            <a href="https://apps.apple.com/us/app/eye-space/id1626671895" target="_blank" rel="noopener noreferrer">
+                                <img className="homepage-appstore-img" src={Appstore} alt="Download On Appstore" />
+                            </a>
+                        </div>
                     </div>
 
                     <div className="card">
-                        <img className="homepage-card-img" src={Card2} alt="Card2 Logo" />
+                        <div className="homepage-card-img-container">
+                            <img className="homepage-card-img" src={Card2} alt="Card2 Logo" />
+                        </div>
                         <div className="detail">
                             {/* <div className="card-title">Refractive Outcome Tracking</div> */}
                             <div className="card-content" id="card2">
@@ -45,7 +51,9 @@ export default class Card extends React.Component {
                         </div>
                     </div>
                     <div className="card">
-                        <img className="homepage-card-img" src={Card3} alt="Card4 Logo" />
+                        <div className="homepage-card-img-container">
+                            <img className="homepage-card-img" src={Card3} alt="Card4 Logo" />
+                        </div>
                         <div className="detail">
                             <div className="card-content">
                             OptiCalc is an AI-Driven IOL formula that utilizes pre-operative imaging routinely obtained with biometry. These include the 
@@ -56,7 +64,9 @@ export default class Card extends React.Component {
                     </div>
 
                     <div className="card">
-                        <img className="homepage-card-img" src={Card4} alt="Card5 Logo" />
+                        <div className="homepage-card-img-container">
+                            <img className="homepage-card-img" src={Card4} alt="Card5 Logo" />
+                        </div>
                         <div className="detail">
                             {/* <div className="card-title">Transposition Tool</div> */}
                             <div className="card-content">
@@ -66,9 +76,6 @@ export default class Card extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div className="tool">
                 </div>
             </div>
         );
