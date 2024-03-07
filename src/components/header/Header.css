@@ -149,7 +149,7 @@ margin-left: 55px;
 
 /* New updated code ends here */
 
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 1300px) {
   .navbar {
     height: 78px; /* 40% smaller */
   }
@@ -165,6 +165,7 @@ margin-left: 55px;
   .buttons {
     gap: 36px; /* 40% smaller */
     margin-left: 20px;
+    padding-left: 0px; 
   }
 
   .button {
@@ -183,3 +184,4 @@ margin-left: 55px;
     line-height: 16.8px; /* Adjust this based on your design */
   }
 }
+
