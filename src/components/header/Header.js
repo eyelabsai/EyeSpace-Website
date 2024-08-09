@@ -7,19 +7,17 @@ const Header = ({ page }) => {
   const buttonsList = [
     "Technology",
     "About Us",
-    // "eXchange",
+    "eXchange",
     "inSight",
     "Contact",
-    'Home'
   ];
 
   const buttonsDict = {
     Technology: "/Technology",
     "About Us": "/AboutUs",
-    // eXchange: "/",
+    eXchange: "/Exchange",
     inSight: "/Insight",
     Contact: "/Contact",
-    Home: '/Home'
   };
 
   return (

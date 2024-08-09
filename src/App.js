@@ -70,9 +70,9 @@ export default class App extends React.Component {
             <Header className="app-sidebar" />
             <div className="app-content">
               <Routes>
-                <Route path="/Home" element={<Homepage />} />
+                <Route path="/" element={<Homepage />} />
                 <Route path="/AboutUs" element={<AboutUs />} />
-                <Route path="/" element={<Exchange />} />
+                <Route path="/Exchange" element={<Exchange />} />
                 <Route path="/Insight" element={<Insight />} />
                 <Route path="/Contact" element={<Contact />} />
                 <Route path="/Login" element={<Login />} />
