@@ -1,0 +1,61 @@
+/* Nav.css */
+
+.navbar {
+  display: flex;
+  height: 35px;
+  justify-content: space-between; /* Ensure elements are spread out */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Fix navbar at the top */
+  width: 100%; /* Ensure it spans the full width */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  z-index: 1000; /* Make sure it stays on top of other content */
+}
+
+.logo img {
+  height: 40px;
+}
+
+.search-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+   /* Center the search component */
+}
+
+.login {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 4px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .search-container {
+    margin: 10px 0;
+    width: 100%; /* Make the search take up full width */
+  }
+
+  .login {
+    margin-top: 10px;
+  }
+}
+
+.main-content {
+  padding-top: 60px; /* Adjust this value based on your navbar's actual height */
+}

@@ -1,0 +1,46 @@
+/* Search.css */
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  position: relative; /* Allows positioning of elements relative to the container */
+}
+
+.searchInput {
+  width: 250px;
+  height:10px;
+  padding: 10px 15px;
+  border: 1px solid #d1d1d1;
+  border-radius: 25px; /* More rounded corners */
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding-right: 40px; /* Space for the search icon */
+}
+
+.searchInput:focus {
+  border-color: #0170b9;
+  box-shadow: 0 2px 6px rgba(0, 112, 185, 0.3); /* Enhanced shadow on focus */
+}
+
+.searchIcon {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #0170b9;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.searchIcon:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .searchInput {
+    width: 200px; /* Adjust width for smaller screens */
+  }
+}

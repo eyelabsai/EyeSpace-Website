@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Header from '../../components/header/Header';
 import './CreateAccount.css';
 import { auth, firestore } from '../../firebase';
 import { doc, setDoc } from 'firebase/firestore';
@@ -55,7 +54,6 @@ function CreateAccount(props) {
   // Render
   return (
     <div>
-        <Header page="CreateAccount"/>
         <div className="createacc-page">
             <div id="ca-main">
                 <h1 className="ca-title">Create Account</h1>

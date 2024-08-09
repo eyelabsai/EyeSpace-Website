@@ -1,185 +1,50 @@
-/* Previous code of 75% zoom bug starts here */
-/* .navbar {
-  height: 100px;
-  background: #FFFFFF;
-  box-shadow: 0px 4px 12px 6px rgba(3, 3, 3, 0.13),
-  0px -4px 12px 6px rgba(3, 3, 3, 0.13);
+/* Header.css */
 
-  border-radius: 20px 20px 20px 20px;
-  display: flex;
-  justify-content: space-between;
-  color: #0170b9;
-
-}
-
-.buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  gap: 60px;
-  padding-left: 150px;
-  color: #0170b9;
-
-}
-
-.button {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-
-.login-button {
-  width: 220px;
-  height: 50px;
-  margin-top: 25px;
-  margin-right: 15px;
-  background: #0170b9;
-  border-radius: 40px;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 28px;
-  color: #FDFDFD;
-}
-.gmail-logo {
-  margin-left: 11px; /* Adjust the margin to move the Twitter logo to the left */
-/* } */
-
-/*.logo-div {
-  width: 300px;
-  height: 55px;
-  margin-left: 45px;
-  margin-top: 25px;
-
-}
-
-.logo-img-tag {
-  width: 100%; /* Make the logo responsive */
-  /* height: auto; Maintain aspect ratio */
-/* }  */
-
-/* Previous code of 75% zoom bug ends here */
-
-
-
-/* New  updated code starts here */
-
-body{
-  margin: 0;
-  padding: 0;
-}
-header {
-border-radius: 10px;
-}
-nav {
-height: 100px;
-background: #FFFFFF;
-    box-shadow: 0px 4px 12px 6px rgba(3, 3, 3, 0.13), 0px -4px 12px 6px rgba(3, 3, 3, 0.13);
-    border-radius: 20px 20px 20px 20px;
-}
-nav ul {
-display: flex;
-flex-direction: row;
-list-style-type: none;
-}
-nav ul h1 {
-font-family: monospace;
-font-size: 35px;
-margin-left: 10px;
-}
-/* nav ul li{
-  text-align: center;
-  vertical-align: middle;
-} */
-.logo {
-  width: 20%;
-  display: flex;
-  align-items: center;
-  margin-top: 16px;
-}
-.logo img{
-  width: 100%;
-}
-.navigationLinks {
-width: 55%;
-margin-left: 25px;
-}
-.navigationLinks ul {
-display: flex;
-align-items: center;
-justify-content: space-between;
-margin-top: 42px;
-margin-left: -10px;
-}
-.navigationLinks ul li,
-.login {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
-  color: rgb(66, 91, 117);
-}
-.login {
-display: flex;
-align-items: center;
-justify-content: center;
-width: 220px;
-height: 50px;
-margin-top: 25px;
-margin-right: 15px;
-background: #0170b9;
-border-radius: 40px;
-font-family: 'Inter';
-font-style: normal;
-font-weight: 500;
-font-size: 17px;
-line-height: 28px;
-color: #FDFDFD;
-margin-left: 55px;
-}
-
-/* New updated code ends here */
-
-@media only screen and (max-width: 920px) {
-  .navbar {
-    height: 78px; /* 40% smaller */
+.header-container {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 14%;
+    position: fixed; /* Fix the header on the left */
+    height: calc(100vh - 55px); /* Full viewport height minus navbar height */
+    top: 55px; /* Start right below the navbar */
+    left: 0;
+    background-color: #f8f9fa; /* Optional: Background color */
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    padding: 20px; /* Add padding for content spacing */
   }
-
-  .logo-div {
-    width: 106.2px; /* 40% smaller */
-    height: 33px; /* 40% smaller */
-    margin-left: 10px;
-    margin-top: 20px;
-    margin-right: 0;
+  
+  .navigationLinks ul {
+    list-style: none;
+    padding: 0;
   }
-
-  .buttons {
-    gap: 36px; /* 40% smaller */
-    margin-left: 20px;
+  
+  .navigationLinks li {
+    margin: 10px 0;
   }
-
+  
   .button {
-    font-weight: 500; /* You can adjust this based on your design */
-    font-size: 14.4px; /* 40% smaller */
-    line-height: 16.8px; /* 40% smaller */
+    color: #48627e;
+    text-decoration: none;
+    transition: color 0.3s ease;
   }
-
-  .login-button {
-    width: 132px; /* 40% smaller */
-    height: 36px; /* 40% smaller */
-    margin-top: 20px;
-    margin-right: 20px;
-    border-radius: 36px; /* Adjust this based on your design */
-    font-size: 13.2px; /* 40% smaller */
-    line-height: 16.8px; /* Adjust this based on your design */
+  
+  .button:hover,
+  .active-link .button {
+    color: #ff6400;
   }
-}
+  
+  @media (max-width: 768px) {
+    .header-container {
+      padding-left: 10px;
+      position: relative; /* Reset position for small screens */
+      width: 100%; /* Take full width on small screens */
+      height: auto; /* Reset height */
+      top: 0; /* Align to top */
+    }
+  
+    .navigationLinks li {
+      margin: 5px 0;
+    }
+  }
+  

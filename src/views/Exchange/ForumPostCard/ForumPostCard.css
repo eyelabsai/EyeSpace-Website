@@ -70,6 +70,7 @@
 .forum-postcard-like-button {
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
 .forum-postcard-comment-button {
@@ -77,6 +78,7 @@
     padding-top: 0.5%;
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
 .forum-postcard-input {
@@ -93,4 +95,7 @@
     border-radius: 20px;
     background-color: rgb(1, 112, 185);
 
+}
+.forum-postcard-comment-word{
+    cursor: pointer;
 }

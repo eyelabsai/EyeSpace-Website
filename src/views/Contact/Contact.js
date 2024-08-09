@@ -1,19 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types"; 
-import Header from '../../components/header/Header';
-// import Bg from "../../assets/vect.jpeg"; style={{backgroundImage: `url(${Bg})`}}
 import './Contact.css'; 
 
-export default class Contact extends React.Component { 
-  static propTypes = { // define any props here
-    name: PropTypes.string,
-  };
-
-  render() {
+const Contact = () => {
     return (
     <div className="cards">
       <div  className="contact-div" >
-      <Header page="Contact"/>
       <div className="contact-container">
         <div className>
           <div className="contct-title">
@@ -40,5 +31,5 @@ export default class Contact extends React.Component {
     </div>
     );
   }
-}
 
+export default Contact;

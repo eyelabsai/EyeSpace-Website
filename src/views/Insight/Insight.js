@@ -1,5 +1,4 @@
 import React from "react";
-import Header from '../../components/header/Header';
 import BlogCard from './BlogCard';
 import './Insight.css'; 
 import Blog1 from '../../assets/blog1.svg'
@@ -52,9 +51,8 @@ function Insight(props) {
 
   return (
     <div className="blog-div" style={{backgroundImage: `url(${Bg})`}}>
-        <Header page="inSight"/>
+
         <div>
-          <br></br><br></br><br></br><br></br><br></br><br></br>
           <div className="blogcontainer">
             <div className="BlogCards">
               {

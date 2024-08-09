@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types"; 
+import React from 'react';
+import PropTypes from 'prop-types'; 
 import './AdvisoryBoard.css';
 import AdvisoryCard from './AdvisoryCard/AdvisoryCard';
 import Helen_Wu from '../../../assets/Wu Headshot.svg';
@@ -8,13 +8,9 @@ import Jella_An from '../../../assets/Jella_An.svg';
 import James_Landreneau from '../../../assets/James_Landreneau.svg';
 import Taj_Nasser from '../../../assets/Taj_Nasser.svg';
 
-export default class AdvisoryBoard extends React.Component {
-  static propTypes = {
-    name: PropTypes.string,
-  };
-
-  // Javascript Object for each of the advisory board people
-  information = [
+const AdvisoryBoard = () => {
+  // Information array for advisory board members
+  const information = [
     {
       name: "Helen Wu",
       title: "MD",
@@ -33,6 +29,7 @@ export default class AdvisoryBoard extends React.Component {
       youtube: "https://www.youtube.com/@JellaAnMD",
       picture: Jella_An,
     },
+    // Uncomment this section when the asset is available
     // {
     //   name: "Bradley Barnett",
     //   title: "MD, PhD",
@@ -62,22 +59,29 @@ export default class AdvisoryBoard extends React.Component {
     },
   ];
 
-  render() {
-    return ( 
-    // maybe add a prop for id (if we need to distinguish btwn different cards)
+  return (
     <div className="AdvisoryBoard">
       <div className="AdvisoryBoardTitle AboutUsTitle">Advisory Board</div>
       <div className="AdvisoryBoardCards">
-        {
-          this.information.map((obj) => {
-            return (
-              <AdvisoryCard name={obj.name} title={obj.title} text={obj.text} twitter={obj.twitter} linkedin={obj.linkedin} youtube={obj.youtube} picture={obj.picture}/>
-            )
-          })
-        }
+        {information.map((info) => (
+          <AdvisoryCard
+            key={info.name} // Added key for efficient rendering
+            name={info.name}
+            title={info.title}
+            text={info.text}
+            twitter={info.twitter}
+            linkedin={info.linkedin}
+            youtube={info.youtube}
+            picture={info.picture}
+          />
+        ))}
       </div>
     </div>
-    );
-  }
-}
+  );
+};
 
+AdvisoryBoard.propTypes = {
+  // Define any props here if necessary in future
+};
+
+export default AdvisoryBoard;

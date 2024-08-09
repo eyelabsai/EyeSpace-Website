@@ -1,31 +1,33 @@
-.App {
-  text-align: center;
+/* App.css */
+
+.app-layout {
+  display: flex;
+  margin-top: 60px; /* Ensure it accounts for the height of the fixed navbar */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-sidebar {
+  width: 250px; /* Set a fixed width for the sidebar */
+  height: calc(100vh - 60px); /* Full height of the viewport minus the navbar */
+  position: fixed; /* Keep it fixed on the left */
+  top: 60px; /* Start right below the navbar */
+  left: 0;
+  background-color: #f8f9fa; /* Optional: Background color */
+  padding: 20px; /* Add padding for content spacing */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+}
+
+.app-content {
+  margin-top:50px;
+  margin-left: 10%; /* Add left margin to account for the sidebar width */
+  padding: 20px; /* Add padding for content */
+  flex: 1; /* Take up the remaining space */
+  overflow-y: auto; /* Allow scrolling if content overflows */
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +38,15 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+
+/* .App {
+  text-align: center;
+} */
+
+
+/* .App-link {
+  color: #61dafb;
+} */
+

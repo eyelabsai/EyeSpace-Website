@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Header from "../../components/header/Header";
 import './Login.css';
 import { auth } from "../../firebase";
 import { signInWithEmailAndPassword } from 'firebase/auth';
@@ -25,7 +24,6 @@ function Login() {
 
   return (
     <div className="cards">
-      <Header page="Login" />
       <div className="loginpage">
         <div id="email-notif"></div>
         <div className="left-login">

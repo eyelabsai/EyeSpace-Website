@@ -1,5 +1,4 @@
 import React from "react";
-import Header from '../../components/header/Header';
 import './ForgotPassword.css';
 import { auth } from "../../firebase";
 import { sendPasswordResetEmail } from 'firebase/auth';
@@ -16,7 +15,6 @@ function ForgotPassword() {
     
     return (
         <div className="forgotpwd">
-            <Header></Header>
             <h1>Forgot Password?</h1>
             <br></br>
             <form onSubmit={(e) => handleSubmit(e)}>
@@ -27,4 +25,4 @@ function ForgotPassword() {
         </div>
     )
 }
-export default ForgotPassword
+export default ForgotPassword;

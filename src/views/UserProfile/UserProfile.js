@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Header from '../../components/header/Header';
 import './UserProfile.css';
 import { auth, firestore, storage } from "../../firebase";
 import { doc, getDoc, updateDoc} from 'firebase/firestore';
@@ -206,7 +205,6 @@ function UserProfile() {
 
     return (
         <div className="userprofile">
-            <Header></Header>
             <h1>User Profile</h1>
             <form onSubmit={(e) => handleUpdateProfile(e)}>
             <div className="userprofile-container">
