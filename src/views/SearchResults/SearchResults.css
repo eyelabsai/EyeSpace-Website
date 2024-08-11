@@ -1,4 +1,7 @@
 .search-results{
-    margin-left: 20%;
-    width: 60%;
+   margin-top:10%;
+   display:flex;
+   justify-content: center;
+   width:4-0px;
+   flex-wrap:wrap;
 }

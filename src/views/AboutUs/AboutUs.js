@@ -7,7 +7,7 @@ import GM from "../../assets/Gurpal-Matthew.png"
 
 const AboutUs = ({ name }) => {
   return (
-    <div>
+    <div className='about-us-container'>
       <div className="aboutus-page">
         <div className="aboutus-header">
           <div className="aboutus-header-text">

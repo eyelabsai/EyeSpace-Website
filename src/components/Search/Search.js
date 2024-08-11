@@ -1,24 +1,6 @@
-// import React from 'react';
-// import './Search.css';
-// import { FaSearch } from 'react-icons/fa'; // Using react-icons for icons
-
-// function Search() {
-//   return (
-//     <div className="search-container">
-//       <input
-//         type="text"
-//         className="searchInput"
-//         placeholder="Search Exchange Forum"
-//       />
-//       <FaSearch className="searchIcon" />
-//     </div>
-//   );
-// }
-
-// export default Search;
 
 
-// Search.js
+// // Search.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
