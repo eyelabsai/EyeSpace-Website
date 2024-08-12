@@ -1,12 +1,12 @@
-
 // import React, { useState, useEffect } from 'react';
 // import { useLocation } from 'react-router-dom';
 // import { collection, query, where, getDocs } from 'firebase/firestore';
 // import { firestore } from '../../firebase'; // Adjust the import based on your setup
 // import ForumPostCard from '../Exchange/ForumPostCard/ForumPostCard'; // Adjust the import based on your setup
 // import SideNav from '../../components/Nav/SideNav'; // Import SideNav component
-// import './SearchResults.css'
+// import './SearchResults.css';
 // import Search from '../../components/Search/Search';
+
 // const formatTimestamp = (timestamp) => {
 //   if (timestamp && timestamp.seconds) {
 //     const date = new Date(timestamp.seconds * 1000);
@@ -29,18 +29,49 @@
 //       setLoading(true);
 //       try {
 //         const postsRef = collection(firestore, 'posts');
-//         const q = query(
+
+//         // Query to match title or uid
+//         const titleQuery = query(
 //           postsRef,
 //           where('title', '>=', queryParam),
-//           where('title', '<=', queryParam + '\uf8ff') // This handles case insensitivity
+//           where('title', '<=', queryParam + '\uf8ff')
 //         );
-//         const querySnapshot = await getDocs(q);
-//         const fetchedPosts = querySnapshot.docs.map(doc => ({
+
+//         const uidQuery = query(
+//           postsRef,
+//           where('uid', '==', queryParam)
+//         );
+
+//         const [titleSnapshot, uidSnapshot] = await Promise.all([
+//           getDocs(titleQuery),
+//           getDocs(uidQuery)
+//         ]);
+
+//         // Process results for title and uid queries
+//         const titleResults = titleSnapshot.docs.map(doc => ({
 //           id: doc.id,
 //           ...doc.data(),
-//           timestamp: formatTimestamp(doc.data().timestamp) // Ensure timestamp is formatted
+//           timestamp: formatTimestamp(doc.data().timestamp)
 //         }));
-//         setPosts(fetchedPosts);
+
+//         const uidResults = uidSnapshot.docs.map(doc => ({
+//           id: doc.id,
+//           ...doc.data(),
+//           timestamp: formatTimestamp(doc.data().timestamp)
+//         }));
+
+//         // Combine and deduplicate results
+//         const combinedResults = [
+//           ...titleResults,
+//           ...uidResults
+//         ].reduce((acc, post) => {
+//           if (!acc.some(item => item.id === post.id)) {
+//             acc.push(post);
+//           }
+//           return acc;
+//         }, []);
+
+//         setPosts(combinedResults);
 //       } catch (error) {
 //         console.error("Error fetching posts: ", error);
 //         setError('Error fetching search results. Please try again later.');
@@ -52,7 +83,7 @@
 //     fetchPosts();
 //   }, [location.search]);
 
-//     return (
+//   return (
 //     <div className="search-results">
 //       <SideNav />
 //       <div className="results-content">
@@ -60,7 +91,7 @@
 //         <h1>Search Results:</h1>
 //         {loading && <p>Loading...</p>}
 //         {error && <p>{error}</p>}
-//         {!loading && posts.length === 0 && <p>No results found".</p>}
+//         {!loading && posts.length === 0 && <p>No results found for "{new URLSearchParams(location.search).get('q')}".</p>}
 //         <div className='search-posts'>
 //           {!loading && posts.map(post => (
 //             <ForumPostCard
@@ -82,10 +113,9 @@
 // };
 
 // export default SearchResults;
-
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { collection, query, where, getDocs } from 'firebase/firestore';
+import { collection, query, where, getDocs} from 'firebase/firestore';
 import { firestore } from '../../firebase'; // Adjust the import based on your setup
 import ForumPostCard from '../Exchange/ForumPostCard/ForumPostCard'; // Adjust the import based on your setup
 import SideNav from '../../components/Nav/SideNav'; // Import SideNav component
@@ -115,11 +145,17 @@ const SearchResults = () => {
       try {
         const postsRef = collection(firestore, 'posts');
 
-        // Query to match title or uid
+        // Perform queries to match the keyword in both the title and text fields
         const titleQuery = query(
           postsRef,
           where('title', '>=', queryParam),
           where('title', '<=', queryParam + '\uf8ff')
+        );
+
+        const textQuery = query(
+          postsRef,
+          where('text', '>=', queryParam),
+          where('text', '<=', queryParam + '\uf8ff')
         );
 
         const uidQuery = query(
@@ -127,13 +163,20 @@ const SearchResults = () => {
           where('uid', '==', queryParam)
         );
 
-        const [titleSnapshot, uidSnapshot] = await Promise.all([
+        const [titleSnapshot, textSnapshot, uidSnapshot] = await Promise.all([
           getDocs(titleQuery),
+          getDocs(textQuery),
           getDocs(uidQuery)
         ]);
 
-        // Process results for title and uid queries
+        // Process results for title, text, and uid queries
         const titleResults = titleSnapshot.docs.map(doc => ({
+          id: doc.id,
+          ...doc.data(),
+          timestamp: formatTimestamp(doc.data().timestamp)
+        }));
+
+        const textResults = textSnapshot.docs.map(doc => ({
           id: doc.id,
           ...doc.data(),
           timestamp: formatTimestamp(doc.data().timestamp)
@@ -148,6 +191,7 @@ const SearchResults = () => {
         // Combine and deduplicate results
         const combinedResults = [
           ...titleResults,
+          ...textResults,
           ...uidResults
         ].reduce((acc, post) => {
           if (!acc.some(item => item.id === post.id)) {
