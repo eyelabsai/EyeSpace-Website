@@ -1,11 +1,12 @@
 // import React, { useState, useEffect } from 'react';
 // import { useLocation } from 'react-router-dom';
-// import { collection, query, where, getDocs } from 'firebase/firestore';
+// import { collection, query, where, getDocs} from 'firebase/firestore';
 // import { firestore } from '../../firebase'; // Adjust the import based on your setup
 // import ForumPostCard from '../Exchange/ForumPostCard/ForumPostCard'; // Adjust the import based on your setup
 // import SideNav from '../../components/Nav/SideNav'; // Import SideNav component
 // import './SearchResults.css';
 // import Search from '../../components/Search/Search';
+// import {Link} from 'react-router-dom'
 
 // const formatTimestamp = (timestamp) => {
 //   if (timestamp && timestamp.seconds) {
@@ -30,11 +31,17 @@
 //       try {
 //         const postsRef = collection(firestore, 'posts');
 
-//         // Query to match title or uid
+//         // Perform queries to match the keyword in both the title and text fields
 //         const titleQuery = query(
 //           postsRef,
 //           where('title', '>=', queryParam),
 //           where('title', '<=', queryParam + '\uf8ff')
+//         );
+
+//         const textQuery = query(
+//           postsRef,
+//           where('text', '>=', queryParam),
+//           where('text', '<=', queryParam + '\uf8ff')
 //         );
 
 //         const uidQuery = query(
@@ -42,13 +49,20 @@
 //           where('uid', '==', queryParam)
 //         );
 
-//         const [titleSnapshot, uidSnapshot] = await Promise.all([
+//         const [titleSnapshot, textSnapshot, uidSnapshot] = await Promise.all([
 //           getDocs(titleQuery),
+//           getDocs(textQuery),
 //           getDocs(uidQuery)
 //         ]);
 
-//         // Process results for title and uid queries
+//         // Process results for title, text, and uid queries
 //         const titleResults = titleSnapshot.docs.map(doc => ({
+//           id: doc.id,
+//           ...doc.data(),
+//           timestamp: formatTimestamp(doc.data().timestamp)
+//         }));
+
+//         const textResults = textSnapshot.docs.map(doc => ({
 //           id: doc.id,
 //           ...doc.data(),
 //           timestamp: formatTimestamp(doc.data().timestamp)
@@ -63,6 +77,7 @@
 //         // Combine and deduplicate results
 //         const combinedResults = [
 //           ...titleResults,
+//           ...textResults,
 //           ...uidResults
 //         ].reduce((acc, post) => {
 //           if (!acc.some(item => item.id === post.id)) {
@@ -107,20 +122,24 @@
 //             />
 //           ))}
 //         </div>
+
+//         <Link to='/Exchange'><button>Go back</button></Link>
 //       </div>
 //     </div>
 //   );
 // };
 
 // export default SearchResults;
+
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { collection, query, where, getDocs} from 'firebase/firestore';
+import { collection, getDocs } from 'firebase/firestore';
 import { firestore } from '../../firebase'; // Adjust the import based on your setup
 import ForumPostCard from '../Exchange/ForumPostCard/ForumPostCard'; // Adjust the import based on your setup
 import SideNav from '../../components/Nav/SideNav'; // Import SideNav component
 import './SearchResults.css';
 import Search from '../../components/Search/Search';
+import { Link } from 'react-router-dom';
 
 const formatTimestamp = (timestamp) => {
   if (timestamp && timestamp.seconds) {
@@ -138,69 +157,29 @@ const SearchResults = () => {
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
-    const queryParam = searchParams.get('q') || '';
+    const queryParam = searchParams.get('q')?.toLowerCase() || ''; // Convert to lowercase for case-insensitive search
 
     const fetchPosts = async () => {
       setLoading(true);
       try {
         const postsRef = collection(firestore, 'posts');
+        const snapshot = await getDocs(postsRef);
 
-        // Perform queries to match the keyword in both the title and text fields
-        const titleQuery = query(
-          postsRef,
-          where('title', '>=', queryParam),
-          where('title', '<=', queryParam + '\uf8ff')
-        );
-
-        const textQuery = query(
-          postsRef,
-          where('text', '>=', queryParam),
-          where('text', '<=', queryParam + '\uf8ff')
-        );
-
-        const uidQuery = query(
-          postsRef,
-          where('uid', '==', queryParam)
-        );
-
-        const [titleSnapshot, textSnapshot, uidSnapshot] = await Promise.all([
-          getDocs(titleQuery),
-          getDocs(textQuery),
-          getDocs(uidQuery)
-        ]);
-
-        // Process results for title, text, and uid queries
-        const titleResults = titleSnapshot.docs.map(doc => ({
+        // Process the results
+        const allPosts = snapshot.docs.map(doc => ({
           id: doc.id,
           ...doc.data(),
           timestamp: formatTimestamp(doc.data().timestamp)
         }));
 
-        const textResults = textSnapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data(),
-          timestamp: formatTimestamp(doc.data().timestamp)
-        }));
+        // Filter posts based on the search term
+        const filteredPosts = allPosts.filter(post => {
+          const titleMatch = post.titleWords?.some(word => word.includes(queryParam));
+          const textMatch = post.textWords?.some(word => word.includes(queryParam));
+          return titleMatch || textMatch;
+        });
 
-        const uidResults = uidSnapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data(),
-          timestamp: formatTimestamp(doc.data().timestamp)
-        }));
-
-        // Combine and deduplicate results
-        const combinedResults = [
-          ...titleResults,
-          ...textResults,
-          ...uidResults
-        ].reduce((acc, post) => {
-          if (!acc.some(item => item.id === post.id)) {
-            acc.push(post);
-          }
-          return acc;
-        }, []);
-
-        setPosts(combinedResults);
+        setPosts(filteredPosts);
       } catch (error) {
         console.error("Error fetching posts: ", error);
         setError('Error fetching search results. Please try again later.');
@@ -236,6 +215,8 @@ const SearchResults = () => {
             />
           ))}
         </div>
+
+        <Link to='/Exchange'><button>Go back</button></Link>
       </div>
     </div>
   );
