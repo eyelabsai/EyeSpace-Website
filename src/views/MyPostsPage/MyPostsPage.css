@@ -1,0 +1,17 @@
+/* MyPosts.css */
+.my-posts-container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.user-posts-container{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-posts{
+    width: 50%;
+}

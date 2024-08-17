@@ -9,6 +9,7 @@ import LikeButtonLiked from '../../../assets/like_post_liked.svg';
 import CommentButton from '../../../assets/comment_post.svg';
 import ForumCommentCard from '../ForumCommentCard/ForumCommentCard';
 import '../ForumCommentCard/ForumCommentCard.css'
+import { Link } from 'react-router-dom';
 
 
 const ForumPostCard = ({ currentUID, postID, didLike, imageURL, subreddit, title, text, timestamp, uid, upvotes }) => {
@@ -168,7 +169,7 @@ const ForumPostCard = ({ currentUID, postID, didLike, imageURL, subreddit, title
       <img className="forum-postcard-header-img" src={imageSrc} alt="person_icon" />
       <div className="forum-postcard-header-content">
         <div className="forum-postcard-header-content2">
-          <div className="forum-postcard-header-username">{username || uid}</div>
+          <Link to={`/user-posts/${uid}`}className="forum-postcard-header-username">{username || uid}</Link>
           <div className="forum-postcard-header-date">{timestamp}</div>
         </div>
         <div className="forum-postcard-header-subreddit">{subreddit}</div>

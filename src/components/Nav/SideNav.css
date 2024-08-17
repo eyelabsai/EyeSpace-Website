@@ -26,3 +26,7 @@
 .nav-item:hover {
     background-color: #e2e6ea; /* Slightly darker background on hover */
 }
+
+.subreddit-link{
+    color: black;
+}

@@ -22,6 +22,11 @@
 .forum-postcard-header-username {
     font-size: 18px;
     font-weight: 600;
+    color:black;
+}
+
+.forum-postcard-header-username:hover{
+    text-decoration: underline;
 }
 
 .forum-postcard-header-date {

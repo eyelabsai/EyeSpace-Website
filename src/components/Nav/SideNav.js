@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./SideNav.css";
 
 const SideNav = () => {
@@ -22,7 +23,10 @@ const SideNav = () => {
         <li>Sub Reddits</li>
         {navItems.map((item, index) => (
           <li key={index} className="nav-item">
-            {item}
+            {/* Link to the SubReddit page and pass the subreddit name as a URL parameter */}
+            <Link to={`/subreddit/${encodeURIComponent(item)}`} className='subreddit-link'>
+              i/{item}
+            </Link>
           </li>
         ))}
       </ul>
@@ -31,3 +35,4 @@ const SideNav = () => {
 };
 
 export default SideNav;
+

@@ -1,7 +1,23 @@
 .search-results{
    margin-top:10%;
    display:flex;
-   justify-content: center;
-   width:4-0px;
-   flex-wrap:wrap;
+   /* justify-content: center;
+   flex-wrap:wrap; */
+}
+
+.results-content{
+   /* margin-top:10%; */
+   margin-left: 5%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   /* justify-content: center; */
+   flex-grow: 1;
+   padding: 20px;
+   background-color: #fff;
+   overflow-y: auto;
+}
+
+.search-posts{
+   width: 50%;
 }

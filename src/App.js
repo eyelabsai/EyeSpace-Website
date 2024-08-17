@@ -12,6 +12,9 @@ import UserProfile from "./views/UserProfile/UserProfile";
 import Insight from "./views/Insight/Insight";
 import Header from './components/header/Header';
 import SearchResults from "./views/SearchResults/SearchResults";
+import SubReddits from "./views/SubReddits/SubReddits";
+import UserPostsPage from "./views/UserPostsPage/UserPostsPage";
+import MyPosts from "./views/MyPostsPage/MyPostsPage";
 
 const App = () => {
   return (
@@ -32,6 +35,9 @@ const App = () => {
           <Route path="/ForgotPassword" element={<ForgotPassword />} />
           <Route path="/UserProfile" element={<UserProfile />} />
           <Route path="/search" element={<SearchResults />} /> {/* Add route for search results */}
+          <Route path="/subreddit/:subreddit" element={<SubReddits />} />
+          <Route path="/myposts" element={<MyPosts /> } />
+          <Route path="/user-posts/:uid" element={<UserPostsPage   />} />
         </Routes>
       </BrowserRouter>
     </div>
