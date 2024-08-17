@@ -10,7 +10,7 @@ const Mission = ({ name }) => {
   return (
     <div id="mission-div">
       <div id="mission-title">
-        <strong>EYESPACE Mission</strong>
+        <strong>Bimini AI Mission</strong>
       </div>
       <div className="mission-content">
         <p>

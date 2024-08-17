@@ -12,7 +12,7 @@ const AboutUs = ({ name }) => {
         <div className="aboutus-header">
           <div className="aboutus-header-text">
             <div>
-              EYESPACE is a technology and consulting firm co-owned and managed by Matt Hirabayashi MD and Gurpal Virdi MD. Together, they lead a team of engineers to develop and deliver AI-based solutions to the field of ophthalmology. The eyeSpace iOS Application is a cross-platform ophthalmology utility, social media, networking service that provides users with a wide array of eye care tools to optimize and track their surgical outcomes.
+              BIMINI AI is a technology and consulting firm co-owned and managed by Matt Hirabayashi MD and Gurpal Virdi MD. Together, they lead a team of engineers to develop and deliver AI-based solutions to the field of ophthalmology. The eyeSpace iOS Application is a cross-platform ophthalmology utility, social media, networking service that provides users with a wide array of eye care tools to optimize and track their surgical outcomes.
             </div>
             <div>
               The founders have extensive experience with ocular surgery, technological development, scaling products, overseeing projects, and managing teams.

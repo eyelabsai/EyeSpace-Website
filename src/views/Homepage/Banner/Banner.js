@@ -8,11 +8,11 @@ const Banner = ({ name }) => {
     <div className="banner">
       <div className="left">
         <div className="banner-title">
-          <strong>EYESPACE Ophthalmology</strong>
+          <strong>Bimini AI Ophthalmology</strong>
         </div>
         <div className="desc">
           <p>
-            Welcome to the future of integrated ophthalmic surgery. EYESPACE is a technology company 
+            Welcome to the future of integrated ophthalmic surgery. Bimini AI is a technology company 
             and consulting firm that specializes in delivering innovative and AI-based solutions
             to problems facing surgeons and patients to improve outcomes and positively impact the field of ophthalmology.
           </p>
