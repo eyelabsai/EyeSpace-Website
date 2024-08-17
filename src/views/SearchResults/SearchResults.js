@@ -62,7 +62,9 @@ const SearchResults = () => {
     <div className="search-results">
       <SideNav />
       <div className="results-content">
-        <Search />
+        <div className='search-results-search'>
+          <Search />
+        </div>
         {/* <h1>Search Results:</h1> */}
         {loading && <p>Loading...</p>}
         {error && <p>{error}</p>}
