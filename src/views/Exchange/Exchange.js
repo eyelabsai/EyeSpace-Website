@@ -196,7 +196,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import './Exchange.css'; 
-import ForumReplacement from '../../assets/forum_replacement.png';
+// import ForumReplacement from '../../assets/forum_replacement.png';
 import ForumPostCard from "./ForumPostCard/ForumPostCard";
 import './ForumPostCard/ForumPostCard.css';
 import { auth, firestore, storage } from '../../firebase';
@@ -330,11 +330,11 @@ function Exchange(props) {
         <SideNav/>
       </div>
       <div>
-        <div className='exchange-title'>
+        {/* <div className='exchange-title'>
           <h1>Coming Soon</h1>
           <img src={ForumReplacement} alt="forum replacement"/>
         </div>
-        
+         */}
         <br /><br /><br /><br />
         <div className="add-post-container">
           <div className='search-exchange'>
