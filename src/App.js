@@ -15,6 +15,7 @@ import SearchResults from "./views/SearchResults/SearchResults";
 import SubReddits from "./views/SubReddits/SubReddits";
 import UserPostsPage from "./views/UserPostsPage/UserPostsPage";
 import MyPosts from "./views/MyPostsPage/MyPostsPage";
+import ForumPostDetails from "./views/ForumPostDetails/ForumPostDetails";
 
 const App = () => {
   return (
@@ -26,7 +27,7 @@ const App = () => {
           {/** For each path we have, add a Route tag to define which element to render depending on the path. */}
           <Route path="/" element={<Homepage />} />
           <Route path="/AboutUs" element={<AboutUs />} />
-          <Route path="/Exchange" element={<Exchange />} />
+          <Route path="/RefracteX" element={<Exchange />} />
           <Route path="/Insight" element={<Insight />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Login" element={<Login />} />
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/subreddit/:subreddit" element={<SubReddits />} />
           <Route path="/myposts" element={<MyPosts /> } />
           <Route path="/user-posts/:uid" element={<UserPostsPage   />} />
+          <Route path="/post/:postID" element={<ForumPostDetails />} />
         </Routes>
       </BrowserRouter>
     </div>

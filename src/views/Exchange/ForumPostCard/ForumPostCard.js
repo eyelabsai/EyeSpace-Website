@@ -165,6 +165,7 @@ const ForumPostCard = ({ currentUID, postID, didLike, imageURL, subreddit, title
 
   return (
   <div className="forum-postcard">
+    <Link to={`/post/${postID}`} className="forum-postcard-link">
     <div className="forum-postcard-header">
       <img className="forum-postcard-header-img" src={imageSrc} alt="person_icon" />
       <div className="forum-postcard-header-content">
@@ -181,10 +182,15 @@ const ForumPostCard = ({ currentUID, postID, didLike, imageURL, subreddit, title
       {(imageURL !== undefined && imageURL !== "") && <img className="forum-postcard-body-img" src={imageURL} alt="post_image" />}
     </div>
     <div className='forum-postcard-comment'>
-      <img className='forum-postcard-like-button' src={likebuttonsrc} alt='like-button' onClick={likeHandler} />
-      <div>Likes {likesCount}</div>
-      <img className='forum-postcard-comment-button' src={CommentButton} alt='comment-button' onClick={commentHandler} />
-      <div className='forum-postcard-comment-word' onClick={commentHandler}>Comments {commentsCount}</div>
+      <div className='forum-postcard-like-container'>
+        <img className='forum-postcard-like-button' src={likebuttonsrc} alt='like-button' onClick={likeHandler} />
+        <div>Likes {likesCount}</div>
+      </div>
+    
+      <div className='forum-postcard-comment-container'>
+        <img className='forum-postcard-comment-button' src={CommentButton} alt='comment-button' onClick={commentHandler} />
+        <div className='forum-postcard-comment-word' onClick={commentHandler}>Comments {commentsCount}</div>
+      </div>
     </div>
     {showComment && (
       <div>
@@ -192,15 +198,16 @@ const ForumPostCard = ({ currentUID, postID, didLike, imageURL, subreddit, title
         <div className='forum-post-card-submit' onClick={handleSubmitComment}>
           Submit
         </div>
-        <div>
+        <div >
           {comments.map((obj) => {
             return (
-              <ForumCommentCard key={obj.id} uid={obj.uid} text={obj.text} timestamp={formatDateTime(new Date(obj.timestamp.seconds*1000))}/>
+              <ForumCommentCard className='forum-comment-hover' key={obj.id} uid={obj.uid} text={obj.text} timestamp={formatDateTime(new Date(obj.timestamp.seconds*1000))}/>
             )
           })}
         </div>
       </div>
     )}
+    </Link>
   </div>
   );
 };

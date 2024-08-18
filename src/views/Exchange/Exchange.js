@@ -224,10 +224,19 @@ function Exchange(props) {
   const [newPostContent, setNewPostContent] = useState("");
   
   const subredditChoices = [
-    "i/Anterior Segment, Cataract, & Cornea", "i/Glaucoma", "i/Retina", 
-    "i/Neuro-Opthamology", "i/Pediatric Opthamology", "i/Ocular Oncology", 
-    "i/Oculoplastic Surgery", "i/Uveitis", "i/Residents & Fellows", 
-    "i/Medical Students", "i/Company Representatives"
+    'i/Cataract and IOLs', 
+    'i/LVC',
+    'i/Phakic IOLs',
+    'i/Complications',
+    'i/Industry',
+    'i/Job Opportunities',
+    'i/Residents/Fellows/Students',
+    'i/Practice Management',
+    'i/Transfer of Care/Referrals',
+    // "i/Anterior Segment, Cataract, & Cornea", "i/Glaucoma", "i/Retina", 
+    // "i/Neuro-Opthamology", "i/Pediatric Opthamology", "i/Ocular Oncology", 
+    // "i/Oculoplastic Surgery", "i/Uveitis", "i/Residents & Fellows", 
+    // "i/Medical Students", "i/Company Representatives"
   ];
 
   useEffect(() => {

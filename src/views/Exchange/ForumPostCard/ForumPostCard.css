@@ -5,6 +5,34 @@
     box-shadow: 0px 0px 25px 1px rgb(240, 240, 240);
 }
 
+.forum-postcard-link{
+    color:black;
+}
+.forum-postcard-comment-container{
+    display: flex;
+    width:150px;
+    justify-content: center;
+    border-radius: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 4px;
+}
+
+.forum-postcard-like-container{
+    display: flex;
+    width:100px;
+    justify-content: center;
+    border-radius: 4px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.forum-postcard-like-container:hover{
+    background-color: #e2e6ea; /* Slightly darker background on hover */
+}
+
+.forum-postcard-comment-container:hover{
+    background-color: #e2e6ea; /* Slightly darker background on hover */
+}
 .forum-postcard-header {
     margin-top: 0.5%;
     margin-left: 1%;

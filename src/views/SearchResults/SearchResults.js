@@ -85,7 +85,7 @@ const SearchResults = () => {
           ))}
         </div>
 
-        <Link to='/Exchange'><button>Go back</button></Link>
+        <Link to='/RefracteX'><button>Go back</button></Link>
       </div>
     </div>
   );

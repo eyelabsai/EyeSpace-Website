@@ -6,6 +6,7 @@ import ForumPostCard from "../Exchange/ForumPostCard/ForumPostCard";
 import SideNav from "../../components/Nav/SideNav";
 import './SubReddits.css'
 // import Search from "../../components/Search/Search";
+import {Link} from 'react-router-dom';
 const SubReddit = () => {
     const { subreddit } = useParams();
     const [posts, setPosts] = useState([]);
@@ -65,6 +66,8 @@ const SubReddit = () => {
                         />
                     ))}
                 </div>
+
+                <Link to='/RefracteX'><button>Go back</button></Link>
             </div>
         </div>
     );
