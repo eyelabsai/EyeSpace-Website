@@ -12,6 +12,8 @@ function CreateAccount(props) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [check, setCheck] = useState(false)
+
   const navigate = useNavigate();
 
   // signUp function
@@ -19,6 +21,10 @@ function CreateAccount(props) {
     e.preventDefault();
     if (password !== confirmPassword) {
       window.alert('Passwords do not match');
+    } else if (password.length < 6) {
+      window.alert('Password must be at least 6 characters')
+    } else if (!check) {
+      window.alert('Please review T&C');
     } else {
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
@@ -46,6 +52,7 @@ function CreateAccount(props) {
               navigate('/');
             })
         }).catch((error) => {
+          window.alert(error.message)
           console.log(error);
         });
     }
@@ -78,7 +85,7 @@ function CreateAccount(props) {
                     <br />
                     <input className="inputborder" type="text" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}></input>
                     <br /><br />
-                    <input type="checkbox"></input>
+                    <input type="checkbox" onChange={(e) => setCheck(e.target.checked)}></input>
                     <label id="makered">Agree to T&C</label>
                     <br /><br />
                     <button type="submit" className="ca-inloginsubmit">Submit</button>
