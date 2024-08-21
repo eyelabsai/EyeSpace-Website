@@ -3,7 +3,8 @@ import PropTypes from "prop-types";
 import './Header.css';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { auth } from "../../firebase";
-import logo from '../../assets/RefracteX_logo.png';
+import logo from '../../assets/biminiai_no_bg.png'
+//import logo from '../../assets/RefracteX_logo.png';
 
 const Button = ({ page }) => {
   const [userEmail, setUserEmail] = useState('');
