@@ -27,7 +27,7 @@ const App = () => {
           {/** For each path we have, add a Route tag to define which element to render depending on the path. */}
           <Route path="/" element={<Homepage />} />
           <Route path="/AboutUs" element={<AboutUs />} />
-          <Route path="/RefracteX" element={<Exchange />} />
+          {/* <Route path="/RefracteX" element={<Exchange />} /> */}
           <Route path="/Insight" element={<Insight />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Login" element={<Login />} />
