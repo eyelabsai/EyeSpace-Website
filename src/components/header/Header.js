@@ -4,6 +4,8 @@ import './Header.css';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { auth } from "../../firebase";
 import logo from '../../assets/bimini_no_bg.png'
+import darkMode from '../../assets/dark-mode.svg';
+import lightMode from '../../assets/light-mode.svg';
 import { ThemeContext,ThemeDispatchContext } from "../../context";
 
 const Button = ({ page }) => {
@@ -100,10 +102,9 @@ const Button = ({ page }) => {
               {getUserButtonContent()}
             </div>
           </li>
-          <label className="switch-mode">
-            <input type="checkbox" onChange={()=>dispatch({type:'toggle'})}/>
-            <span class="slider round"></span>
-          </label>
+          <li className="uiMode" onClick={()=>dispatch({type:'toggle'})}>
+              <img src={isDarkMode ? darkMode : lightMode} alt='mode' />
+          </li>
         </ul>
       </nav>
     </header>
