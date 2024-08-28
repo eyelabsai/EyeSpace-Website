@@ -15,7 +15,7 @@ const Button = ({ page }) => {
   const buttonsList = [
     "Technology",
     "About Us",
-    "RefracteX",
+    // "RefracteX",
     "inSight",
     "Contact",
   ];
@@ -23,7 +23,7 @@ const Button = ({ page }) => {
   const buttonsDict = {
     "Technology": "/Technology",
     "About Us": "/AboutUs",
-    "RefracteX": "/RefracteX",
+    // "RefracteX": "/RefracteX",
     "inSight": "/Insight",
     "Contact": "/Contact",
   };
