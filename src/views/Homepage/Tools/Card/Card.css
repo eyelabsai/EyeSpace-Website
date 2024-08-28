@@ -2,6 +2,10 @@
   margin: 20%;
 }
 
+.current_tools{
+  background-color: #f0f0f0;
+}
+
 .tool {
   display: flex;
   padding: 3%;

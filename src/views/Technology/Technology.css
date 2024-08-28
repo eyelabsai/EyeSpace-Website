@@ -1,12 +1,37 @@
+.theme__dark #blog{
+    background-color: rgb(29, 30, 41);
+}
+
+.theme__dark .blog-div{
+    background-color: rgb(29, 30, 41);
+    color: rgb(231, 231, 231);
+}
+
+.theme__dark #blog-card{
+    background-color: rgb(38, 39, 51);
+    box-shadow: none;
+}
+
+.theme__dark #blog-content{
+    color: rgb(231, 231, 231);
+}
+
+.theme__dark .eyespace-card{
+    box-shadow: none;
+    color: rgb(231, 231, 231);
+
+}
+
 .blog-div{
-    margin-top: 10%;
-  }
+    padding-top: 10%;
+    padding-bottom: 3%;
+}
   
 
 #blog {
-    margin-top: 3%;
-    margin-left: 10%;
-    margin-right: 10%;
+    /* margin-top: 3%; */
+    /* margin-left: 10%;
+    margin-right: 10%; */
     font-family: 'Inter';
     /* font-style: normal; */
     font-weight: 600;

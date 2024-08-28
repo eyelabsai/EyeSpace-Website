@@ -9,7 +9,7 @@ import Appstore from '../../../../assets/download-on-appstore.png';
 
 const Card = ({ name }) => {
   return (
-    <div className="current_tools" style={{ backgroundColor: '#f0f0f0' }}>
+    <div className="current_tools">
       <br /><br />
       <h1 style={{ textAlign: 'center' }}>CURRENT TECHNOLOGY</h1>
       <div className="tool">

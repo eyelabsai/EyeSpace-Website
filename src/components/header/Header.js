@@ -82,7 +82,7 @@ const Button = ({ page }) => {
                   <Link to={buttonsDict[name]} style={{ textDecoration: 'none' }}>
                     <div
                       className="button"
-                      style={{ color: location.pathname === buttonsDict[name] ? '#FF6400' : '' }}
+                      style={{ color: location.pathname === buttonsDict[name] ? '#FF6400' : (isDarkMode ? 'white':'black') }}
                     >
                       {name}
                     </div>

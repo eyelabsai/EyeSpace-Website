@@ -50,7 +50,7 @@ function Insight(props) {
   ];
 
   return (
-    <div className="blog-div" style={{backgroundImage: `url(${Bg})`}}>
+    <div className="blog-div" /*style={{backgroundImage: `url(${Bg})`}}*/>
 
         <div>
           <div className="blogcontainer">

@@ -1,5 +1,23 @@
+.theme__dark .cards{
+    background-color: rgb(29, 30, 41);
+    color: rgb(231, 231, 231);
+}
+
+.theme__dark input{
+    background-color: rgb(77, 80, 107);
+    color: rgb(231, 231, 231);
+}
+
+.theme__dark .contact-right{
+    color: rgb(177, 177, 177);
+}
+
+.theme__dark #con-submission{
+    box-shadow: none;
+}
+
 .cards{
-    margin-top: 10%;
+    padding: 10% 0%;
 }
 
 .contact-container {

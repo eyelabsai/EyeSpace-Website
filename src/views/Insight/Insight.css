@@ -1,11 +1,31 @@
+.theme__dark .blog-div{
+    background-image: none;
+    background-color: rgb(29, 30, 41);
+}
+
+.theme__dark .exchange-blog-card{
+    box-shadow: none;
+    background-color: rgb(38, 39, 51);
+}
+
+.theme__dark .exchange-blog-title{
+    color: rgb(231, 231, 231);
+}
+
+.theme__dark .exchange-blog-content{
+    color: rgb(231, 231, 231);
+}
+
+
 #top{
     display: flex;
     margin-bottom: 80px;
 }
 
 .blog-div{
-    margin-left: 16%;
-    margin-right: 8%;
+    padding-left: 16%;
+    padding-right: 8%;
+    background-color: white;
 }
 
 .blog-aboutus{

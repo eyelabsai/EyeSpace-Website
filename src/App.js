@@ -22,7 +22,7 @@ const App = () => {
   const [theme, dispatch] = useReducer(themeReducer,false)
 
   return (
-    <ThemeContext.Provider value={false}>
+    <ThemeContext.Provider value={theme}>
       <ThemeDispatchContext.Provider value={dispatch}>
         <div className={`App ${theme? 'theme__dark':''}`}>
           {/** Everything outside the BrowserRouter tag will be rendered on every single page (ex: nav bar and footer)*/}

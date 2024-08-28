@@ -37,7 +37,7 @@ const info = [
 
 const Technology = ({ name }) => {
   return (
-    <div className="blog-div" style={{backgroundImage: `url(${Bg})`}}>
+    <div className="blog-div">
       <div id="blog">
         <div className="technology-title"><strong>CURRENT TECHNOLOGY</strong></div>
         <div>
