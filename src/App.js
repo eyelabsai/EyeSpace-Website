@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useReducer} from "react";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Homepage from "./views/Homepage/Homepage";
 import Exchange from "./views/Exchange/Exchange";
@@ -16,33 +16,41 @@ import SubReddits from "./views/SubReddits/SubReddits";
 import UserPostsPage from "./views/UserPostsPage/UserPostsPage";
 import MyPosts from "./views/MyPostsPage/MyPostsPage";
 import ForumPostDetails from "./views/ForumPostDetails/ForumPostDetails";
+import {ThemeContext, ThemeDispatchContext, themeReducer} from "../src/context/index";
 
 const App = () => {
+  const [theme, dispatch] = useReducer(themeReducer,false)
+
   return (
-    <div className="App">
-      {/** Everything outside the BrowserRouter tag will be rendered on every single page (ex: nav bar and footer)*/}
-      <BrowserRouter>
-        <Header/>
-        <Routes>
-          {/** For each path we have, add a Route tag to define which element to render depending on the path. */}
-          <Route path="/" element={<Homepage />} />
-          <Route path="/AboutUs" element={<AboutUs />} />
-          <Route path="/RefracteX" element={<Exchange />} />
-          <Route path="/Insight" element={<Insight />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Technology" element={<Technology />} />
-          <Route path="/CreateAccount" element={<CreateAccount />} />
-          <Route path="/ForgotPassword" element={<ForgotPassword />} />
-          <Route path="/UserProfile" element={<UserProfile />} />
-          <Route path="/search" element={<SearchResults />} /> {/* Add route for search results */}
-          <Route path="/subreddit/:subreddit" element={<SubReddits />} />
-          <Route path="/myposts" element={<MyPosts /> } />
-          <Route path="/user-posts/:uid" element={<UserPostsPage   />} />
-          <Route path="/post/:postID" element={<ForumPostDetails />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <ThemeContext.Provider value={theme}>
+      <ThemeDispatchContext.Provider value={dispatch}>
+        <div className={`App ${theme? 'theme__dark':''}`}>
+          {/** Everything outside the BrowserRouter tag will be rendered on every single page (ex: nav bar and footer)*/}
+          <BrowserRouter>
+          <Header/>
+            <Routes>
+              {/** For each path we have, add a Route tag to define which element to render depending on the path. */}
+              <Route path="/" element={<Homepage />} />
+              <Route path="/AboutUs" element={<AboutUs />} />
+              <Route path="/RefracteX" element={<Exchange />} />
+              <Route path="/Insight" element={<Insight />} />
+              <Route path="/Contact" element={<Contact />} />
+              <Route path="/Login" element={<Login />} />
+              <Route path="/Technology" element={<Technology />} />
+              <Route path="/CreateAccount" element={<CreateAccount />} />
+              <Route path="/ForgotPassword" element={<ForgotPassword />} />
+              <Route path="/UserProfile" element={<UserProfile />} />
+              <Route path="/search" element={<SearchResults />} /> {/* Add route for search results */}
+              <Route path="/subreddit/:subreddit" element={<SubReddits />} />
+              <Route path="/myposts" element={<MyPosts /> } />
+              <Route path="/user-posts/:uid" element={<UserPostsPage   />} />
+              <Route path="/post/:postID" element={<ForumPostDetails />} />
+            </Routes>
+          </BrowserRouter>
+        </div>
+
+      </ThemeDispatchContext.Provider>
+    </ThemeContext.Provider>
   );
 }
 

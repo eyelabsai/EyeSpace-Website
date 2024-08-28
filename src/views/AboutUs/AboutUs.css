@@ -1,5 +1,32 @@
+.theme__dark .about-us-container{
+  background-color: rgb(29, 30, 41);
+  color: rgb(231, 231, 231);
+}
+
+.theme__dark .developer-board{
+  background-color: rgb(38, 39, 51);
+}
+
+.theme__dark .founders-card{
+  background-color: rgb(38, 39, 51);
+  border: 1px solid rgb(231, 231, 231);
+  box-shadow: none;
+}
+
+.theme__dark .founders-card-large{
+  background-color: rgb(38, 39, 51);
+  border: 1px solid rgb(231, 231, 231);
+  box-shadow: none;
+}
+
+.theme__dark .founders-card-small{
+  background-color: rgb(38, 39, 51);
+  border: 1px solid rgb(231, 231, 231);
+  box-shadow: none;
+}
+
 .about-us-container{
-  margin-top: 10%;
+  padding-top: 10%;
 }
 
 .AboutUs {
@@ -38,14 +65,14 @@
   }
   
 .aboutus-page {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin: 0% 13%;
 }
 
 .aboutus-header {
   margin-top: 3%;
   display: flex;
   justify-content: space-between;
+  gap: 4rem;
 }
 
 .aboutus-header-text {
@@ -58,8 +85,9 @@
 }
 
 .aboutus-header-img {
-  width: 25%;
-  height: 25%;
+  width: 35%;
+  height: 35%;
+  /* margin: auto; */
 }
 
 .aboutus-title {

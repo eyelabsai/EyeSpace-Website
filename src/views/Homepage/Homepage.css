@@ -1,5 +1,39 @@
+.theme__dark .homepage{
+    background-color: rgb(38, 39, 51);
+    color: rgb(231, 231, 231);
+}
+
+.theme__dark .current_tools{
+    background-color: rgb(29, 30, 41);
+}
+  
+.theme__dark .card{
+    background-color: rgb(38, 39, 51);
+    box-shadow: none;
+}
+
+.theme__dark .desc{
+    color: rgb(231, 231, 231);
+}
+
+.theme__dark .card-content{
+    color: rgb(231, 231, 231);
+}
+
+.theme__dark #mission-title{
+    color: rgb(231, 231, 231);
+}
+
+.theme__dark .mission-content{
+    color: rgb(231, 231, 231);
+}
+
+.theme__dark button{
+    box-shadow: none;
+}
+  
 .homepage{
-    margin-top:10%;
+    padding-top:10%;
 }
 .footer-div {
     margin-top: 230px;

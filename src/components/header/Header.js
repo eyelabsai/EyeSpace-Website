@@ -1,16 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import './Header.css';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { auth } from "../../firebase";
 import logo from '../../assets/bimini_no_bg.png'
-//import logo from '../../assets/RefracteX_logo.png';
+import darkMode from '../../assets/dark-mode.svg';
+import lightMode from '../../assets/light-mode.svg';
+import { ThemeContext,ThemeDispatchContext } from "../../context";
 
 const Button = ({ page }) => {
   const [userEmail, setUserEmail] = useState('');
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
   const navigate = useNavigate(); // Hook for programmatic navigation
   const location = useLocation(); // Hook to get the current location
+  const dispatch = useContext(ThemeDispatchContext)
+  const isDarkMode = useContext(ThemeContext)
 
   const buttonsList = [
     "Technology",
@@ -80,7 +84,7 @@ const Button = ({ page }) => {
                   <Link to={buttonsDict[name]} style={{ textDecoration: 'none' }}>
                     <div
                       className="button"
-                      style={{ color: location.pathname === buttonsDict[name] ? '#FF6400' : '#48627E' }}
+                      style={{ color: location.pathname === buttonsDict[name] ? '#FF6400' : (isDarkMode ? 'white':'black') }}
                     >
                       {name}
                     </div>
@@ -97,6 +101,9 @@ const Button = ({ page }) => {
             >
               {getUserButtonContent()}
             </div>
+          </li>
+          <li className="uiMode" onClick={()=>dispatch({type:'toggle'})}>
+              <img src={isDarkMode ? darkMode : lightMode} alt='mode' />
           </li>
         </ul>
       </nav>
